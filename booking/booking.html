@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Fredoka:wght@300..700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Permanent+Marker&family=Shadows+Into+Light&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrab.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">KEMEXRA</div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="locations.html">Locations</a>
+            <a href="activities.html">Activities</a>
+            <a href="hotels.html">Hotels</a>
+            <a href="souvenirs.html">Souvenirs</a>
+            <a href="recommendations.html">Recommendations</a>
+            <a href="reservations.html">Reservations</a>
+        </div>
+        <div style="display:flex; gap:10px; align-items:center;">
+            <button class="theme-btn" onclick="toggleTheme()">☀️ Light</button>
+            <a class="action-btn" href="login.html">LOG IN</a>
+        </div>
+    </nav>
+    <a href="booking.html"></a>
+
+    <header>
+        <h1>Book Your Dream Trip </h1>
+        <p>You're one step away from your perfect trip </p>
+    </header>
+
+    <nav class="multi-step">
+        <ul>
+            <li class="active1">
+                <div class="icon"><i class="fa-solid fa-circle-info"></i></div> <span>Trip Details</span> </li>
+            <li><div class="icon"><i class="fa-solid fa-location-dot"></i></div><span>Destination</span></li>
+            <li><div class="icon"><i class="fa-solid fa-hotel"></i></div><span>Your Backage</span> </li>
+            <li><div class="icon"><i class="fa-solid fa-plane-arrival"></i></div><span>Extras</span></li>
+            <li><div class="icon"><i class="fa-solid fa-list-ul"></i></div><span>Summary</span></li>
+            <li><div class="icon"><i class="fa-brands fa-cash-app"></i></div><span> Payment</span></li>
+            <li><div class="icon"><i class="fa-solid fa-circle-check"></i></div><span> Confirm</span></li>
+        </ul>
+    </nav>
+
+    <main class="booking-container">
+
+        <section class="steps">
+
+            <div class="step active" id="step-1">
+                <h2><i class="fa-brands fa-wpforms"></i>Trip Details </h2>
+
+                <form action="get">
+                    <div class="row">
+                        <div>
+                            <label>Check-in Date:</label>
+                            <input type="date" required id="start-date">
+                        </div>
+
+                        <div>
+                            <label>Check-out Date:</label>
+                            <input type="date" required id="end-date">
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div>
+                            <label>Adults:</label>
+                            <select required id="no-adults">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>more than 4</option>
+                            </select>
+
+                        </div>
+                        <div>
+                            <label>children:</label>
+                            <select required id="no-children">
+                                <option>no children</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>more than 4</option>
+                            </select>
+
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div>
+                            <label>Trip Type:</label>
+                            <select required id="trip-type">
+                                <option>Friends</option>
+                                <option>Family</option>
+                                <option>couple</option>
+                                <option>solo</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <!-- <button type="button" class="next" id="booking-save" onclick="saveData()">Continue To
+                        Review</button>-->
+                    <button type="button" class="next" id="booking-save">Continue To
+                        Review</button>
+                </form>
+
+
+            </div>
+
+            <div class="step" id="step-2">
+                <h2>Destination</h2>
+                <div class="hug-booking">
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="Sharm El Sheikh" onclick="selectPlace(this, 'sharm')">
+
+                        <img src="./imges/place1-booking.jpg" alt="">
+                        <h5>Sharm El Sheikh</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="Hurghada" onclick="selectPlace(this, 'hurghada')">
+
+                        <img src="./imges/place2-booking.jpg" alt="">
+                        <h5>Hurghada</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="Luxor" onclick="selectPlace(this, 'luxor')">
+
+                        <img src="./imges/place3-booking.jpg" alt="">
+                        <h5>Luxor</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="Aswan" onclick="selectPlace(this, 'aswan')">
+
+                        <img src="./imges/place4-booking.jpg" alt="">
+                        <h5>Aswan</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="New Alamein City"
+                            onclick="selectPlace(this, 'alamein')">
+
+                        <img src="./imges/place5-booking.jpeg" alt="">
+                        <h5> New Alamein City</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                    <label class="place-booking">
+                        <input type="radio" name="place" value="cairo" onclick="selectPlace(this, 'cairo')">
+
+                        <img src="./imges/place6-booking.webp" alt="">
+                        <h5>cairo</h5>
+
+                        <span class="check">✔</span>
+                    </label>
+                </div>
+
+
+
+                <div class="row">
+                    <div>
+                        <button class="back">Back</button>
+                    </div>
+                    <div>
+                        <button type="button" class="next" id="save-step-2" onclick="saveplaces()">next</button>
+                    </div>
+                </div>
+            </div>
+            <div class="step" id="step-3">
+
+                <div class="side-by-side">
+                    <h4>Find Your Ideal Hotel</h4>
+                    <div class=" booking booking-hotels">
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel1-booking.jpeg" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel2-booking.jpeg" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel3-booking.jpg" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel4-booking.webp" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel5-booking.jpg" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="hotel-card">
+                            <input type="radio" name="hotel" value="">
+
+                            <img src="./imges/hotel6-booking.jpeg" alt="">
+                            <h5>Hotel Name</h5>
+                            <p>Price</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                    </div>
+                    <h4>Add Fun to Your Journey</h4>
+                    <div class=" booking booking-activities">
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip2-booking.jpg" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip1-booking.webp" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip3-booking.jpg" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip4-booking.jpg" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip5-booking.webp" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                        <label class="activity-card">
+                            <input type="checkbox" name="activities" value="">
+
+                            <img src="./imges/trip6-booking.jpg" alt="">
+                            <h5>Diving</h5>
+                            <p>80$</p>
+
+                            <span class="check">✔</span>
+                        </label>
+                    </div>
+
+
+                </div>
+                <div class="row">
+                    <div>
+                        <button class="back">Back</button>
+                    </div>
+                    <div>
+                        <button type="button" class="next" id="save-step-3"
+                            onclick="savehotels() ; saveActivities() ;">next</button>
+                    </div>
+                </div>
+
+            </div>
+            <div class="step" id="step-4">
+                <h2>Add Extra Services</h2>
+                <p>Level up your adventure Choose extra activities and enjoy a personalized travel experience in
+                    Egypt!</p>
+                <div class="box-extras">
+                    <label class="hug-of-extras" for="nada-extra1">
+                        <label class="extra-card">
+                            <input type="checkbox" name="extras" value="Airport Pickup " data-price="20"
+                                id="nada-extra1"> Airport Pickup</label>
+                        <div class="price-extra">20$</div>
+                    </label>
+                    <label class="hug-of-extras" for="nada-extra2">
+                        <label class="extra-card"><input type="checkbox" name="extras" value="Tour Guide"
+                                data-price="15" id="nada-extra2"> Tour Guide</label>
+                        <div class="price-extra">15$</div>
+                    </label>
+                    <label class="hug-of-extras" for="nada-extra3">
+                        <label class="extra-card"><input type="checkbox" name="extras" value="VIP Service"
+                                data-price="10" id="nada-extra3"> VIP Service </label>
+                        <div class="price-extra">10$</div>
+                    </label>
+                    <label class="hug-of-extras" for="nada-extra4">
+                        <label class="extra-card"><input type="checkbox" name="extras" value="Photo Session"
+                                data-price="30" id="nada-extra4"> Photo Session </label>
+                        <div class="price-extra">30$</div>
+                    </label>
+                    <label class="hug-of-extras" for="nada-extra5">
+                        <label class="extra-card"><input type="checkbox" name="extras" value="Travel Insurance"
+                                data-price="20" id="nada-extra5"> Travel Insurance</label>
+                        <div class="price-extra">20$</div>
+                    </label>
+
+                </div>
+
+                <div class="row">
+                    <div>
+                        <button class="back">Back</button>
+                    </div>
+                    <div>
+                        <button type="button" class="next vpn" onclick="saveExtras(); displayData(); "
+                            id="save-step-4">next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step" id="step-5">
+                <div id="output-booking">
+
+
+                </div>
+                <div class="row">
+                    <div>
+                        <button class="back">Back</button>
+                    </div>
+                    <div>
+                        <button class="next">next</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step" id="step-6">
+                <div class="hug-of-payment">
+                    <h2>Payment</h2>
+
+                    <div class="user-info">
+                        <h5> Enter your Information</h5>
+                        <div class="row">
+                            <div>
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div>
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="Enter your phone" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="payment-method">
+                        <h5>Select Payment Method</h5>
+
+                        <label>
+                            <input type="radio" name="payment" value="card" checked>
+                            Credit / Debit Card 
+                        </label>
+
+                        <label>
+                            <input type="radio" name="payment" value="cash">
+                            Cash on Arrival
+                        </label>
+
+                        <label>
+                            <input type="radio" name="payment" value="vodafone">
+                            Vodafone Cash
+                        </label>
+                         <label>
+                            <input type="radio" name="payment" value="InstaPay">
+                            InstaPay
+                        </label>
+                    </div>
+
+                    <div class="card-details">
+                        <h5>Card Details</h5>
+
+                        <label>Card Number</label>
+                        <input type="text" placeholder="XXXX XXXX XXXX XXXX">
+
+                        <label>Expiry Date</label>
+                        <input type="month">
+
+                        <label>CVV</label>
+                        <input type="password" placeholder="123">
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div>
+                        <button class="back">Back</button>
+                    </div>
+                    <div>
+                        <button class="next">pay</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step" id="step-7">
+                <h2>Booking Confirmed </h2>
+                <p>Your trip is ready!</p>
+                <div class="confirm">
+                    <img src="./imges/confirm-booking.png" alt="">
+                </div>
+                <p>Thank you for choosing us! 
+                    We’re truly happy to be part of your journey.</p>
+            </div>
+
+        </section>
+        <aside id="price">
+            <h3>Total Price</h3>
+            <hr>
+            <div class="total">
+                <p id="total-price">0 $</p>
+            </div>
+            <div class="ain-horas">
+
+            </div>
+
+        </aside>
+
+
+    </main>
+    <footer>
+        <p class="footer-logo">KEMEXRA</p>
+        <p class="footer-tagline">Experience Egypt in Ultimate Comfort</p>
+        <div class="footer-socials">
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+        </div>
+        <p class="footer-copy">&copy; 2025 KEMEXRA. All Rights Reserved.</p>
+    </footer>
+    <script src="./java/functions.js"></script>
+    <script src="./java/booking.js"></script>
+    <script src="./java/bootstrab.js"></script>
+    <script src="./java/shared.js"></script>
+
+</body>
+
+</html>
