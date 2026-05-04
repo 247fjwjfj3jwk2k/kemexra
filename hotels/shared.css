@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121c3a;
+    font-family: sans-serif;
+}
+
+/* عاكس الالوان */
+h2.light-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* الناف بار*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    background-color: #0a0f1e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover {
+    color: #c9a84c;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 13px;
+}
+.action-btn {
+    background-color: #c9a84c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* الفوتر*/
+footer {
+    background-color: #0a0f1e;
+    color: #9aaccc;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    margin-top: 40px;
+}
+.footer-logo {
+    color: #c9a84c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-tagline {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.footer-socials a {
+    color: #c9a84c;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    color: white;
+}
+.footer-copy {
+    font-size: 12px;
+}
