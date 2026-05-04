@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link  rel= "stylesheet" href="Style.css">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+    </head>
+    <body>
+        <nav class="navbar">
+    <div class="logo">KEMEXRA</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="activities.html">Activities</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="souvenirs.html">Souvenirs</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="reservations.html">Reservations</a>
+    </div>
+    <div style="display:flex; gap:10px; align-items:center;">
+        <button class="theme-btn" onclick="toggleTheme()">☀️ Light</button>
+        <a class="action-btn" href="login.html">LOG IN</a>
+    </div>
+</nav>
+
+        <section class="cont">
+            <div class="img"></div>
+            <h1 class="get">GET IN TOUCH</h1>
+        </section>
+        <br> <br>
+        <section class="contact">  
+            <div class="left">
+                <h2 class="mess">Send a Message</h2>
+                <br>
+                <p class="cat">Our curators are ready to architect your personal 
+                    <br>
+                    journey through the sands of time.
+                </p>
+                <br><br>
+        <form class="myform">
+            <label class="ch">NAME</label>
+             <input type="text" id="name" placeholder="Alexander Hamilton" class="name">
+             <label class="ch">EMAIL</label>
+            <input type="email" id="email" placeholder="alex@voyage.com" class="email">
+            <label class="ch">SUBJECT</label>
+            <input type="text" id="subject" placeholder="Private Nile Expedition" class="subject">
+            <label class="ch">MESSAGE</label>
+            <input id="message" placeholder="Describe your vision" class="message"></textarea>
+           <button type="submit">Send Message</button>
+     </form>
+     <p id="error" style="color:red;"></p>
+            </div>
+            <div class="right">
+                <div class="box">📍<br> <br> <br>11 Al-Giza st,
+                     Cairo,Egypt</div>
+                <div class="box">📞 <br> <br> <br>+20 234567890 <br>
+                      +20 100 123 4567
+                </div>
+                <div class="box">✉️ <br> <br> <br>curators@kemexra.com
+                    info@kemexra.com
+                </div>
+                <div class="box">⏱️ <br> <br> <br> Sat-Thu:09:00-19:00
+                    Fri:By Invitation Only
+                </div>
+            </div>
+        </section>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110502.7776937826!2d31.340866560453684!3d30.059462761118617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14583fa60b21beeb%3A0x79dfb296e8423bba!2z2KfZhNmC2KfZh9ix2KnYjCDZhdit2KfZgdi42Kkg2KfZhNmC2KfZh9ix2KnigKw!5e0!3m2!1sar!2seg!4v1777456818791!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <footer>
+    <p class="footer-logo">KEMEXRA</p>
+    <p class="footer-tagline">Experience Egypt in Ultimate Comfort</p>
+    <div class="footer-socials">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 KEMEXRA. All Rights Reserved.</p>
+</footer>
+
+<script src="contact.js"></script>
+
+    </body>
+    </html>

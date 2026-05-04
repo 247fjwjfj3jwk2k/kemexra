@@ -1,0 +1,359 @@
+*{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121c3a;
+    font-family: sans-serif;
+}
+
+/* عاكس الالوان */
+html.light-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+/* الناف بار*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    background-color: #0a0f1e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+.navbar a:hover {
+    color: #c9a84c;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 13px;
+}
+.action-btn {
+    background-color: #c9a84c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+body {
+    background-color: #020817; 
+}
+.hero {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    background-image:url(pyramid.png);
+    background-position: center 20% ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.4;
+}
+.hero{
+    padding-top: 100px;
+}
+.hero h1 , .hero p{
+    text-align: center;
+}
+/* 4. الطبقة اللي بتدمج الهرم مع الكحلي (التسييحة) */
+.cover::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    /* width: 100%;
+    height: 40vh; مغطية المساحة كلها */
+    /* تدرج من شفاف فوق لكحلي غامق تحت */
+    background: linear-gradient(to bottom, transparent 30%, #020817 95%);
+    pointer-events: none; /* عشان متغطيش على زراير لو موجودة */
+}
+
+/* 5. عشان الكلام يظهر فوق التدرج */
+.cover h1, .cover p ,.change{
+    position: relative;
+    z-index: 5;
+    text-align: center;
+}
+
+.picture{
+    background-image:url(canddle.png) ;
+    background-position: left;
+    height:350px ;
+    width: 450px;
+    flex-shrink: 0;
+}
+.hero{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+.theme{
+    color:rgb(243, 243, 11);
+}
+.change{
+    color:white;
+    font-size: 1rem;
+    font-style: italic;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin: 0;
+}
+.pargraph{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 40px;
+}
+.text p{
+    display: block;
+}
+.add{
+    text-align: leftt;
+    color: white;
+    margin-bottom: 0 0 15px 0;
+}
+.text{ 
+    color:rgb(238, 223, 92); 
+    display: flex ;
+    flex-direction:column ; 
+    align-items: flex-start;
+    flex: 1; 
+    gap: 20px;
+    text-align: left; 
+    width: 100px;
+}
+.btn{
+    border:2px white solid; 
+    color:white;
+    width:180px;
+    height: 50px;
+    margin-top: 20px;
+    align-self: flex-start;
+    justify-content: center;
+    background: transparent;    
+    display: block;
+}
+.stats {
+    background-color: rgba(15, 15, 148, 0.623);
+    width: 100%;
+    height: 130px;
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    text-align: center;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 8px; 
+}
+
+.space {
+    color: rgb(238, 223, 92);
+    font-size: 24px; 
+    font-weight: bold;
+}
+
+.dog{
+    color: white;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px; 
+}
+.collect{
+    background-color: #020817 ;
+    width: 100%;
+    height: 500px;
+}
+.guard{
+    color: white;
+    font-size:xx-large;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    padding-top: 35px;
+}
+.team-container {
+  display: flex;            /* تفعيل نظام الفليكس */
+  justify-content: space-around; 
+  flex-direction: row;
+  /* توسيط البطاقات في نص الشاشة */
+  gap: 20px;   
+  align-items: center;            /* المسافة بين كل بطاقة والتانية */
+  background-color: #1a1a2e; /* لون الخلفية الغامق زي الصورة */
+  padding: 50px;
+  flex-wrap: wrap;         /* عشان لو الشاشة صغرت ينزلوا تحت بعض وما يختفوش */
+}
+
+/* تصميم البطاقة الواحدة */
+.card {
+  text-align: center;      /* توسيط الكلام */
+  color: white;            /* لون الخط */
+  width: 250px;            /* عرض البطاقة */
+}
+
+/* تنسيق الصورة */
+.card img {
+  width: 100%;             /* الصورة تاخد عرض البطاقة بالكامل */
+  height: 350px;           /* طول موحد للصور */
+  object-fit: cover;       /* عشان الصورة ماتتمطش وتتحافظ على أبعادها */
+  border-radius: 5px;      /* حواف ناعمة بسيطة */
+  margin-bottom: 15px;
+}
+
+/* تنسيق الأسماء */
+.card h3 {
+  font-family: serif;      /* نوع خط كلاسيكي زي الصورة */
+  margin: 10px 0 5px 0;
+  font-size: 1.5rem;
+}
+
+/* تنسيق الوظيفة */
+.card p {
+  font-size: 0.8rem;
+  letter-spacing: 1px;     /* تباعد الحروف */
+  color: #ccc;             /* لون رمادي فاتح للوصف */
+  text-transform: uppercase; /* حروف كبيرة */
+}
+html.light.mode{
+    filter: invert(1) hue-rotate(180deg);
+}
+/* الفوتر*/
+footer {
+    background-color: #0a0f1e;
+    color: #9aaccc;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    margin-top: 40px;
+}
+.footer-logo {
+    color: #c9a84c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-tagline {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.footer-socials a {
+    color: #c9a84c;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    color: white;
+}
+.footer-copy {
+    font-size: 12px;
+}
+.cont{
+    position: relative;
+}
+.img{
+     width: 100%;
+    height: 80vh;
+    position: relative;
+    background-image:url(Pharaohs.png);
+    background-position: center 20% ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+}
+.get{
+    color:white;
+    font-size: xx-large;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+}
+.mess{
+    font-size: xx-large;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cat{
+    color: rgb(233, 156, 55);
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+
+}
+.left{
+    width: 45%;
+}
+.left input ,.left textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    outline: none;
+  
+
+}
+.left button{
+      padding: 10px 20px;
+    border: none;
+    background-color: orange;
+
+}
+.right{
+    width: 45%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+.box{
+    background-color:rgba(62, 62, 224, 0.205);
+    padding: 20px;
+    text-align: center;
+}
+.ch{
+    color: orange;
+}
