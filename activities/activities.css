@@ -1,0 +1,2498 @@
+/*------------------------------------------------------------------------------------------------------*/
+/*just classes to show which's gon be active and which's not, legit just 2 lines, the problem is going to be swapping*/
+/*may god help me, i havent studied JS yet as of 28th of april*/
+.not-active{
+    display: none;
+}
+.active{
+    display: block;
+}
+/* Default main page */
+.yasso-title-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+.yasso-title{
+    color: #FFE08F;
+    font-family: Liberation Serif, serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.5px;
+}
+.yasso-title-description{
+    color: #D0C5B2;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.5px;
+    margin: auto;
+    text-align: center;
+    max-width: 50%;
+    margin-bottom: 40px;
+}
+
+.yasso-locations {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 15px;
+    height: 100vh;
+}
+
+/* shared card */
+.yasso-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 24px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+.yasso-card:hover {
+    transform: scale(1.03);
+}
+.yasso-tag-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.yasso-tag {
+    color: #C2C6DB;
+    background: rgba(30, 41, 59, 0.5);
+    backdrop-filter: blur(8px);
+    border: 1px solid #C2C6DB;
+    border-radius: 30px;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.yasso-card-title {
+    color: #FFE08F;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+}
+.yasso-card-description {
+    color: #D0C5B2;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+}
+.yasso-sphinx { 
+    grid-area: 1 / 2 / 5 / 6; 
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(15, 23, 42, 0.95)),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuA6H--LcEb891_m_bHl4WS7QS8IkBbGA3eLeH1bNNRKnVNnOCynpvT1SVVCRRw4EQtzHnQIoG_W6NDkasCuvGhS7SBmAfLG1XAJw6ZqOSPNsxrO5DX3HsM0YxBh0SocHIDBC3xiGM7oyXpgikR1dctYjX-5uqCuy9RyrNmsfs-yCQJLP_zAysHoYUnRguThvU83SuflDiLU6LrWUqxRG9f0O-7ASbC9o0PlPf9IzhntR9ucqEWh15eKo86uhQyCz1ILsrlXPF8Mag0'); 
+}
+.yasso-sharm { 
+    grid-area: 1 / 6 / 5 / 9; 
+    width: 80%;
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(15, 23, 42, 0.95)),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuAg6W1dAd-aBrS8RhXlA73DhRQ7qDBEVj0-9l_KwLfd3wvI6mYcCf06fgOBOiarPYHSAX7t6iAQ1mhvRa4kVlHe1cErULr2WfHcdNWD42vcy3uY0PgfuTqcH0o5vF2eWthoj-Ar61y6G8_rXbOJHbasyEoKkqQJB8yvpMqYrNmv3Cjfa1O7XeVyJLI4Jyzh9i5r5Fsyv1tuIIdBgYUjiADG2a5eM4C1M5j_znZ0_60pCRTyCBjPBYszlENC7vPa67mcj-p_yrn8afQ'); 
+}
+.yasso-almoez { 
+    grid-area: 5 / 2 / 9 / 6; 
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(15, 23, 42, 0.95)),
+    url('almoez.jpg'); 
+}
+.yasso-luxor { 
+    grid-area: 5 / 6 / 9 / 9; 
+    background-image: linear-gradient(to bottom, transparent 40%, rgba(15, 23, 42, 0.95)),
+    url('https://lh3.googleusercontent.com/aida-public/AB6AXuAlk6H_T76ME-TYKNChMAKliiMerqSfOy3A4XQ9voEMfFzyK1Zj1O2DJyvO0Ps27E9XhdqVRjF2EACgTlMmEzNNC7JzdHv2zjjZxI3WTq639e3aa7-DlaZ5W2PI2pf3KGUtP4SRrfhiSj5L-8FwFiidrvEVwxTosRaCKSIkhG7_drCuNhlZAQGfTnk3CJqYcdKj97GQUjE801yoG2EOYjH5of3lIabw8m6p4Dl2kky2Bqpc3cjH8-KPydU-pd0w_l1zcAXnwg5YMyM'); 
+}
+/* sphinx dark */
+.tab-bar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #0a0f1e;
+    position: fixed; 
+    /* relative to the browser window and will overlap things unless a margin is added */
+    left: 0;
+    top: 65px;
+    /* offsets the element from the top of the page so it doesn't overlap the navbar */
+    z-index: 10000;
+}
+.tab-content{
+    height: 100%;
+}
+.tab-content li {
+    list-style: none;
+    cursor: pointer;
+    color: #a7acc2;
+    margin: 0 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.tab-content li:hover {
+    background-color: #a7acc2;
+    color: #0a0f1e;
+}
+.tab-content li.active {
+    background-color: #a7acc2;
+    color: #0a0f1e;
+}
+.sphinx-top-page{
+    margin-left: 50px;
+    margin-bottom: 50px;
+    background-image: 
+        /* NOTE: 1: linear gradient is a gradient that goes from top to bottom. I legitemately didn't even know you could have it
+        go from top to bottom i thought it was only one static value that you cant change*/
+        /*NOTE 2: rgba(R value, G value, B value, opacity value)*/
+        linear-gradient(
+            to bottom, 
+            rgba(18, 28, 58, 0.65) 0%,    /* starts at the top by having a moderate effect*/
+            rgba(18, 28, 58, 0.45) 35%,  /* Stay the same until about 35% of the way (35% is a rough estimation) */
+            rgba(18, 28, 58, 0.85) 65%,/* Start darkening harder at 65% and its noticable*/
+            rgba(18, 28, 58, 0.95) 80%, /* darkens much harder at about 80%*/
+            rgba(18, 28, 58, 1) 100%  /* fully just dark at the bottom*/
+        ), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCWieQI8lTuPd94d9eVfS-i3BHScQffY0AmpnSPZC_DUSwBVlo8nrdnY-WKlIz5e3UMqrle39yLkFZNHzpboX5d7_78RSdQ30Elg-wmryypjIBmr0yyJClzAFFCOYv_Ae-GdtkifCobhF876WBOexkga-Nl3QF4fK-xdu3AA0XphbicLl-Eb66JdJ7Qk6mqde-LU4RBVjZY0P1m8QU_H4HZasXTpb9V8yYP6MaLEeXWdzEHjlt8AyV5MgQZc6A6HyT4i1iH8O-fJZo');
+    height: 65vh;  /* a rough estimate of the height of the image, i genuinely don't know how to calculate this */
+    width: auto;
+    /* this image will repeat by default, so to fix that i'll write the following */
+    background-size: cover;
+    background-position: center 30%; /* the 30% is so that the image shows sphinx's face*/
+    background-repeat: no-repeat;
+    display: flex; /* this will make the text appear on top of the image at the bottom */
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+}
+.sphinx-title-mini{
+    color: #FFE08F;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+.sphinx-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.sphinx-description{
+    font-family: serif;
+    width: fit-content;
+    color: #d5e3ff;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.yasso-sphinx-lower {
+    display: grid;
+    grid-template-columns: 600px 300px;
+    grid-template-rows: auto auto;
+    gap: 20px;
+    padding: 40px 60px 40px 110px;
+    margin-left: 0;
+}
+.meow{
+    margin-left: 23%;
+}
+
+.yasso-history {
+    
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    background-image: linear-gradient(
+        to right,
+        rgba(14, 34, 59, 1) 0%,
+        rgba(14, 34, 59, 0.9) 55%,
+        rgba(14, 34, 59, 0.5) 70%,
+        rgba(14, 34, 59, 0) 100%
+    ), url('pyramids_navy.jpg');
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 40px;
+    height: 58.5vh;
+    width: 100%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.yasso-sphinx-card {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    border: 1px solid #FFE08F;
+    background-color: #0d2139;
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.yasso-sphinx-card-2 {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: #0d2139;
+    border: 1px solid #FFE08F;
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.yasso-sphinx-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a0f1e;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #dabe78;
+    box-shadow: 0 0 18px rgba(230, 195, 100, 0.5);
+    border-radius: 5px;
+    width: fit-content;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 40px;
+    margin-left: 0;
+    transition: gap 0.2s ease;
+}
+.yasso-sphinx-link-low-effort{
+    font-size: 14px;
+    font-weight: 600;
+    color: #e6c364;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+}
+.yasso-history:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+}
+.yasso-sphinx-lower-tag{
+    color: #FFE08F;
+    font-size: 10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    margin-left: 0;
+    border: 1px, solid #FFE08F;
+    padding: 8px;
+    width: fit-content;
+    text-align: center;
+}
+.yasso-sphinx-description
+{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #d5e3ff;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-left: 0;
+}
+.yasso-sphinx-card-title{
+    color: #d5e3ff;
+    font-family: manorope;
+    margin-left: 0;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.yasso-sphinx-card {
+    grid-column: 2;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    border: 1px solid #FFE08F;
+    background-color: #0d2139;
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.yasso-sphinx-card:hover {
+    transform: scale(1.04);
+}
+.yasso-mini-icon-color{
+    color: #FFE08F;
+    font-size: 30px;
+    margin-bottom: 16px;
+}
+.yasso-mini-card-title{
+    color: #d5e3ff;
+    font-family: manorope;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.yasso-mini-card-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #d5e3ff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.yasso-sphinx-card-2 {
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+    background-color: #0d2139;
+    border: 1px solid #FFE08F;
+    padding: 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.yasso-sphinx-card-2:hover {
+    transform: scale(1.04);
+}
+.yasso-extra-activity-sphinx{
+    background-image: linear-gradient(
+        to right,
+        rgba(18, 28, 58, 1) 0%,
+        rgba(18, 28, 58, 0.9) 55%,
+        rgba(18, 28, 58, 0.8) 70%,
+        rgba(18, 28, 58, 0.67) 100%
+    ), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrh_qwwyqoEEOx5szq8VtpwrtiVwFDn4WqvoQmDDMrrBlWZGs3NKmy1G1yFSvAnWTimRALUYJyfUAcNP9SDZRgJv8uIPqqF09mdw2_JcDvGRz6OcKfc37n2NsZe_efY9aIxCdTtHwFZe1tWDl8F1RvBr1umTqxN-O9R-0CdKLMaIT6uMDqnQCVc7QCM2wcO50vYur5I4Rdel939vyaSYI3cMPx9azhvLUjPx0ejmRvuDlH3ttCgyZeOCMNQ1G33pHaZS_-5fItwpc');
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 40vh;
+    width: auto;
+    margin-top: 40px;
+    margin-left: 110px;
+    margin-right: 60px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+.yasso-alittletotheleft{
+    margin-left: 80px;
+}
+.yasso-extra-activity-sphinx:hover {
+    transform: scale(1.04);
+}
+/* sharm dark*/
+.sharm-top-page{
+    margin-top: 5%;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(18, 28, 58, 0.4) 0%,
+    rgba(18, 28, 58, 0.6) 40%,
+    rgba(18, 28, 58, 0.85) 65%,
+    rgba(18, 28, 58, 1) 100%
+), url('What-are-the-best-snorkeling-and-diving-spots-in-Sharm-El-Sheikh.jpg');
+    height: 65vh;
+    width: auto;
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+}
+.btn-primary {
+    background-color: #e6c364;
+    color: #0e1e3a;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: #d4ae4e;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #0e1e3a;
+}
+.button-placement{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+.sharm-title-mini{
+    color: #e6c364;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    margin-left: 30px;
+}
+.sharm-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    margin-left: 30px;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+}
+.sharm-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #d0c5b2;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-top: 15px;
+    margin-left: 30px;
+}
+.sharm-lower{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 50px;
+    padding: 0 60px;
+    gap: 40px;
+    align-items: flex-start;
+}
+.sharm-lower-left {
+    flex: 1;
+    min-width: 0;
+}
+.sharm-lower-right{
+    flex: 1;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+.yasso-line{
+    width: 100%;
+    height: 1px;
+    margin-left: 0;
+    background-color: #e6c364;
+    border-top: 2px solid #e6c364;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 0 18px rgba(230, 195, 100, .4);
+}
+.yasso-sharm-tag{
+    color: #e6c364;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;    
+    margin-left: 30px;
+    margin-top: 30px;
+    letter-spacing: 1px;
+}
+.sharm-lower-lower{
+    padding-left: 60px;
+    margin-top: 100px;
+}
+.sharm-cards-lower{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 30px;
+    margin-left: 25%;
+    align-items: stretch;
+}
+.sharm-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    background-color: #0e1e3a;
+    border: 1px solid #e6c364;
+    border-radius: 14px;
+    max-width: 280px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sharm-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+}
+
+.sharm-card-icon{
+    font-size: 28px;
+    color: #e6c364;
+    margin-bottom: 4px;
+}
+
+.sharm-card-title{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0;
+    font-family: 'Georgia', serif;
+}
+
+.sharm-card-description{
+    font-size: 14px;
+    line-height: 1.7;
+    color: #a8bcd4;
+    margin: 0;
+}
+
+.sharm-card-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: #e6c364;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    transition: gap 0.2s ease;
+}
+
+.sharm-card-link:hover {
+    gap: 10px;
+}
+.sharm-card:hover {
+    transform: scale(1.04);
+}
+
+/* khan dark*/
+.khan-top-page{
+    background-image: linear-gradient(
+    to bottom,
+    rgba(18, 28, 58, 0.9) 0%,
+    rgba(18, 28, 58, 0.9) 40%,
+    rgba(18, 28, 58, 0.9) 65%,
+    rgba(18, 28, 58, 1) 100%
+), url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIuW8DJQa6XOa6Cy2ebynYKMUXDwhLPacNYjs64qAIg1YidwIQYsERE3fSxexqBKS_CIe5Wf1OjFmYA7CpBSJhMCWOu32EyiXQruip9JzQmZ9iwDx-gZfs3sD1kzh5vAWPzLX-CFz-JLUxhFtV7ZMJssYEWpnj5aRnCUmGYf9pDPNRyWBF3xxpRUedx2HusucfilARmQdVIV9tPePeiDqnnBOzTdqWU3pIhHCa7FPHXlnrrIfIkofxfxVKGv9zGLt5NsbZ8Df335g');
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+    margin-top: 6%;
+}
+.khan-title-mini{
+    color: #FFE08F;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+}
+.khan-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgba(213, 227, 255, 0.4);
+}
+.khan-description{
+    font-family: serif;
+    font-size: 20px;
+    width: 600px;
+    color: #d0c5b2;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.yasso-khan-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a0f1e;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #dabe78;
+    box-shadow: 0 0 18px rgba(230, 195, 100, 0.5);
+    border-radius: 5px;
+    text-align: center;
+    width: 170px;
+    padding: 12px 24px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 40px;
+    transition: gap 0.2s ease, transform 0.2s ease;
+}
+.yasso-khan-link:hover {
+    gap: 10px;
+    transform: scale(1.04);
+}
+.khan-lower-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(213, 227, 255, 0.4);
+    text-align: center;
+}
+.khan-lower-title-line{
+    width: 100px;
+    height: 2px;
+    background-color: #d5e3ff;
+    box-shadow: rgb(213, 227, 255, 0.4) 2px 4px 10px;
+    margin: 0 auto 16px auto;
+    margin-top: 15px;
+}
+.khan-lower-page{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20%;
+}
+.khan-lower-left{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+    background-image: linear-gradient(
+        to top,
+        rgba(18, 28, 58, 1) 0%,
+        rgba(18, 28, 58, 0.3) 55%,
+        rgba(18, 28, 58, 0.4) 70%,
+        rgba(18, 28, 58, 0.67) 100%
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDStSfSiA-s2XXHAyaLOyqPvP_qnw0VIcS35h02mWOvIWzfnIbjHQVGyY1Gu8MPmye4b-YoAtj6-vsunWe2MzwkwK4IPJmhIEQitsSVTBl5PiFgEA6i43rpB6xxp-Hxjp7iFsvQbA0gK1HmE6AsWmV_JHizQGI47bjEiw4kOFxBk4L2WfshH53Qw5Oy2Dplxf4gUrdDbrMBL7ffmWBiFoyf7Ab-gPJumTmUYqYkWkB48JucvUjW8Ud4xnG22wZFCISw7SnFJmiMAfY);
+    background-size: cover;
+    background-position: center 100%;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, filter 0.3s ease;
+} 
+.khan-lower-left:hover {
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.khan-lower-left-mini-title{
+    color: #FFE08F;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+    background: transparent;
+    background-color: rgba(18, 28, 58, .5);
+    width: fit-content;
+    padding: 4px 8px;
+    border-radius: 5px;
+}
+.khan-lower-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px 40px;
+    gap: 20px;
+    margin-left: 0;
+}
+.khan-lower-right .yasso-sphinx-card,
+.khan-lower-right .yasso-sphinx-card-2 {
+    width: 100%;
+    max-width: 340px;
+    height: auto;
+    min-height: 150px;
+}
+.khan-lower-left-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(213, 227, 255, 0.4);
+}
+.khan-lower-left-description{
+    font-family: serif;
+    font-size: 20px;
+    width: 600px;
+    color: #d0c5b2;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+.khan-mini-card-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #FFE08F;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+}
+.khan-lower-lower-page{
+    display: flex;
+    flex-direction: row;
+    margin-top: 60px;
+    padding: 0 60px;
+}
+.khan-lower-lower-left{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 40px;
+    background-color: #0e2136;
+}
+.khan-lower-lower-title{
+    font-family: manorope;
+    color: #d5e3ff;
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 2px 4px 10px rgba(213, 227, 255, 0.4);
+    text-align: left;
+}
+.khan-lower-lower-page .khan-mini-card-description{
+    width: 800px;
+    font-size: 21px;
+    margin-bottom: 40px;
+}
+.khan-lower-lower-page .yasso-khan-link{
+    background: transparent;
+    color:#C2C6DB;
+    border: 1px solid #C2C6DB;
+    box-shadow: none;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.khan-lower-lower-page .yasso-khan-link:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.khan-lower-lower-right{
+    flex: 2;
+    background-image: linear-gradient(
+        to right,
+        rgba(18, 28, 58, 1) 0%,
+        rgba(18, 28, 58, 0.85) 40%,
+        rgba(18, 28, 58, 0.3) 70%,
+        rgba(18, 28, 58, 0) 100% 
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAFIJdMx1HxOdjKY43J1YvbTxutY66HC-pXWYL8NYXUaZoCjhVM6HyguyOWaxTTO7l3_qM4hbfuAolpcur7HrYT0d1F-1w9DDNz5h1fzW1nOIICw-vmnL-m367hgRo_qWzlJViP1oRHR6Y17g139R3Zo1KGuWbdu0dxZv-7Y3sbfUkvFe7bZsm2cALSKz6hQjnwRLkDyzim9bbiF4FWR4tfB67ZMTr5c2cqxafIV1PWi-wlb6eppI5OuEdOeAm5oFOD19KNQO1Hsfo);
+    min-height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+/* Luxor dark*/
+.luxor-upper{
+    background-image: linear-gradient(
+    to bottom,
+    rgba(3, 14, 31, 0.2) 0%,
+    rgba(3, 14, 31, 0.6) 40%,
+    rgba(3, 14, 31, 0.7) 65%,
+    rgba(3, 14, 31, 1) 100%
+), url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0D7uMyZLAYYzFy3I-5dcnUsl6_anwQARh_OBipsQFMnzwnGuF-7-PyhTPu3pyj19Oi7o1xzjBFBpVM3FSqUd3AjuNQ3uaosZS5d3_ueMmHHISzogQp0vx6yhzqXK7xnIvDAizFTxCV8bSLy7CKhYUipZz_v3MaKlbgvmdjCM4PVOQDKfNEWMHZbbxGYAz_gRM1EY8LkBs6yXCHoQLP2VmzTKpoLGDnc3BoVyMgEm6cY7zqdGQPbHirA3kWm4Ln7B2UILxb9iLodo');
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+}
+.luxor-filler{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: -30px;
+    padding: 10px 100px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.luxor-filler1{
+    color: #e0be62;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+.luxor-filler1:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #f8d36d;
+    text-shadow: 0 0 5px #f8d36d;
+}
+.luxor-filler1::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #e0be62;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+.luxor-filler1:hover::after{
+    width: 100%;
+}
+.luxor-filler2{
+    color: #ccc2b0;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+.luxor-filler2:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #f8d36d;
+    text-shadow: 0 0 5px #f8d36d;
+}
+.luxor-filler2::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #e0be62;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+.luxor-filler2:hover::after{
+    width: 100%;
+}
+.luxor-lower{
+    display: flex;
+    flex-direction: column;
+    padding: 0 80px;
+    margin-top: 100px;
+}
+.luxor-lower-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #e0be62;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin-top: -10px;
+}
+.luxor-lower-lower
+{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    gap: 40px;
+}
+.luxor-lower-lower-left{
+    flex: 1;
+    background-image: linear-gradient(
+        to top,
+        rgba(18, 28, 58, .9) 0%,
+        rgba(18, 28, 58, 0.45) 40%,
+        rgba(18, 28, 58, 0.2) 70%,
+        rgba(18, 28, 58, 0) 100% 
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuC-EHpyo4PgcSIAsj6PhEncSBzRAZmqR7pJD1f7SbcXyKDwxZi3K4O3ualHlyrUM4eBtJQlWkYAkONZ2GCzPllUBot8NqqW1L3TdHilkjEb9yrwJdw5upGgqr3acQzEAeg19j7WY3P6FycDNWDeG4Nft4N6NadL3bfpITw83z_V53msGlMl6vyaYVA7m3dedqKW0IIf7kNMmeny4ICrQ2hswn93SRJyTkLnBpIWfUxoXGSbHCWg-2XmB1xIeLITYkIZpRy-z0FMopo);
+    min-height: 300px;
+    height: 400px;
+    width: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border: solid rgb(124,105,53,0.4) 1px;
+    border-radius: 10px;
+}
+.luxor-lower-lower-left::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(18, 28, 58, 0.35) 0%,
+        rgba(18, 28, 58, 0.2) 50%,
+        rgba(18, 28, 58, 0.1) 100%
+    );
+    transition: opacity 0.4s ease;
+}
+.luxor-lower-lower-left:hover::after{
+    opacity: 0;
+}
+.luxor-lower-lower-left-description{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #e6c364;
+    margin-top: 240px;
+    margin-left: 20px;
+    background-color: rgba(18, 28, 58, 0.35);
+    width: fit-content;
+    border: #737b8b solid 1px;
+    padding: 5px 7px;
+    border-radius: 5px;
+}
+.luxor-lower-lower-left .khan-title {
+    margin-left: 20px;
+    font-size: 30px;
+}
+.luxor-lower-lower-left .luxor-lower-description {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.luxor-lower-lower-right{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 1;
+}
+.luxor-lower-lower-right-card1{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    background-color: #182a44;
+    width: 400px;
+    color: #e6c364;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.luxor-lower-lower-right-card1:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.luxor-lower-lower-right-card-icon{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.luxor-lower-lower-right .khan-title{
+    margin-left: 20px;
+    font-size: 24px;
+    margin-top: 19px;
+}
+.luxor-lower-lower-right .khan-lower-lower-left-description{
+    font-size: 17px;
+    color: #95938e;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.luxor-lower-lower-right-card2{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: #182a44;
+    width: 400px;
+    color: #e6c364;
+    font-size: 25px;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.luxor-lower-lower-right-card2:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.yasso-luxor-link{
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #e6c364;
+    font-size: 17px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+.yasso-luxor-link:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+/* NOW we begin with the light mode, this SHOULDNT take as long as the dark mode since im now more used to writing tons of code
+in small sittings, its currently the 1st of may*/
+.yasso-main-upper{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+.yasso-title-main-light{
+    font-family: manorope;
+    color: #00436a;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgba(14, 30, 58, 0.2  );
+}
+.yasso-title-description-light{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+    margin: 0 auto;
+}
+.yasso-double-cards-light{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.yasso-card1-light{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #c2c2c2;
+    border-radius: 14px;
+    max-width: 700px;
+    cursor: pointer;
+    text-align: left;
+}
+.yasso-card1-left{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCceVjaICgUjixXANNBYjHdSh7E-w6Kg7kZs1V4jkrCI9JsZxTDcpobdtjQZ43l1Fm3fcFmUTeX8tbDR6_GTGjQxSwQ4t-kAvIFYDrFBJBWfYZUKklpoUcyNEAqEl5yg7x4MmlbMe8Hhgts4pnN5rXHAqZR1wpL0h70cVDAUBaf6dxWHWz9wRIrnIokShs5l1U2yHD3qvhmHKT1WrsD4Cg8WcbM-whDVc4PQb1gP60-Y2YO--IWXkKlE5EiHXclnzOVsKwX0YMxrok);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 400px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.yasso-card1-right{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.card-upper-tag{
+    color: #bc902b;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 15px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.card-title-light{
+    font-family: manorope;
+    color: #00436a;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.card-description-light{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 16px;
+    width: 400px;
+    line-height: 1.6;
+}
+.yasso-card-link-light{
+    font-size: 14px;
+    font-weight: 600;
+    color: #00436a;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 170px;
+    padding: fit-content;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    transition: gap 0.2s ease, transform 0.2s ease;
+}
+.yasso-card-link-light:hover {
+    gap: 10px;
+    transform: scale(1.04);
+}
+.yasso-card-link-light::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #00436a;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease, transform 0.2s ease;
+}
+.yasso-card-link-light:hover::after{
+    width: 123px;
+    transform: scale(1.04);
+}
+.yasso-card2-light{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    background-color: #f0f0f0;
+    border: 1px solid #c2c2c2;
+    border-radius: 14px;
+    max-width: 700px;
+    cursor: pointer;
+    text-align: left;
+}
+.yasso-card2-left{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAW5VoQqire5dTBaZzb2r5JcMc_-KkKuWR_BxizlzWnDLj1N9C0kyvDH8cJqdVfrNq23N0o0hj6yEJHAdQQsOS9Yt0Vk-PwA6wl2c-u7WguPQiOIaG2ok3KbGy9dIb9WnOY7J_Vs88BvOywHeYgmmlCNDjm21_SKmkxlyCeEuuYs1-xbtLp1HD-_59tSyZNlkCHie_Uyh0qqBNp9b6VAt1tNozxyrvc2JO19peK1VKI8TJzoB60ZFI1KmlBgiuZe4Pb8ekDMebfApc);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 400px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.yasso-middle-card{
+    display: flex;
+    margin-left: 50px;
+    margin-right: 50px;
+    flex-direction: column;
+    gap: 16px;
+    align-items: left;
+    background-image: linear-gradient(
+        to bottom,
+        rgb(0,0,0,0.0) 0%,
+        rgba(0,0,0,0.7) 100%
+        ), url(martijn-vonk-pRWkjbXDBzs-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 32px 28px;
+    height: 700px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.yasso-middle-card:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.yasso-middle-card-content{
+    margin-top: 450px;
+}
+.middle-card-title-light{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.middle-card-description-light{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    width: 600px;
+    line-height: 1.6;
+}
+.just-to-have-the-link-be-on-the-right{
+    display: flex;
+    flex-direction: row;
+    margin-left: 0;
+}
+.yasso-middle-card-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background: transparent;
+    border-radius: 20px;
+    background-color: rgba(34, 34, 34, 0.6);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 170px;
+    padding-left: 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    transition: gap 0.2s ease, transform 0.2s ease;
+}
+.yasso-middle-card-link:hover {
+    gap: 10px;
+    transform: scale(1.04);
+}
+.yasso-card3-left{
+    background-image: url(thales-botelho-de-sousa--kTPRsNFZXU-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 400px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+/* giza light*/
+.tab-bar-light {
+    flex-direction: column;
+    height: 100vh;
+    margin-bottom: 0;
+    padding: 0; 
+    width: 50px;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    background-color: #0a0f1e;
+    position: fixed; 
+    /* relative to the browser window and will overlap things unless a margin is added */
+    left: 0;
+    top: 65px;
+    /* offsets the element from the top of the page so it doesn't overlap the navbar */
+    z-index: 10000;
+}
+.tab-light-content{
+    height: 100%;
+}
+.tab-light-content li {
+    list-style: none;
+    cursor: pointer;
+    color: #ffffff;
+    margin: 0 10px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+.tab-light-content li:hover {
+    background-color: #000000;
+    color: #335eff;
+}
+.tab-light-content li.active {
+    background-color: #0a0f1e;
+    color: #c2c8e2;
+}
+/* I genuinely dont care enough to tamper with the fucking colors, having the light mode be simply an inverse is NOT my fault and time is running out for me to find an alternative to this mess*/
+.yasso-giza-light-upper{
+    background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.64) 100%
+), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBOgrRL3M4HqhlGMXVXjixakjQRl5ASHkoyLLFE2LDvl7oCg6qGlpUhpKXwJqNaIkyheCksxdjG_qhtfC_WY8X421JOD5-NuTBJgiUQcQlkeGSrQuPvGY3ms3Qc1zoitlTC7nsd2Vl2PV9zFSiiT-JiqUL9r0JYprpsZZt5d9BbgH8imHxShXsb-CRhYuYIhMK4fCzQiFGSK7PIAjC7l1oOKVUx6ipGGMGiMPm3_MU_2oXKfZQb68QWn0pWStjBCPjC_XHRuJjlxFs');
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    text-align: left;
+    padding: 60px;
+}
+.giza-light-upper-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255);
+}
+.giza-light-upper-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+}
+.giza-upper-tag{
+    color: #bc902b;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.giza-light-upper-content{
+    margin-top: 300px;
+}
+.yasso-giza-light-middle{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    max-width: 1000px;
+    margin: 50px auto 10px auto;
+    text-align: center;
+}
+.giza-light-middle-title{
+    font-family: manorope;
+    color: #bb9825;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(231, 193, 67);
+}
+.yasso-giza-card-right{
+    flex: 1;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDfLXELwpkG_5XVP-4BxxXb795ivkTjCAiBIOeXE3Ve5QSvsYU1VWCnDRMEGjqyYV4U4DA__8FyK_WaZiAYdUT3Uo5vEBiI9auX9Jao0M7Ft2mdXpqjzVx3v1gYzOVMut6KkH3w7cHbGhYyAzZa1hAM_7l1z9FlNGk7xNCKa241S0XR4HXweJy3OPkCNMjxNkGIDA-U0OlnL7ZC5HkscoXOrZuhp0J0VtrILx1QAOQgv33zeqyx6kE_23UHyD3iwxce2E-RLjbdHdM);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 400px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.yasso-giza-card-left{
+    flex: 1;
+}
+.yasso-giza-card-title{
+    font-family: manorope;
+    color: #00436a;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(15, 91, 139, 0.2);
+}
+.yasso-giza-card-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 16px;
+    width: 400px;
+    margin-left: 5px;
+    line-height: 1.6;
+}
+.time-to-visit-content{
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+}
+.logo-color-time{
+    color: #bb9825;
+    font-size: 40px;
+}
+.best{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.october{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(37, 115, 179);
+    font-weight: 500;
+    font-size: 16px;
+}
+#giza-light .giza-light-middle-title{
+    margin-left: 0;
+    font-size: 25px;
+    color: #0f5b8b;
+    text-align: center;
+}
+.giza-lower-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: 25%;
+}
+.giza-lower-cards{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    padding: 0 60px;
+    align-items: start;
+    justify-content: center;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px 28px;
+    width: 100%;
+    border-radius: 14px;
+    max-width: 700px;
+    cursor: pointer;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+.card-tag-giza{
+    color: #0f5b8b;
+    background-color: #ffffff;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.card1-upper .card-tag-giza{
+    margin-left: auto;
+}
+.card2-upper .card-tag-giza{
+    margin-left: auto;
+}
+.card:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.card1-upper{
+    background-image:url(https://lh3.googleusercontent.com/aida-public/AB6AXuBY4PF7rjTYiiGymCqtkI2cOA1mvdT-Xo78OQtWqr43lE5DRsBg9N1FeXhj_oWzIZWcJYlgall7_zx66H4Ny-BiSZDLmtBAcqjGvhoJkpRBgToH0UMan_XKE4uSA8HW6iKunLhrWYR_WEeSp-CJ3--S6g8Utu_yTN8Py9_7hKi3vyPtrXg3I2-4vvRl6Euo253GH9yBOVd1A3ITvwvHeNo3tzWtpMT3S6EZHJer3fFY8lhETkxe9NNDUJ6QBuSXAPW5Rl66H1Z0iRo);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 300px;
+    text-align: right;
+}
+.card2-upper{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDLA97hnWvIUz2GwFa8MwSnYQMLiavLYxgTPuVh23mdEb2uc8BZ6rhmc1_Vx-Ggv7-UHOIYQnh9bbKPazolHX08-yrK5H_jzpRxr9F9CRpvhQhv3QhoYG7m8-WN9t7foTpd2LCGsbwJ0GvIpYUa-wtmeKm5J0o2f5udPUeTkAo0G-8XnuDZQ2L2BuwLJ2JwpR_N-bGPuhwmSG7j9_e3b2QUZA_62Jt-L_1sSeFh94WJfo9r-fcL4cSi3IYVlaRXMPCwkqj6AIxKqQ8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 300px;
+}
+.card3-upper{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCZxRpPwM-sSWQJUz_zHYS9eLjyoHDQDnWimF8_sZ6c49bzotj9yTtEmrSx6wPts_FamcISkht2qK6BmAvibi9hTlo5ukAapI51dc8e4XuslP2npfZEyPFsuo6WN0dpcXba_Q-xgd2snsH7ogjgCvY9tRxhe4UgXe9qV1-ZxeNABrpw1lH8Z7a9J2F8u78d5FqQ4t5avu6rrM69FlwgG_V0SVw9b9li7o4ZZqnhw0IF4xA0fGqmuxd7L6XSQqnH55pybGa22d6ODi8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 300px;
+}
+.card-title{
+    font-family: manorope;
+    color: #00436a;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(15, 91, 139, 0.2);
+}
+.card-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 14px;
+    width: 300px;
+    line-height: 1.6;
+}
+.sharm-upper-light{
+    background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 100%
+), url('https://lh3.googleusercontent.com/aida-public/AB6AXuBDqtC5Bw78TPW8VM0Ee4eDqx_kJops4WqN0depKp35LCdi4QaCqnXGsdbszHH3gvXpjj4Ug0BYVPxhz6FN5lXWyVZlGOwZYQiPQ6lkQ1hSd8OEyAOTF06IDeVI2e0pUNeRceSbCQwlRMEL5EhJngR4ppqotisMqVEJjUqf6qiStKSKHXR_OfhyIUX0ssTSmhbOWFejg9EDu2oI5ZHcaGuBefmK7GBRRa9vvwqRqT5HM_29c63yeGZtnx37441e4yrf8S8I3k5N8nk');
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px;
+}
+.sharm-upper-light-tag{
+    color: #fddda8;
+    background-color: #1a5e89;
+    border-radius: 10px;
+    padding: 5px 10px;
+    border: 1px solid #fddda8;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 10px;
+    font-size: 20px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sharm-upper-light-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255);
+}
+.sharm-upper-light-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 2000px;
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 16px;
+    max-width: 550px;
+    line-height: 1.6;
+}
+.sharm-lower-upper-light{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: -20px;
+    max-width: 1000px;
+    margin-left: 80px;
+    text-align: left;
+}
+.sharm-lower-upper-light-item{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #41474f;
+    font-weight: 400;
+    font-size: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.sharm-lower-upper-light-item:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #1a5e89;
+}
+.sharm-lower-upper-light-item::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #1a5e89;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+.sharm-lower-upper-light-item:hover::after{
+    width: 100%;
+}
+#sharm-light .yasso-line{
+    background-color: #000000;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+}
+.Mid-sharm-light-title{
+    font-family: maorope;
+    color: #1a5e89;
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 0;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.mid-sharm-content{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mid-sharm-left{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDuXJlqCUGHYGGLPzaHq_hUe5sccpF86VjnpofZCs39VCvAzipUyEf3KnJoZPPI_T8kcO62MY8MBRvxRRdhjuKUMO0mbByOZ2tTmlF0b-YwuNSI2a_m68xq3ukUpHodyViYWXC-ONUYCjolTa7CAGMJI1DRyAvlHUmGz4XlA0BWajRnY0xSSyzREa2l7r3r9PzUDF22Jjoq9NFGcKUwGm6AJvq8DktWGMq2uH_cE5WKfvPe82L1nVUv-eghkqA5tDF9b9zeg7ToBA8);
+    background-image: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 60%), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDuXJlqCUGHYGGLPzaHq_hUe5sccpF86VjnpofZCs39VCvAzipUyEf3KnJoZPPI_T8kcO62MY8MBRvxRRdhjuKUMO0mbByOZ2tTmlF0b-YwuNSI2a_m68xq3ukUpHodyViYWXC-ONUYCjolTa7CAGMJI1DRyAvlHUmGz4XlA0BWajRnY0xSSyzREa2l7r3r9PzUDF22Jjoq9NFGcKUwGm6AJvq8DktWGMq2uH_cE5WKfvPe82L1nVUv-eghkqA5tDF9b9zeg7ToBA8);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    height: 380px;
+    width: 600px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+.sharm-lower-tag{
+    color: #ffffff;
+    background-color: #7b580b;
+    width: fit-content;
+    margin-left: 0;
+    margin-top: 0;
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    padding: 5px 10px;  
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.mid-sharm-right{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sharm-lower-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-left: 10px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+.sharm-lower-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 400px;
+    line-height: 1.6;
+}
+.mid-sharm-right{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sharm-icon{
+    color: #2e90cd;
+    font-size: 30px;
+}
+.mid-sharm-right-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1a5e89;
+    font-size: 35px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: 0;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.mid-sharm-right-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 20px;
+    width: 400px;
+    line-height: 1.6;
+}
+.mid-sharm-right-link{
+    font-size: 14px;
+    font-weight: 600;
+    color: #a2d1ff;
+    background-color: #0f5b8b;
+    border-radius: 6px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 170px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    transition: gap 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 0 10px rgb(15, 91, 139, 0.5);
+}
+.mid-sharm-right-link:hover {
+    gap: 10px;
+    transform: scale(1.04);
+}
+.sharm-bottom{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: 200px;
+    margin-right: auto;
+}
+.image{
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCLS7bSS2dKDBJpjRs34GZTzBK-8dwJd3zvv0edCsFE2IeVkn6E9ZjM7c0lwTHneungMBSfXqxYq6Yssz4wzFmTRRPk5knJIbUj3Eoqfa5QLIVYobXg9Piwpq93NNzxWKuIJd4EWfpqtCn9-yMgzGA-kambrualE9Y2MDRGHgSBi0R5P2aVKH-LoZe6L_YJC_rmYskUU1rQgDByikDBzKHQsJbEA9hGsrO-PltNimr3B_-SXSQI-F4zZEUhTHW8pRdHz3sKMAIGzE0);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 600px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+.just-to-split-conditions{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+.conditions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conditions-title{
+    font-family: manorope;
+    color: #000000;
+    font-size: 35px;
+    font-weight: 600;
+    width: 400px;
+    line-height: 1.2;
+    margin-left: 10px;
+    margin-bottom: 16px;
+    letter-spacing: 1px;
+}
+.left-conditions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.conditions-line{
+    background-color: #000000;
+    height: 2px;
+    width: 100%;
+    margin-left: 10px;
+}
+.description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    width: 400px;
+    line-height: 1.6;
+}
+.right-conditions{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right-conditions .condition{
+    color: #0f5b9a;
+    text-align: right;
+}
+.description-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #191c1f;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: 0;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.actual-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 20px;
+    width: 400px;
+    line-height: 1.6;
+}
+.description-link{
+    font-size: 20px;
+    font-weight: 600;
+    color: #0f5b8b;
+    border-radius: 6px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    width: 170px;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 20px;
+    transition: gap 0.2s ease, transform 0.2s ease, color 0.3s ease;
+}
+.description-link:hover {
+    gap: 10px;
+    transform: scale(1.04);
+    color: #7b580b;
+}
+/*luxor light*/
+.luxor-upper-light{
+    display:  flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 16px;
+    background-image:
+    linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuDspll6tQQ6kqRcQOUKIZY5evH-eWZcooC-NWe0JEFYH2-T3LTxAQuCAN7TDd8wf9f66GZHniWvxBqoEkEbnXaWmgEPSbiCW2X9ZS2yyGN7kQ3g2lA046NRjdlqdzmotw_SgtpqqT4LYPVrwIj3XVAnH48-b0cWG3vcChMJPtLNpmsMtK8pi3hL50LZ2GOj6_Lbm1FGiX5gx5h3Uv69D18vnIPXS0gRvEf-UeVYPQd_uepNrRjJVnNbriZrNVXJkzEJWdhSBTZ47ps);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 100%;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 0;
+}
+.yasso-luxor-upper-light-tag{
+    color: #fddda8;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+.yasso-luxor-upper-light-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255, 0.5);
+}
+.yasso-luxor-upper-light-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 550px;
+    color:#ffffff;
+    align-self: center;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.6;   
+}
+.active-stuff-luxor-light{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin-top: 20px;
+    max-width: 1000px;
+    margin-left: 80px;
+    margin-bottom: -20px;
+    text-align: left;
+}
+.active-stuff-luxor-light-thingie{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #41474f;
+    font-weight: 400;
+    font-size: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.active-stuff-luxor-light-thingie:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #1a5e89;
+}
+.active-stuff-luxor-light-thingie::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #c7a127;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+.active-stuff-luxor-light-thingie:hover::after{
+    width: 100%;
+}
+.luxor-middle-light{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e0e0e0;
+
+}
+.luxor-middle-light-right{
+    flex: 1;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA8R3STwYiUrdZCfy0bQoyHDG6Ac8gfMRVJbYha3uZ6VN8-FYOoSr3GbUkOnKIpUdF4sc7Hr1SxVaJWEsWYsEzTtValZhH_29P-HmqNhfo4G_NE3WmhTylOhuuZXExvJDYIKXZZazl8Cj2E3VYfOMeGQThtyQmqGiCOl_HxipipH-taIz9hFuqgdOrMu_Qfv11bNWF42CB1uiEUwu-H1QZ0b2ViImArx-Z9XLWZNRIwSNwPhtG6pj9UZuVdl2YitZjD2bSo8Qat_DM);
+    background-size: auto; /* I just realized that background size auto solves a ton of my issues, i gotta go back to change some stuff now, shit)*/
+    /*after playing around with this, size auto is only good if the photo isnt going to be a background photo with content inside of it*/
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 380px;
+    width: 400px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+.luxor-missle-light-left{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.luxor-middle-light-right-title{
+    font-family: manorope;
+    color: #0f5b9a;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255, 0.5);
+}
+.luxor-middle-light-right-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    max-width: 550px;
+    color: #4c5259;
+    align-self: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+.luxor-middle-light-right-explore{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c7a127;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.6;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+.luxor-middle-light-right-explore:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #1a5e89;
+}
+.lower-middle-luxor-light-title-but-not-that-big{
+    font-family: manorope;
+    color: #1a5e89;
+    margin-left: 45%;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.luxor-lower-upper-light{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -20px;
+    max-width: 1000px;
+    text-align: left;
+}
+.luxor-lower-upper-left{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-image: linear-gradient(
+    to bottom,
+    rgba(8, 64, 95, 0) 0%,
+    rgba(8, 64, 95, .9) 100%
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAVN7_gd_CMOBu0zbLBbZYW4ZrtT7s_5ExkcuaqVuTwVpN3fGErn6hTgSG8qhzDs1yAJkWIZkDUmXBvFvV-Nt8MryhM3sIvToyf1QQQMYc7n0z743gosbdN2jGXTlJEuHaC_4JkHX6SwZBDT5-4tsIBa5jgey9lU9FtYSiomtnKp4sSzZKueCqFqrg00DhhP0Uvyelc7zqoAymWAuBPc_xf5uVClQB0msw6zgnKpUeg3nPVk4VNXD5WcKtlnKe13pwjCi-9GjUerqg);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 390px;
+    width: 510px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, background-size 0.3s ease;
+}
+.luxor-lower-upper-left:hover{
+    transform: scale(1.05);
+}
+.luxor-lower-upper-tag{
+    margin-top: 62%;
+    margin-left: 10px;
+    color: #fddda8;
+    font-size: 20px;
+}
+.luxor-lower-upper-right{
+    display: flex;
+    background-color: #d4defa;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 16px;
+    width: 40%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 20px;
+}
+.luxor-lower-upper-right:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}   
+.luxor-lower-upper-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 19px;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255, 0.5);
+}
+.luxor-lower-upper-right-icon{
+    color: #7b580b;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.luxor-lower-upper-right-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1a5e89;
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.luxor-lower-upper-right-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 19px;
+    margin-left: 10px;
+    width: 400px;
+    max-width: 300px;
+    line-height: 1.6;
+}
+.luxor-lower-lower-light{
+    display: flex;
+    flex-direction: row;
+    gap: 80px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.luxor-lower-lower-light-right{
+    background-image: linear-gradient(
+    to bottom,
+    rgba(8, 64, 95, 0) 0%,
+    rgba(8, 64, 95, .9) 100%
+    ), url(https://lh3.googleusercontent.com/aida-public/AB6AXuD1A5F2vHewlxNDTu4Y1SR2lexOgYPSXzLFx5y9qIKPV9NKVaaNraujva4cvpxgHASekwZl-HlG4M3Y7jrJgZlWCTeneXzMKP-yWcB_S6FfcncHScvi3pqaTJQ2hIW64WNbdZA-YPcBsMyER1M77qq_W9utWDT60P0fvj2XN-j7lEi-DxNkArrYe59Q-aNT2YNRJ5qIZhb9-O_ngw38VaBmMgafTpAYaRJlBWVo0tq-SDZsWui5WfCax3_D7p-otAZKoY1UTxXJuWE);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 600px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 0;
+    transition: transform 0.3s ease, background-size 0.3s ease;
+}
+.luxor-lower-lower-light-right:hover{
+    transform: scale(1.05);
+}
+.luxor-lower-lower-right-light-tag{
+    color: #fddda8;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 52%;
+    margin-left: 10px;
+}
+.luxor-lower-lower-right-light-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255, 0.5);
+}
+.luxor-lower-lower-light-left{
+    display: flex;
+    background-color: #d4defa;
+    flex-direction: column;
+    border-radius: 12px;
+    gap: 16px;
+    width: 40%;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    padding: 20px;
+}
+.luxor-lower-lower-light-left:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+}
+.luxor-lower-lower-light-left-icon{
+    color: #7b580b;
+    margin-top: 30px;
+    margin-left: 10px;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+.luxor-lower-lower-light-left-title{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #1a5e89;
+    font-size: 30px;
+    margin-left: 10px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+}
+.luxor-lower-lower-light-left-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 19px;
+    margin-left: 10px;
+    width: 400px;
+    max-width: 300px;
+    line-height: 1.6;
+}
+.khan-upper-light{
+    display: flex;
+    background-image: url(faqih-abdul-y5r2QFx97aI-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 60%;
+    height: 600px;
+    width: 100%;
+    filter: brightness(.7);
+    text-align: center;
+    flex-direction: column;
+}
+.khan-light-upper-tag{
+    margin-top: 20%;
+    color: #2a85fc;
+    text-transform: uppercase;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.khan-light-upper-title{
+    font-family: manorope;
+    color: #ffffff;
+    font-size: 60px;
+    margin-left: 10px;
+    margin-top: 2px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(255, 255, 255);
+}
+.khan-light-upper-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #ffffff;
+    align-self: center;
+    font-weight: 400;
+    font-size: 25px;
+    max-width: 600px;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 19px;   
+}
+.filler-content-i-dont-know-anymore{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: 5%;
+    margin-right: auto;
+}
+.filler-content{
+    color: #41474f;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
+}
+.filler-content:hover{
+    transform: scale(1.02);
+    filter: brightness(1.1);
+    color: #a64b00;
+}
+.filler-content::after{
+    content: "";
+    position: absolute;
+    width: 0; 
+    height: 2px;
+    background-color: #a64b00;
+    left: 0;
+    bottom: -5px;
+    transition: width 0.3s ease;
+}
+.filler-content:hover::after{
+    width: 100%;
+}
+#khan-light .yasso-line{
+    background-color: #b7b8bd;
+    margin-top: -20px;
+}
+.khan-light-middle{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-left: 10%;
+    margin-right: auto;
+    background-color: #d6dff8;
+    border-radius: 12px;
+}
+.khan-light-middle-left{
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    padding: 20px;
+    transition: transform 0.3s ease, filter 0.3s ease, size 0.3s ease, brightness 0.3s ease;
+}
+.khan-light-middle-left:hover{
+    transform: scale(1.02);
+    filter: brightness(2);
+}
+.khan-light-middle-title{
+    font-family: manorope;
+    color: #3e2723;
+    font-size: 40px;
+    font-weight: 400;
+    max-width: 500px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(62, 39, 35, 0.2);
+}
+.khan-light-middle-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #4c5259;
+    font-weight: 400;
+    font-size: 20px;
+    width: 500px;
+    line-height: 1.6;
+}
+.khan-light-middle-tag{
+    color: #a64b00;
+    font-size: 20px;
+    font-weight: 500;
+}
+.khan-light-middle-middle{
+    background-image: url(agnieszka-stankiewicz-obMdrL5pFWI-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-size 0.3s ease
+}
+.khan-light-middle-middle:hover{
+    transform: scale(1.05);
+}
+.khan-light-middle-right{
+    background-image: url(dsc_0388-1024x682.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+    margin-top: 30px;
+    border-radius: 12px; 
+    transition: transform 0.3s ease, background-size 0.3s ease;   
+}
+.khan-light-middle-right:hover{
+    transform: scale(1.05);
+}
+.khan-lower-title-left{
+    font-family: manorope;
+    color: #3e2723;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-left: 10%;
+    margin-bottom: 16px;
+    text-shadow: 0 0 18px rgb(62, 39, 35, 0.2);
+    margin-bottom: 30px;
+}
+.khan-lower-lower-light{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    max-width: 1000px;
+    margin-right: auto;
+}
+.khan-lower-lower-light-left{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,.7)100%
+    ), url(cansu-sarp-wIr1CdJHjRs-unsplash.jpg);
+    background-size: cover;
+    background-position: center 50%;
+    background-repeat: no-repeat;
+    height: 380px;
+    width: 600px;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-left: 10%;
+    transition: transform 0.3s ease, background-size 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.khan-lower-lower-light-left:hover{
+    transform: scale(1.05);
+}
+.khan-lower-lower-light-left-tag{
+    color: #ffffff;
+    background-color: rgba(119, 119, 119, 0.336);
+    border-radius: 12px;
+    font-size: 15px;
+    padding: 7px 7px;
+    width: fit-content;
+    font-weight: 500;
+    margin-left: 10px;
+    margin-bottom: 8px;
+}
+.khan-lower-lower-light-left-title{
+    font-family:manorope;
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.khan-lower-lower-light-left-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #9b9b9b;
+    margin-bottom: 4%;
+    margin-left: 3%;
+    max-width: 500px;
+}
+.khan-lower-lower-light-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+    gap: 30px;
+    color: #d6dff8;
+}
+.khan-lower-lower-light-card{
+    background-color: #d6dff8;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    box-shadow: rgba(214, 223, 248, 1) 0px 2px 4px, rgba(214, 223, 248, 0.3) 0px 7px 13px -3px, rgba(214, 223, 248, 0.2) 0px -3px 0px inset;
+    border-radius: 12px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.khan-lower-lower-light-card:hover{
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+.khan-lower-lower-light-card-icon{
+    font-size: 30px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #ad5a15;
+}
+.khan-lower-lower-light-card-title{
+    font-family:manorope;
+    color: #6f5e5b;
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 400;
+    margin-left: 10px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+.khan-lower-lower-light-card-description{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #84888d;
+    margin-bottom: 4%;
+    margin-left: 3%;
+    max-width: 500px;
+}
+.khan-lower-lower-light-card-link{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #c58b5b;
+    margin-bottom: 4%;
+    margin-left: 3%;
+    max-width: 500px;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+.khan-lower-lower-light-card-link:hover{
+    transform: scale(1.05);
+}
+

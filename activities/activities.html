@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>KEMEXRA — Page Name</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="activities.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+<!--  navbar  -->
+<nav class="navbar">
+    <div class="logo">KEMEXRA</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="activities.html">Activities</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="souvenirs.html">Souvenirs</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="reservations.html">Reservations</a>
+    </div>
+    <div style="display:flex; gap:10px; align-items:center;">
+        <button class="theme-btn" onclick="toggleTheme()">☀️ Light</button>
+        <a class="action-btn" href="login.html">LOG IN</a>
+    </div>
+</nav>
+<!--  Default main page dark-->
+<div id="dark-mode-layout">
+    <div id="main-stage" class="not-active">
+        <div class="yasso-default-activity-page" class="not-active">
+        <div class="yasso-title-container">
+            <h1 class="yasso-title">Experience everything Egypt has to offer</h1>
+            <p class="yasso-title-description">Embark on a journey through antiquity, where monumental legacies and hidden marvels await discovery in an atmosphere of unparalleled exclusivity.</p>
+        </div>
+    
+        <div class="yasso-locations">
+            <div class="yasso-card yasso-sphinx" data-location="giza">
+                <div class="yasso-tag-container">
+                    <span class="yasso-tag">Giza</span>
+                    <span class="yasso-tag">Monumental</span>
+                </div>
+                <h2 class="yasso-card-title">Pharaonic Legacy</h2>
+                <p class="yasso-card-description">Stand before the last remaining wonder of the ancient world.</p>
+            </div>
+
+            <div class="yasso-card yasso-sharm" data-location="sharm">
+                <div class="yasso-tag-container">
+                    <span class="yasso-tag">Red Sea</span>
+                    <span class="yasso-tag">Natural Wonder</span>
+                </div>
+                <h2 class="yasso-card-title">Crystal Waters</h2>
+                <p class="yasso-card-description">Explore the beauty of the deep red sea.</p>
+            </div>
+
+            <div class="yasso-card yasso-luxor" data-location="luxor">
+                <div class="yasso-tag-container">
+                    <span class="yasso-tag">Luxor</span>
+                    <span class="yasso-tag">Historical</span>
+                </div>
+                <h2 class="yasso-card-title">Pillars of Thebes</h2>
+                <p class="yasso-card-description">Walk through the world's greatest open-air museum.</p>
+            </div>
+
+            <div class="yasso-card yasso-almoez" data-location="almoez">
+                <div class="yasso-tag-container">
+                    <span class="yasso-tag">Al-Moez</span>
+                    <span class="yasso-tag">Cultural</span>
+                </div>
+                <h2 class="yasso-card-title">Spice Route</h2>
+                <p class="yasso-card-description">Journey through the heart of Old Cairo.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Sphinx dark -->
+<div id="sphinx-stage" class="not-active">
+    <div class="tab-bar">
+        <ul class="tab-content">
+            <li data-target="sphinx-stage"><i class="bi bi-triangle-fill"></i></li>
+            <li data-target="sharm-stage"><i class="bi bi-water"></i></li>
+            <li data-target="luxor-stage"><i class="bi bi-bank"></i></li>
+            <li data-target="khan-stage"><i class="bi bi-shop-window"></i></li>
+            <li data-target="main-stage"><i class="bi bi-house-door-fill"></i></li>
+        </ul>
+    </div>
+    <div class="sphinx-top-page">
+        <h2 class="sphinx-title-mini">Giza Plateau</h2>
+        <h1 class="sphinx-title">Pharonic Legacy</h1>
+        <p class="sphinx-description">Stand before the last remaining wonder of the ancient world. An exclusive journey into the monumental triumphs of a civilization lost to time.</p>
+    </div>
+    
+    <div class="yasso-sphinx-lower">
+        <div class="yasso-history">
+            <p class="yasso-sphinx-lower-tag">The Genesis</p>
+            <h2 class="yasso-sphinx-card-title">Archeticts of Eternity</h2>
+            <p class="yasso-sphinx-description">Constructed over 4,500 years ago, the pyramids stand as a testament to human ingenuity and divine ambition. Explore the inner chambers with our resident Egyptologists.</p>
+            <a href="#" class="yasso-sphinx-link">Discover History</a>
+        </div>
+        <div class="yasso-sphinx-card">
+            <div class="yasso-mini-icon-color"><i class="bi bi-key-fill"></i></div>
+            <h3 class="yasso-mini-card-title">Private access</h3>
+            <p class="yasso-mini-card-description">Exclusive before-hours entry to the Sphinx enclosure and private tomb access.</p>
+            <a href="#" class="yasso-sphinx-link-low-effort">Request Access -></a>
+        </div>
+        <div class="yasso-sphinx-card-2">
+            <div class="yasso-mini-icon-color"><i class="bi bi-car-front-fill"></i></div>
+            <h3 class="yasso-mini-card-title">Dune Treks</h3>
+            <p class="yasso-mini-card-description">Tear through the shifting Sahara dunes in high-performance 4x4s as the sun dips below the horizon.</p>
+            <a href="#" class="yasso-sphinx-link-low-effort">View Itinerary -></a>
+        </div>
+    </div>
+    <div class="yasso-extra-activity-sphinx">
+        <div class="yasso-alittletotheleft">
+        <p class="yasso-sphinx-lower-tag">Masterpiece</p>
+            <h2 class="yasso-sphinx-card-title">The wonders of Egyptian engineering</h2>
+            <p class="yasso-sphinx-description">Venture into the heart of the tombs with expert Egyptologists to witness the ingenuity that defined a civilization.</p>
+            <a href="#" class="yasso-sphinx-link">Venture into the tombs</a>
+        </div>
+    </div>
+    
+</div>
+<!-- Sharm dark -->
+<div id="sharm-stage" class="not-active">
+    <div class="tab-bar">
+        <ul class="tab-content">
+            <li data-target="sphinx-stage"><i class="bi bi-triangle-fill"></i></li>
+            <li data-target="sharm-stage"><i class="bi bi-water"></i></li>
+            <li data-target="luxor-stage"><i class="bi bi-bank"></i></li>
+            <li data-target="khan-stage"><i class="bi bi-shop-window"></i></li>
+            <li data-target="main-stage"><i class="bi bi-house-door-fill"></i></li>
+        </ul>
+    </div>
+    <div class="sharm-top-page">
+        <h2 class="sharm-title-mini">Deep Blue Sharm</h2>
+        <h1 class="sharm-title">Red Sea Diving</h1>
+        <p class="sharm-description">Descend into a world of vibrant coral gardens and historic shipwrecks. Experience the unparalleled clarity and marine biodiversity of the Red Sea with our expert-guided expeditions.</p>
+        <div class="button-placement">
+        <button class="btn-primary">Book a Dive</button>
+        <button class="btn-secondary">View Equipment</button>
+        </div>
+    </div>
+    <hr class="yasso-line">
+    <div class="sharm-lower">
+        <div class="sharm-lower-left">
+        <div class="yasso-lower-page-text">
+            <h1 class="sharm-title">Ras Mohammed National Park</h1>
+            <p class="sharm-description">Egypt's premier national park offers dramatic drop-offs, massive gorgonian sea fans, and encounters with pelagic species. Shark Reef and Yolanda Reef are renowned for their staggering currents and nutrient-rich waters that attract schools of barracuda, snappers, and batfish.</p>
+            <p class="yasso-sharm-tag"><i class="bi bi-droplet-fill"></i>Depth: 10m-40m+</p>
+            <p class="yasso-sharm-tag"><i class="bi bi-geo-alt-fill"></i>Location: Sharm El Sheikh</p>
+            <p class="yasso-sharm-tag"><i class="bi bi-alarm-fill"></i>Duration: 2 hours</p>
+            <p class="yasso-sharm-tag"><i class="bi bi-people-fill"></i>Group Size: 2-4</p>
+            <p class="yasso-sharm-tag"><i class="bi bi-eye-fill"></i>Visibility: Moderate</p>
+        </div>
+        </div>
+        <img class="sharm-lower-right" src="The_cargo_of_the_Yolanda_is_now_home_for_many_kind_of_fishes.jpg">
+    </div>
+    <div class="sharm-lower-lower">
+        <p class="sharm-title-mini">Services</p>
+        <h1 class="sharm-title">Equipment & Guides</h1>
+        <div class="sharm-cards-lower">
+            <div class="sharm-card">
+                <div class="sharm-card-icon"><i class="bi bi-water"></i> </div>
+                <h2 class="sharm-card-title">
+                    Premium Gear Rental
+                </h2>
+                <p class="sharm-card-description">
+                    Top-tier, regularly serviced equipment from leading brands. Including nitrox-compatible computers, regulators, and specialized deep-water thermal protection.
+                </p>
+                <a href="#" class="sharm-card-link">View Inventory →</a>
+            </div>
+            <div class="sharm-card">
+                <div class="sharm-card-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <h2 class="sharm-card-title">
+                    Expert Instruction
+                </h2>
+                <p class="sharm-card-description">
+                    From initial certification to advanced technical diving. Our multilingual PADI & SSI certified master instructors ensure safety and skill mastery.
+                </p>
+                <a href="#" class="sharm-card-link">Explore Courses →</a>
+            </div>
+            <div class="sharm-card">
+                <div class="sharm-card-icon"><i class="fa-solid fa-ship"></i> </div>
+                <h2 class="sharm-card-title">
+                    Private Charters
+                </h2>
+                <p class="sharm-card-description">
+                    Exclusive access to pristine dive sites aboard luxury yachts. Customized itineraries, private guides, and gourmet onboard catering for intimate groups.                </p>
+                <a href="#" class="sharm-card-link">Charter a Vessel →</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--  khan dark -->
+<div id="khan-stage" class="not-active">
+    <div class="tab-bar">
+        <ul class="tab-content">
+            <li data-target="sphinx-stage"><i class="bi bi-triangle-fill"></i></li>
+            <li data-target="sharm-stage"><i class="bi bi-water"></i></li>
+            <li data-target="luxor-stage"><i class="bi bi-bank"></i></li>
+            <li data-target="khan-stage"><i class="bi bi-shop-window"></i></li>
+            <li data-target="main-stage"><i class="bi bi-house-door-fill"></i></li>
+        </ul>
+    </div>
+    <div class="khan-top-page">
+        <p class="khan-title-mini">The spice route</p>
+        <h1 class="khan-title">Al-Moez & Bazaar</h1>
+        <p class="khan-description">Step into the labyrinth of Islamic Cairo. A sensory journey through centuries of artisanal craftsmanship, exotic spices, and the timeless hum of the historic souks.</p>
+        <a href="#" class="yasso-khan-link">Book Guided Walk</a>
+        
+    </div>
+    <hr class="yasso-line">
+            <h2 class="khan-lower-title">
+                Treasures of the Labyrinth
+                <hr class="khan-lower-title-line">
+            </h2>
+    <div class="khan-lower-page">
+        <div class="khan-lower-left">
+            <p class="khan-lower-left-mini-title">Sensory Experience</p>
+            <h2 class="khan-lower-left-title">The Spice Markets</h2>
+            <p class="khan-lower-left-description">Inhale the intoxicating aromas of saffron, cardamom, and frankincense. The spice merchants of Khan el-Khalili continue a trade that has flourished here since the 14th century.</p>
+        </div>
+        <div class="khan-lower-right">
+            <div class="yasso-sphinx-card">
+                <div class="yasso-mini-icon-color"><i class="bi bi-cup-hot"></i></div>
+            <h3 class="yasso-mini-card-title">Fishawi's cafe</h3>
+            <p class="khan-mini-card-description">Sip mint tea in the mirror-lined cafe that has operated continuously for over 200 years.</p>
+            </div>
+            <div class="yasso-sphinx-card">
+                <div class="yasso-mini-icon-color"><i class="bi bi-gem"></i></div>
+            <h3 class="yasso-mini-card-title">Artisanal Copper</h3>
+            <p class="khan-mini-card-description">Witness coppersmiths crafting intricate trays and lanterns in the Street of the Tentmakers.</p>
+            </div>
+        </div>
+    </div>
+    <div class="khan-lower-lower-page">
+        <div class="khan-lower-lower-left">
+            <h2 class="khan-lower-lower-title">Curated bazar tours</h2>
+            <p class="khan-mini-card-description">Navigate the complex alleys with our expert historians. Gain access to private artisan workshops and hidden architectural marvels rarely seen by tourists.</p>
+            <a href="#" class="yasso-khan-link">View Itineraries</a>
+        </div>
+        <div class="khan-lower-lower-right">
+        </div>
+    </div>
+</div>
+<!-- Luxor dark-->
+ <div id="luxor-stage" class="not-active">
+    <div class="tab-bar">
+        <ul class="tab-content">
+            <li data-target="sphinx-stage"><i class="bi bi-triangle-fill"></i></li>
+            <li data-target="sharm-stage"><i class="bi bi-water"></i></li>
+            <li data-target="luxor-stage"><i class="bi bi-bank"></i></li>
+            <li data-target="khan-stage"><i class="bi bi-shop-window"></i></li>
+            <li data-target="main-stage"><i class="bi bi-house-door-fill"></i></li>
+        </ul>
+    </div>
+    <div class=" luxor-upper">
+        <p class="khan-title-mini">The pillars of thebes</p>
+        <h1 class="khan-title">Luxor & Temples</h1>
+        <p class="khan-description">Navigate the sprawling columns of the New Kingdom. Stand amidst a forest of stone where the ingenuity of ancient architects turned desert dust into an eternal testament of power.</p>
+
+    </div>
+    <div class="luxor-filler">
+        <p class="luxor-filler1">Karnak</p>
+        <p class="luxor-filler2">Luxor</p>
+        <p class="luxor-filler2">West bank</p>
+    </div>
+        <hr class="yasso-line">
+        <div class="luxor-lower">
+        <h1 class="khan-title">The Great temple of Amun</h1>
+        <p class="luxor-lower-description">A vast open-air museum and the largest religious building ever constructed.</p>
+        <div class="luxor-lower-lower">
+            <div class="luxor-lower-lower-left">
+             <p class="luxor-lower-lower-left-description">Archaeological Curation</p>
+             <h2 class="khan-title">Hypostyle Hall</h2>
+             <p class="luxor-lower-description">Wander among 134 colossal columns, some reaching 70 feet high, intricately carved with the exploits of ancient kings.</p>
+            </div>
+            <div class="luxor-lower-lower-right">
+               <div class="luxor-lower-lower-right-card1">
+                <div class="luxor-lower-lower-right-card-icon"><i class="bi bi-compass-fill"></i></div>
+                <h2 class="khan-title">Guided Expiditions</h2>
+                <p class="khan-lower-lower-left-description">Expert Egyptologists reveal the deciphered secrets of the soaked lake and obelisks</p>
+                <a href="#" class="yasso-luxor-link">Reserve a tour</a>
+               </div>
+               <div class="luxor-lower-lower-right-card2">
+                <div class="luxor-lower-lower-right-card-icon"><i class="bi bi-eye-fill"></i> </div>
+                <h2 class="khan-title">Night Illumination</h2>
+                <p class="khan-lower-lower-left-description">Witness the sanctuary transformed under shadows and theatrical lighting.</p>
+               </div>
+            </div>
+        </div>
+        </div>
+ </div>
+  </div>
+ <!-- light mode-->
+
+ <div class="tab-bar-light">
+        <ul class="tab-light-content">
+            <li data-target="giza-light"><i class="bi bi-triangle-fill"></i></li>
+            <li data-target="sharm-light"><i class="bi bi-water"></i></li>
+            <li data-target="luxor-light"><i class="bi bi-bank"></i></li>
+            <li data-target="khan-light"><i class="bi bi-shop-window"></i></li>
+            <li data-target="main-stage-light"><i class="bi bi-house-door-fill"></i></li>
+        </ul>
+        </div>
+ <div class="light-mode-layout">
+    <!-- main light-->
+
+    <div id="main-stage-light" class="not-active">
+        <div class="yasso-main-upper">
+        <h1 class="yasso-title-main-light">Unveil the Mysteries of the Nile</h1>
+        <p class="yasso-title-description-light">From the sun-drenched pyramids to the vibrant depths of the Red Sea, curate your ultimate Egyptian odyssey with KEMEXRA's exclusive experiences.</p>
+        </div>
+        <div class="yasso-double-cards-light">
+            <div class="yasso-card1-left">
+
+            </div>
+            <div class="yasso-card1-right">
+                <h2 class="card-upper-tag">Giza Pleateau</h2>
+                <h1 class="card-title-light">Pharaonic Legacy</h1>
+                <p class="card-description-light">Stand before the last remaining wonder of the ancient world. An exclusive journey into the monumental triumphs of a civilization lost to time.</p>
+                <a href="#" class="yasso-card-link-light" data-location="giza-light">Explore experience →</a>
+            </div>
+        </div>
+        <div class="yasso-double-cards-light">
+            
+            <div class="yasso-card2-right">
+                <h2 class="card-upper-tag">Sharm El Sheikh</h2>
+                <h1 class="card-title-light">Deep Blue Sharm</h1>
+                <p class="card-description-light">Dive into the pristine waters of the Red Sea. Discover vibrant coral reefs and marine life in a world-class underwater sanctuary, guided by master divers.</p>
+                <a href="#" class="yasso-card-link-light" data-location="sharm-light">Explore experience →</a>
+            </div>
+            <div class="yasso-card2-left">
+            </div>
+        </div>
+        <div class="yasso-middle-card">
+            <div class="yasso-middle-card-content">
+                <h2 class="card-upper-tag">Luxor</h2>
+                <h1 class="middle-card-title-light">The Pillars of Thebes</h1>
+                <div class="just-to-have-the-link-be-on-the-right"><p class="middle-card-description-light">Walk among the colossal columns of Karnak and the Valley of the Kings. Witness the majestic scale of ancient architectural mastery under the desert sun. </p> <a href="#" class="yasso-middle-card-link" data-location="luxor-light">Explore experience →</a></div>
+            </div>
+        </div>
+        <div class="yasso-double-cards-light">
+            <div class="yasso-card3-left">
+
+            </div>
+            <div class="yasso-card1-right">
+                <h2 class="card-upper-tag">cairo</h2>
+                <h1 class="card-title-light">The Gilded Labyrinth</h1>
+                <p class="card-description-light">Trace the glow of a thousand brass lanterns through Cairo's medieval heart. A curated twilight passage through spice-scented alleyways and the living history of the Fatimid era.</p>
+                <a href="#" class="yasso-card-link-light" data-location="almoez-light">Explore experience →</a>
+            </div>
+        </div>
+    </div>
+    <!-- giaz light-->
+    <div id="giza-light" class="not-active">
+        
+        <div class="yasso-giza-light-upper">
+            <div class="giza-light-upper-content">
+            <h2 class="giza-upper-tag">Monumental Heritage</h2>
+            <p class="giza-light-upper-title">The pyramids of Giza</p>
+            <p class="giza-light-upper-description">Witness the enduring legacy of the Pharaohs. An architectural marvel that has stood the test of millennia, bathed in the golden light of the Egyptian sun.</p>
+        </div>
+        </div>
+        <div class="yasso-giza-light-middle">
+            <p class="giza-light-middle-title">The Giza plateau</p>
+        </div>
+        <hr class="yasso-line">
+        <div class="yasso-double-cards-light">
+            <div class="yasso-giza-card-left">
+                <h2 class="yasso-giza-card-title">Echoes of Eternity</h2>
+                <p class="yasso-giza-card-description">The Giza plateau is home to the most iconic monuments of the ancient world. Constructed over 4,500 years ago, these immense structures were designed to protect the pharaohs' bodies and guide them into the afterlife. The precision of their construction remains a subject of awe and study to this day.</p>
+            <div class="time-to-visit">
+                
+                <div class="time-to-visit-content">
+                    <div class="logo-color-time"><i class="bi bi-brightness-high"></i></div>
+                    <div class="time-to-visit-text">
+                        <p class="best"> Best time to visit</p>
+                        <p class="october"> October to April (Cooler Climate)</p>
+                    </div>
+                </div>
+
+            </div>
+            </div>
+
+            <div class="yasso-giza-card-right">
+
+            </div>
+        </div>
+        <hr class="yasso-line">
+        <h2 class="giza-light-middle-title">Discover Architectural Marvels</h2>
+        <div class="giza-lower-cards">
+            <div class="card">
+                <div class="card1-upper">
+                    <p class="card-tag-giza">Khufu</p>
+                </div>
+                <div class="card-lower">
+                    <p class="card-title">The great pyramid</p>
+                    <p class="card-description">The oldest and largest of the three pyramids, originally standing at 146.6 meters. It was the tallest man-made structure in the world for over 3,800 years.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card2-upper">
+                    <p class="card-tag-giza">Khafre</p>
+                </div>
+                <div class="card-lower">
+                    <p class="card-title">The great sphinx</p>
+                    <p class="card-description">A mythical creature with the body of a lion and the head of a human, believed to represent Pharaoh Khafre. It stands as a timeless guardian of the plateau.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card3-upper">
+                    <p class="card-tag-giza">Menkaure</p>
+                </div>
+                <div class="card-lower">
+                    <p class="card-title">Pyramid of Menkaure</p>
+                    <p class="card-description">The smallest of the three main pyramids, noted for its complex internal chambers and the remains of its original red granite casing.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- sharm light-->
+     <!-- side not the only reason i no longer use yass-something is because i thought we were going to merge everything into one CSS folder but now that we're allowed to have multiple CSS folders thats not the case so, you will be missed "yasso-" naming method, gone too soon but still in my heart-->
+    <div id="sharm-light" class="not-active">
+        <div class="sharm-upper-light">
+            <p class="sharm-upper-light-tag">Underwater Exploration</p>
+            <h1 class="sharm-upper-light-title">Deep Blue Sharm</h1>
+            <p class="sharm-upper-light-description">Descend into the vibrant ecosystems of the Red Sea. Experience world-class diving and pristine coral reefs in unparalleled luxury.</p>
+        </div>
+        <div class="sharm-lower-upper-light">
+            <p class="sharm-lower-upper-light-item">Overview</p>
+            <p class="sharm-lower-upper-light-item">Diving Expeditions</p>
+            <p class="sharm-lower-upper-light-item">Snorkeling</p>
+            <p class="sharm-lower-upper-light-item">Marine Conservation</p>
+        </div>
+        <hr class="yasso-line">
+        <h1 class="Mid-sharm-light-title">The Coral Gardens</h1>
+        <div class="mid-sharm-content">
+            <div class="mid-sharm-left">
+                <p class="sharm-lower-tag"><i class="bi bi-star"></i>Featured</p>
+                <h2 class="sharm-lower-title">Ras Mohammed Reserve</h2>
+                <p class="sharm-lower-description">Discover vertical walls plunging into the abyss, teeming with pelagic fish and spectacular coral formations.</p>
+            </div>
+            <div class="mid-sharm-right">
+                <div class="sharm-icon"><i class="fa-solid fa-fish-fins"></i></div>
+                <p class="mid-sharm-right-title">Private Charters</p>
+                <p class="mid-sharm-right-description">Elevate your underwater journey with our exclusive yacht charters. Accompanied by marine biologists, explore untouched dive sites away from the crowds.</p>
+                <a href="#" class="mid-sharm-right-link">Charter a Vessel →</a>
+            </div>
+            
+        </div>
+        <div class="sharm-bottom">
+                <div class="conditions">
+                    <p class="conditions-title">Conditions & Clarity</p>
+                    <div class="just-to-split-conditions">
+                    <div class="left-conditions">
+                        <p class="condition">Visibility</p>
+                        <hr class="conditions-line">
+                        <p class="condition">Water Temp</p>
+                        <hr class="conditions-line">
+                        <p class="condition">Difficulty</p>
+                        <hr class="conditions-line">
+                        <p class="condition">Preferred Season</p>
+                    </div>
+                    <div class="right-conditions">
+                        <p class="condition">30m</p>
+                        <hr class="conditions-line">
+                        <p class="condition">25°C</p>
+                        <hr class="conditions-line">
+                        <p class="condition">Moderate</p>
+                        <hr class="conditions-line">
+                        <p class="condition">June to October</p>
+                    </div>
+                    </div>
+                </div>
+                <div class="description">
+                    <h2 class="description-title">Shallow Water Snorkeling</h2>
+                    <p class="actual-description">For those who prefer to stay near the surface, our guided snorkeling tours offer a window into a kaleidoscopic world of soft corals and gentle sea turtles just meters from our pristine beaches.</p>
+                    <a href="#" class="description-link">Explore spots ></a>
+                </div>
+                <div class="image"></div>
+            </div>
+    </div>
+    <!-- luxor light -->
+     <div id="luxor-light" class="not-active">
+        <div class="luxor-upper-light">
+            <p class="yasso-luxor-upper-light-tag">Luxor & Aswan</p>
+            <p class="yasso-luxor-upper-light-title">The pillars of Thebes</p>
+            <p class="yasso-luxor-upper-light-description">Walk among the colossal ruins of ancient empires. Experience the timeless majesty of Karnak and the sacred beauty of Luxor Temple along the life-giving Nile.</p>
+        </div>
+        <div class="active-stuff-luxor-light">
+            <p class="active-stuff-luxor-light-thingie">Overview</p>
+            <p class="active-stuff-luxor-light-thingie">Karnak Temple</p>
+            <p class="active-stuff-luxor-light-thingie">Luxor Temple</p>
+            <p class="active-stuff-luxor-light-thingie">Philae Temple</p>
+        </div>
+        <hr class="yasso-line">
+        <div class="luxor-middle-light">
+            <div class="luxor-middle-light-left">
+                <p class="luxor-middle-light-right-title">Monuments of eternity</p>
+                <p class="luxor-middle-light-right-description">Theban monuments stand as a testament to the power and devotion of pharaohs past. From the sprawling complex of Karnak, dedicated to the god Amun, to the elegant colonnades of Luxor Temple in the heart of the city, every stone tells a story of divine right and earthly grandeur.</p>
+                <p class="luxor-middle-light-right-explore">Explore History→</p>
+            </div>
+            <div class="luxor-middle-light-right">
+            </div>
+        </div>
+        <p class="lower-middle-luxor-light-title-but-not-that-big">Sacred Precincts</p>
+        <div class="luxor-lower-upper-light"> <!--I'm so tired boss-->
+            <div class="luxor-lower-upper-left">
+                <p class="luxor-lower-upper-tag">Karnak Complex</p>
+                <p class="luxor-lower-upper-title">The Hypostyle Hall</p>
+            </div>
+            <div class="luxor-lower-upper-right">
+                <p class="luxor-lower-upper-right-icon"><i class="bi bi-sun"></i></p>
+                <p class="luxor-lower-upper-right-title">Solar Alignment</p>
+                <p class="luxor-lower-upper-right-description">Witness the architectural precision that aligns these ancient structures perfectly with solstices.</p>
+            </div>
+        </div>
+        <div class="luxor-lower-lower-light">
+            <div class="luxor-lower-lower-light-left">
+                <p class="luxor-lower-lower-light-left-icon"><i class="bi bi-droplet"></i></p>
+                <p class="luxor-lower-lower-light-left-title">The Sacred Lake</p>
+                <p class="luxor-lower-lower-light-left-description">Used by priests for purification rituals before entering the inner sanctums.</p>
+            </div>
+            <div class="luxor-lower-lower-light-right">
+                <p class="luxor-lower-lower-right-light-tag">Luxor Temple</p>
+                <p class="luxor-lower-lower-right-light-title">Avenue of Sphinxes</p>
+            </div>
+            
+            </div>
+        </div>
+    
+    <div id="khan-light" class="not-active">
+            <div class="khan-upper-light">
+                <p class="khan-light-upper-tag">Historical District</p>
+                <p class="khan-light-upper-title">The Spice Route Bazaar</p>
+                <p class="khan-light-upper-description">Wander through centuries of history in the labyrinthine alleys of Al-Moez Street and Khan el-Khalili.</p>
+            </div>
+            <div class="filler-content-i-dont-know-anymore">
+                <p class="filler-content">Overview</p>
+                <p class="filler-content">Artisan</p>
+                <p class="filler-content">Spice Markets</p>
+                <p class="filler-content">Cafes & Dining</p>
+                <p class="filler-content">Map</p>
+            </div>
+           
+        <hr class="yasso-line">
+            <div class="khan-light-middle">
+                <div class="khan-light-middle-left">
+                    <p class="khan-light-middle-title">A Living Museum of Islamic Cairo</p>
+                    <p class="khan-light-middle-description">Step back in time as you traverse Al-Moez Street, arguably the greatest concentration of medieval architectural treasures in the Islamic world. Adjacent lies the famed Khan el-Khalili, a sprawling bazaar where the scent of cardamom and saffron has mingled with the sound of coppersmiths for over 600 years.</p>
+                    <p class="khan-light-middle-tag"><i class="bi bi-clock"></i> Best visited late afternoon</p>
+                </div>
+                    <div class="khan-light-middle-middle">
+                </div>
+                    <div class="khan-light-middle-right">
+                </div>
+            </div>
+        <p class="khan-lower-title-left">Curated Experiences</p>
+        <hr class="yasso-line">
+        <div class="khan-lower-lower-light">
+            <div class="khan-lower-lower-light-left">
+                <p class="khan-lower-lower-light-left-tag">Artisan Quarter</p>
+                <p class="khan-lower-lower-light-left-title">The Coppersmiths' Alley</p>
+                <p class="khan-lower-lower-light-left-description">Witness master artisans shaping raw metal into exquisite lanterns and trays using techniques passed down through generations.</p>
+            </div>
+            <div class="khan-lower-lower-light-right">
+                <div class="khan-lower-lower-light-card">
+                    <p class="khan-lower-lower-light-card-icon"><i class="bi bi-cup-hot"></i></p>
+                    <p class="khan-lower-lower-light-card-title">El Fishawy Cafe</p>
+                    <p class="khan-lower-lower-light-card-description">Sip traditional mint tea in Cairo's oldest cafe, a mirror-lined establishment that has been open continuously for centuries.</p>
+                    <a href="#" class="khan-lower-lower-light-card-link">Discover →</a>
+                </div>
+                <div class="khan-lower-lower-light-card">
+                    <p class="khan-lower-lower-light-card-icon"><i class="fa-brands fa-fort-awesome"></i></p>
+                    <p class="khan-lower-lower-light-card-title">Qalawun Complex</p>
+                    <p class="khan-lower-lower-light-card-description">Step into the golden age of the Mamluks. At the heart of Al-Muizz Street, the Qalawun Complex stands as a breathtaking convergence of light and stone, where sun-drenched stained glass illuminates centuries of history.</p>
+                    <a href="#" class="khan-lower-lower-light-card-link">Discover →</a>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+<!--  footer  -->
+<footer>
+    <p class="footer-logo">KEMEXRA</p>
+    <p class="footer-tagline">Experience Egypt in Ultimate Comfort</p>
+    <div class="footer-socials">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 KEMEXRA. All Rights Reserved.</p>
+</footer>
+
+<script src="shared.js"></script>
+<script src="activities.js"></script>
+</body>
+</html>
