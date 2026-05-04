@@ -1,0 +1,752 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400&display=swap');
+
+
+:root { /*الوان الصفحة كفاريبل*/
+    --bg-deep-blue: #0a192f;      
+    --nav-darker-blue: #0a0f1e;  
+    --gold-accent: #c5a059;
+    --h1:#ffffff;        
+    --white-text:#E1EBF9 ;         
+    --button-gold:#c5a059;
+    --sub-title: #c5a059;               
+    --sky-blue-muted:#16243d;
+    --parent-color:linear-gradient(90deg, rgba(10,20,29,1) 0%, rgba(5,11,16,1) 50%, rgba(10,20,29,1) 100%); 
+    --shadow-color:linear-gradient(to bottom, rgba(10, 25, 47, 0.2) 0%,   rgba(10, 25, 47, 0.7) 40%,   rgba(10, 25, 47, 1) 90% );
+    --line:linear-gradient(to right, transparent, #d4af37, transparent);        
+}
+
+
+
+:root.light-mode { /*الوان الصفحة بنفس الفاريبلز بس لايت */
+    --bg-deep-blue: #E1EBF9;
+    --gold-accent: #2C3E50;
+    --nav-darker-blue:#F0F4FF;
+    --sky-blue-muted:#D1E3F8;
+    --parent-color:#F5F5F5;
+    --white-text:#0a0f1e;
+    --shadow-color:linear-gradient(to bottom, rgba(225, 235, 249, 0) 0%,   rgba(225, 235, 249, 0.6) 50%,  rgba(225, 235, 249, 1) 100% );
+    --h1:#2B4377;
+    --sub-title:#2B4377;
+    --line:linear-gradient(to right, transparent,#2B4377 , transparent);
+    --button-gold:#2B4377;
+}
+
+
+body {
+    background-color: var(--bg-deep-blue);
+    color: var(--gold-accent);
+    transition: 0.3s; 
+}
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration:none;
+}
+/* ===================================================================== */
+
+#header{
+    position:fixed;
+    width:100%;
+    z-index: 3;
+    
+
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: var(--white-text);
+    background-color: var(--nav-darker-blue);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar a {
+    text-decoration: none;
+    color: var(--white-text);
+}
+.navbar a:hover {
+    color: #c9a84c;
+}
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 13px;
+}
+.action-btn {
+    background-color: #c9a84c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 900px;
+    padding: 20px;
+    text-align: center; 
+}
+
+/* ============================================================================================================================================================ */
+
+#hero {
+    background-image: var(--shadow-color)/*linear-gradient(to bottom, rgba(10, 25, 47, 0.2) 0%,   rgba(10, 25, 47, 0.7) 40%,   rgba(10, 25, 47, 1) 90% )*/
+    ,url('./img/homebackground.avif');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.sub-title {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--sub-title); 
+    text-transform: uppercase;
+}
+
+
+#hero h1 { 
+    /*clamp بتخلي حجم الخط يتغير على حسب الشاشة*/
+    font-size: clamp(2.5rem, 6vw, 4.5rem);/*clamp(اكبر قيمة, قيمة متغيرة حسب عرض الشاشة, اقل قيمة*/ 
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    font-family: "Times New Roman", Times, serif; 
+    color: var(--h1);
+}
+
+
+.divider { /*ده عشان اخلي الخط والصورة والخط التاني جمب بعض */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.divider .line { /*جبت ديف فاضي اديتله ارتفاع و عرض ولون فبقى خط صغير*/
+    height: 1px;
+    width: 80px;
+    background: var(--line);/*linear-gradient(to right, transparent, #d4af37, transparent)*/
+}
+
+.divider .scarab {
+    width: 50px;
+}
+
+
+#hero p {
+    font-size: 1.1rem;
+    color: var(--h1);
+    margin-bottom: 35px;
+}
+
+
+.btn-group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.btn {
+    text-decoration: none;
+    padding: 12px 28px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 4px;
+    transition: 0.3s ease;
+    gap: 10px;
+}
+
+
+.btn-gold {
+    background-color: var(--button-gold);
+    color: var(--bg-deep-blue);
+}
+
+.btn-gold:hover {
+    background-color: #f1c40f;
+    transform: translateY(-3px);
+}
+
+
+.btn-outline { /*عاملة كل بوتون كلاس مختلف عشان كنت بفكر اخليهم مختلفين في الالوان بس رجعت في كلامي*/
+    background-color: var(--button-gold);
+    color: var(--bg-deep-blue);
+}
+
+.btn-outline:hover {
+    border-color: var(--gold-accent);
+    background-color: #f1c40f;
+    transform: translateY(-3px);    
+}
+
+/* ========================================================================================================= */
+
+
+#card{
+    background-color: var(--bg-deep-blue);
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+    padding-bottom: 80px;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+
+
+
+.curated-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 20px;
+}
+
+.text {
+    color:#c5a059; 
+    font-family: "Times New Roman", Times, serif; 
+    font-size: 24px;
+    letter-spacing: 4px; 
+    padding: 0 20px;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/*الخطين اللي جمب ال text *//*نفس فكرة  ال ديفايدر فوق بس بطريقة مختلفة*/
+.curated-container::before,
+.curated-container::after { /*قبل وبعد ال ديف ده */
+    content: "";
+    flex: 1; /*هيتمدو وياخدو مساحة*/ /*المساحة اللي هياخدوها هيا مساحة ال curated-container max-width:800px; مش هياخدو عرض الشاشة كلها*/
+    height: 2px; /*سمك الخط*/
+    background: linear-gradient(to right, transparent, #b89c6f); 
+    margin-right: 5px;
+}
+
+.curated-container::after { /*من اليمين للشمال*/
+    background: linear-gradient(to left, transparent, #b89c6f);
+}
+
+
+
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    justify-content: center;
+    gap: 20px;
+    width: 100%;/*بخلي الديف ياخد ال 1300 كاملين من غيرها هتبقى اصغر من ال 1300*/
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+.custom-card{
+    width: 100%;/*1fr*/
+    height: 280px; 
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+
+.custom-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s;
+}
+
+
+.card-overlay{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px;
+    display: flex;
+    gap: 10px;
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: white;
+}
+
+
+.icon-circle{
+    width: 35px;
+    height: 35px;
+    border: 1px solid #d4af37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4af37;
+    font-size: 14px;
+}
+
+
+.card-info h3{
+    font-size: 13px;
+}
+
+.card-info p{
+    font-size: 11px;
+    color: #ccc;
+}
+
+
+.custom-card:hover img{
+    transform: scale(1.08);
+}
+
+.custom-card:hover{
+    transform: translateY(-5px);
+}
+
+/* ===================================================================== */
+
+
+.pharaohs-banner {
+    background-color: var(--bg-deep-blue); 
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    border: 1px solid rgba(212, 175, 55, 0.3); 
+    border-radius: 15px;
+    overflow: hidden;
+    background: var(--parent-color);
+}
+
+
+.banner-img-side {
+    width: 25%;
+    height: 300px;
+}
+
+.banner-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, black 70%, transparent);
+}
+
+.right-img img {
+    mask-image: linear-gradient(to left, black 70%, transparent);
+    /*دي بتستخدم عشان تخفي جزء من العنصر بشكل تدريجي */
+    /*الصورة ظاهرة بالكامل من الشمال لحد 70% من الصورة*/
+    /* بتبدا تختفي تدريجيا من 70% لحد الاخر  */
+}
+
+
+.banner-text {
+    width: 45%;
+    text-align: center;
+    padding: 20px;
+}
+
+.gold-title{
+    color: var(--gold-accent);
+    font-family: 'Cinzel', serif;
+    font-size: 22px;
+    letter-spacing: 3px;
+}
+
+.mini-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.mini-divider i{
+    color: var(--gold-accent);
+}
+
+.mini-divider .line {
+    height: 1px;
+    width: 40px;
+    background: var(--gold-accent);
+}
+
+.banner-text p {
+    color: var(--gold-accent);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+
+.discover-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 25px;
+    border: 1px solid var(--gold-accent);
+    color: var(--gold-accent);
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.discover-btn:hover {
+    background: var(--button-gold);
+    color: var(--bg-deep-blue);
+}
+
+/* ========================================================================= */
+
+
+
+#treasures-slider {
+    background-color: var(--bg-deep-blue);
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.section-title-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.section-title-wrapper .line {
+    height: 1px;
+    flex: 1;
+    max-width: 150px;
+    background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+}
+
+.gold-title {
+    color: #c5a059;
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.slider-desc {
+    color: var(--gold-accent);
+    text-align: center;
+    font-size: 14px;
+    margin-bottom: 40px;
+}
+
+/*ده اللي فيه الاسهم الصور الحركة */
+.carousel-main-wrapper {
+    display: flex;
+    align-items: center;
+    max-width: 1350px;
+    margin: 0 auto;
+    position: relative;
+    padding: 0 60px;
+    width: 100%;
+}
+
+/*ده اللي فيه الكاردات و التراك*/
+.carousel-viewport {
+    width: 100%;
+    overflow-x: hidden;/*من غيرها كل الكاردات هتبان بالعرض */
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory; /*السحب افقي x ولازم يقف عند كل عنصر */
+    scrollbar-width: none;/*في متصفحات بتظهر فيها شريط سكرول لو مكتبتش دي*/
+    padding: 20px 0;
+}
+
+
+/* دي برضو عشان تخفي شريط السكرول */
+.carousel-viewport::-webkit-scrollbar {
+    display: none;
+}
+
+/*فيه الكاردات */
+.carousel-track {
+    display: flex;
+    gap: 25px; 
+    width: max-content;/*العرض على قد المحتوى بالظبط*/
+}
+
+/*كل كارد*/
+.artifact-card {
+    flex: 0 0 calc((100vw - 120px - (3 * 25px)) / 4); /* 0 0 معناها مش هتكبر ومش هتصغر ليها عرض ثابت*//*calc(عرض الشاشة كله - المارجن من الشمال واليمين -المسافات بين الكروت ال 3 جاب بين ال4 كروت / 4 تقسيم المساحة على 4 كروت)*/
+    max-width: 280px; 
+    scroll-snap-align: start;/*كل كارد وانا بعمل سكرول هيقف عند بدايته من الشمال*/
+    background: var(--sky-blue-muted);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    padding: 15px;/*لو شلتها الصورة هتبقى واخدة الديف كله ماعدا المارجن بوتوم اللي تحت*/
+    transition: 0.4s ease;
+}
+
+.artifact-card:hover {
+    border-color: var(--gold-accent);
+    transform: translateY(-8px);
+}
+
+/*الديف اللي فيه الصورة*/
+.artifact-img {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;/*دي بتحدد نسبة العرض للارتفاع   الارتفاع اطول شوية من العرض مهما اتغير الحجم*/
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.artifact-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artifact-card h3 {
+    color: var(--gold-accent);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    font-family: 'Cinzel', serif;
+}
+
+/*السهم*/
+.nav-arrow {
+    background: none;
+    border: none;
+    color: var(--gold-accent);
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.nav-arrow:hover { color: #fff; transform: translateY(-50%) scale(1.2); }
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/*النقط اللي تحت*/
+.slider-dots { display: flex; justify-content: center; gap: 8px; margin-top: 30px; }
+.dot { width: 8px; height: 8px; border-radius: 50%; background: #222; cursor: pointer; transition: 0.3s; }
+.dot.active { background: var(--gold-accent); box-shadow: 0 0 10px var(--gold-accent); }
+
+
+@media (max-width: 1024px) {
+    .artifact-card { flex: 0 0 calc((100vw - 120px - (2 * 25px)) / 3); }
+}
+@media (max-width: 768px) {
+    .artifact-card { flex: 0 0 calc((100vw - 120px - (1 * 25px)) / 2); }
+}
+@media (max-width: 480px) {
+    .artifact-card { flex: 0 0 calc(100vw - 120px); }
+}
+
+/* ============================================================================================================================================ */
+
+
+/* --- Stats Section --- */
+#stats-banner {
+    background-color: var(--bg-deep-blue);
+    padding: 60px 0;
+    border-top: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.stats-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.stat-item img {
+    width: 45px;
+    height: 45px;
+}
+
+.stat-text h3 {
+    color: var(--gold-accent);
+    font-size: 24px;
+    font-family: 'Cinzel', serif;
+}
+
+.stat-text p {
+    color: var(--gold-accent);
+    font-size: 14px;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 50px;
+    background: rgba(212, 175, 55, 0.2);
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-container { flex-direction: column; gap: 30px; }
+    .stat-divider { display: none; }
+    
+}
+
+
+
+
+footer {
+    background-color: var(--nav-darker-blue);
+    color: var(--h1);
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    /* margin-top: 40px; */
+}
+.footer-logo {
+    color: #c9a84c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.footer-tagline {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.footer-socials a {
+    color: #c9a84c;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    color: white;
+}
+.footer-copy {
+    font-size: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
