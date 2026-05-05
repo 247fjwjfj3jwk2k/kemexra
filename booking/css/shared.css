@@ -5,7 +5,7 @@
 }
 body {
     background-color: var(--bgcolor, #0A0F1E);
-    color: var(--textcolor, white);
+    color: var(--textcolor, black);
     transition: background-color 0.3s ease;
 }
 /* عاكس الالوان */
