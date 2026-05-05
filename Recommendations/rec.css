@@ -21,57 +21,28 @@ a{
     --textcolor:#c5a059;
     --homecolor:#a9adc1;;
     --buttoncolor:#d4af37;
+    --bgcolor:#0a1128;
+    --navbg:rgba(10, 15, 30, 0.85);
+    --footerbg:#0a0f1e;
+    --formbg:#deba73;
+    --formcolor:#123f8e;
+    --navlinkcolor:#e6dfcd;
 }
 /* end reset */
 /* عاكس الالوان */
 html.light-mode {
-    filter: invert(1) hue-rotate(180deg);
+    --cardcolor:#e8e0d0;
+    --textcolor:#7a5c1e;
+    --homecolor:#2c2f3a;
+    --buttoncolor:#b8860b;
+    --bgcolor:#f5f0e8;
+    --navbg:rgba(245, 240, 232, 0.95);
+    --footerbg:#e8e0d0;
+    --formbg:#7a5c1e;
+    --formcolor:#f5f0e8;
+    --navlinkcolor:#2c2f3a;
 }
-html.light-mode input[name="rate"]{ filter:invert(1) ; }
-html.light-mode img{
-    filter:invert(1) hue-rotate(180deg);
-
-}
-html.light-mode .start-rec:before{
-    background-image: url(images/try.jpeg);
-    filter:invert(1) hue-rotate(180deg);
-}
-html.light-mode .start-rec h1,html.light-mode ,html.light-mode .start-rec h3,html.light-mode .start-rec p{
-    color:black;
-}
-html.light-mode #btn_3{ filter:invert(1) hue-rotate(180deg);
-}
-html.light-mode .form {
-    width: 70vw;
-    height: fit-content;
-    background-color: #9aaccc;
-    margin: auto;
-    margin-top: 20vh;
-    border: 3px solid #95aaad7a;
-    box-shadow: -2px 0px 11px 2px aliceblue;
-    background-color: #392908bd;
-    border-radius: 40px 40px;
-    padding: 4vw;
-    width: 70vw;
-    height: fit-content;
-    color: #808793;
-    margin: auto;
-    margin-top: 20vh;
-}
-
-html.light-mode #comment {color: rgb(227, 217, 217);;
-     background-color: black;
-     padding: 5vw;
-}
-html.light-mode #name{color: white;
-    padding: 1vw;
-    background-color: black;
-    border: 3px solid var(--buttoncolor);
-    height: 4vh;
-    cursor: cell;
-    border-radius: 40px 40px;
-    box-shadow: -2px 0px 11px 2px aliceblue;}
-
+/* end عاكس الالوان */
 
 /* الناف بار*/
 .navbar {
@@ -79,7 +50,7 @@ html.light-mode #name{color: white;
     justify-content: space-between;
     align-items: center;
     padding: 18px 50px; 
-    background-color: rgba(10, 15, 30, 0.85);
+    background-color: var(--navbg);
     backdrop-filter: blur(12px); 
     position: sticky;
     top: 0;
@@ -103,7 +74,7 @@ html.light-mode #name{color: white;
 
 .nav-links a {
     text-decoration: none;
-    color: #e6dfcd; 
+    color: var(--navlinkcolor); 
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -187,7 +158,7 @@ html.light-mode #name{color: white;
 }
 
 footer {
-    background-color: #0a0f1e;
+    background-color: var(--footerbg);
     color: #9aaccc;
     text-align: center;
     padding: 30px;
@@ -426,12 +397,12 @@ font-size: 1vw;
     margin-top: 20vh;
     border: 3px solid #95aaad7a;
     box-shadow: -2px 0px 11px 2px aliceblue;
-    background-color: #deba73;
+    background-color: var(--formbg);
     border-radius: 40px 40px;
     padding: 4vw;
     width: 70vw;
     height: fit-content;
-    color: #123f8e;
+    color: var(--formcolor);
     margin: auto;
     margin-top: 20vh;
 }
@@ -455,7 +426,7 @@ font-size: 1vw;
     border-radius:40px 40px ;
     border: 3px solid #95aaad7a;
     box-shadow: -2px 0px 11px 2px aliceblue;
-    background-color: #deba73;
+    background-color: var(--formbg);
     transition: all ease 0.3s;
    
 }
@@ -480,4 +451,51 @@ font-size: 1vw;
 }
 #comment{
     padding: 5vw;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 11px;
+    }
+    .start-rec h1 {
+        font-size: 6vw;
+    }
+    .start-rec p {
+        font-size: 4vw;
+    }
+    .start-rec h3 {
+        font-size: 2.5vw;
+    }
+    .content_rec, .content_rec1 {
+        grid-template-columns: 1fr;
+        width: 95vw;
+    }
+    .audio-player {
+        font-size: 3vw;
+        padding: 10px 20px;
+    }
+    .form {
+        width: 90vw;
+        padding: 6vw;
+    }
+    .form button {
+        width: 25vw;
+    }
+    .button-rec, .button-rec-2 {
+        width: 20vw;
+        font-size: 2vw;
+    }
+    .button-rec a, .button-rec-2 a {
+        font-size: 2vw;
+    }
 }
