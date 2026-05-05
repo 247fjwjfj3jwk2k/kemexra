@@ -468,7 +468,8 @@ header p{
     text-align: center;
     position: relative;
     padding: 20px;
-    background: white;
+    background: var(--cardbg, white);
+    color: var(--textcolor, #C9A84C);
     cursor: pointer;
     border-radius: 10px;
     transition: 0.3s;
