@@ -21,7 +21,15 @@ h2{
 }
 body{
     width: 100%;
-    background-color: #0A0F1E;
+    background-color: var(--bgcolor, #0A0F1E);
+}
+/* عاكس الالوان */
+html.light-mode {
+    --bgcolor: #f5f0e8;
+    --cardbg: #e8e0d0;
+    --cardbg2: #d9d0be;
+    --textcolor: #2c2f3a;
+    --scrolltrack: #e8e0d0;
 }
 header{
     background-size: cover;
@@ -176,7 +184,7 @@ header p{
 }
 .booking-container #price{
     /*background-color: #C9A84C;*/
-    background-color:#1A2540;
+    background-color: var(--cardbg, #1A2540);
     background-size:cover ;
     text-align: center;
     height: 220px;
@@ -194,7 +202,7 @@ header p{
     text-align: center;
     width: 180px;
     padding: 10px;
-    background-color:#121C3A;
+    background-color: var(--cardbg2, #121C3A);
     border-radius: 10px;
     color: #C9A84C;
     font-size: 20px;
@@ -211,7 +219,7 @@ header p{
     transition-duration: 1s;
 }
 .booking-container .steps button:hover{
-    background-color: #121C3A;
+    background-color: var(--cardbg2, #121C3A);
     color: black;
 }
 /*********************************************/
@@ -226,7 +234,7 @@ header p{
     padding: 25px;
     border-radius: 15px;
     /*background-image: url(./imges/تصميم\ بدون\ عنوان\ \(1\).gif);*/
-    background-color:#1a2540;
+    background-color: var(--cardbg, #1a2540);
     box-shadow: 0 8px 20px rgba(0 , 0 , 0 ,0.5);
     position: absolute;
     z-index: 1;
@@ -264,7 +272,7 @@ header p{
     margin: auto;
 }
 #booking-save:hover{
-    background-color:#121C3A;
+    background-color: var(--cardbg2, #121C3A);
     color: white;
 }
 .booking-container .steps .active {
@@ -303,7 +311,7 @@ header p{
     color: white;
 }
 .steps .row input:hover{
-    border-bottom: 1px solid #121C3A;
+    border-bottom: 1px solid var(--cardbg2, #121C3A);
 
 }
 .steps .row label{
@@ -324,11 +332,11 @@ header p{
     color: black;
 }
 .steps select:hover{
-    border-bottom: 1px solid #121C3A;
+    border-bottom: 1px solid var(--cardbg2, #121C3A);
 }
 
 .steps .row div .options .active:hover{
-    border-color:#121C3A;
+    border-color: var(--cardbg2, #121C3A);
     color: white;
 }
 
@@ -485,7 +493,7 @@ header p{
     outline: none;
     border-radius: 8px;
     border: 1px solid #ddd;
-    background-color: #121C3A;
+    background-color: var(--cardbg2, #121C3A);
     color: white;
 }
 .steps button.next:hover{
@@ -502,7 +510,7 @@ header p{
     background-color: #C9A84C;
 }
 .steps button.back:hover{
-    background-color: #121C3A;
+    background-color: var(--cardbg2, #121C3A);
     color: white;
 }
 /******************************************/
@@ -609,7 +617,7 @@ header p{
     
 }
 #step-6 .card-details input:hover{
-    border-bottom: 1px solid #121C3A;
+    border-bottom: 1px solid var(--cardbg2, #121C3A);
 
 }
 .card-details {
@@ -676,7 +684,7 @@ header p{
 }
 
 ::-webkit-scrollbar-track {
-    background: #0A0F1E;
+    background: var(--scrolltrack, #0A0F1E);
     border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
@@ -685,4 +693,39 @@ header p{
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #C9A84C;
+}
+
+@media (max-width: 768px) {
+    .booking-container {
+        width: 95%;
+        flex-direction: column;
+    }
+    .multi-step {
+        width: 95%;
+    }
+    .multi-step li {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .icon {
+        width: 35px;
+        height: 35px;
+        font-size: 12px;
+    }
+    .booking-container .steps {
+        height: auto;
+        min-height: 600px;
+    }
+    .steps .step .hug-booking {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .booking {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .card-details {
+        width: 90%;
+    }
+    .confirm {
+        width: 90%;
+    }
 }
