@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400&display=swap');
+@import url('[https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400&display=swap](https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400&display=swap)');
 
 
 :root { /*الوان الصفحة كفاريبل*/
@@ -8,7 +8,7 @@
     --h1:#ffffff;        
     --white-text:#E1EBF9 ;         
     --button-gold:#c5a059;
-    --sub-title: #c5a059;               
+    --sub-title: #c5a059;                
     --sky-blue-muted:#16243d;
     --parent-color:linear-gradient(90deg, rgba(10,20,29,1) 0%, rgba(5,11,16,1) 50%, rgba(10,20,29,1) 100%); 
     --shadow-color:linear-gradient(to bottom, rgba(10, 25, 47, 0.2) 0%,   rgba(10, 25, 47, 0.7) 40%,   rgba(10, 25, 47, 1) 90% );
@@ -18,17 +18,17 @@
 
 
 :root.light-mode { /*الوان الصفحة بنفس الفاريبلز بس لايت */
-    --bg-deep-blue: #E1EBF9;
-    --gold-accent: #2C3E50;
-    --nav-darker-blue:#F0F4FF;
-    --sky-blue-muted:#D1E3F8;
-    --parent-color:#F5F5F5;
-    --white-text:#0a0f1e;
-    --shadow-color:linear-gradient(to bottom, rgba(225, 235, 249, 0) 0%,   rgba(225, 235, 249, 0.6) 50%,  rgba(225, 235, 249, 1) 100% );
-    --h1:#2B4377;
-    --sub-title:#2B4377;
-    --line:linear-gradient(to right, transparent,#2B4377 , transparent);
-    --button-gold:#2B4377;
+    --bg-deep-blue: #f5eee6;
+    --gold-accent: #b08d32;
+    --nav-darker-blue:#ebe4db;
+    --sky-blue-muted:#ffffff;
+    --parent-color:#fdfaf7;
+    --white-text:#1a1a1a;
+    --shadow-color:linear-gradient(to bottom, rgba(245, 238, 230, 0) 0%,   rgba(245, 238, 230, 0.6) 50%,  rgba(245, 238, 230, 1) 100% );
+    --h1:#1a1a1a;
+    --sub-title:#b08d32;
+    --line:linear-gradient(to right, transparent,#b08d32 , transparent);
+    --button-gold:#b08d32;
 }
 
 
@@ -75,19 +75,19 @@ a{
     justify-content: space-between;
     align-items: center;
     padding: 18px 50px; 
-    background-color: rgba(10, 15, 30, 0.85);
+    background-color: var(--nav-darker-blue);
     backdrop-filter: blur(12px); 
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(201, 168, 76, 0.2); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    border-bottom: 1px solid rgba(176, 141, 50, 0.2); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
 }
 
 .logo {
     font-size: 24px;
     font-weight: 800;
-    color: #c9a84c;
+    color: var(--gold-accent);
     letter-spacing: 3px;
     text-transform: uppercase;
 }
@@ -99,7 +99,7 @@ a{
 
 .nav-links a {
     text-decoration: none;
-    color: #e6dfcd; 
+    color: var(--white-text); 
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -115,12 +115,12 @@ a{
     height: 1.5px;
     bottom: -5px;
     left: 0;
-    background-color: #c9a84c;
+    background-color: var(--gold-accent);
     transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #c9a84c;
+    color: var(--gold-accent);
 }
 
 .nav-links a:hover::after {
@@ -129,8 +129,8 @@ a{
 
 .theme-btn {
     background-color: transparent;
-    border: 1px solid rgba(201, 168, 76, 0.5);
-    color: #c9a84c;
+    border: 1px solid var(--gold-accent);
+    color: var(--gold-accent);
     padding: 8px 18px;
     border-radius: 2px; 
     cursor: pointer;
@@ -140,26 +140,26 @@ a{
 }
 
 .theme-btn:hover {
-    background-color: rgba(201, 168, 76, 0.1);
-    border-color: #c9a84c;
+    background-color: rgba(176, 141, 50, 0.1);
+    border-color: var(--gold-accent);
 }
 
 .action-btn {
-    background-color: #c9a84c;
+    background-color: var(--gold-accent);
     padding: 10px 22px;
     border-radius: 2px;
-    color: #0a0f1e !important;
+    color: var(--bg-deep-blue) !important;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 1px;
     transition: 0.3s;
-    box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
+    box-shadow: 0 4px 15px rgba(176, 141, 50, 0.3);
 }
 
 .action-btn:hover {
     background-color: #e8ce87;
     transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+    box-shadow: 0 6px 20px rgba(176, 141, 50, 0.4);
 }
 
 .container {
@@ -296,7 +296,7 @@ a{
 }
 
 .text {
-    color:#c5a059; 
+    color: var(--gold-accent); 
     font-family: "Times New Roman", Times, serif; 
     font-size: 24px;
     letter-spacing: 4px; 
@@ -311,12 +311,12 @@ a{
     content: "";
     flex: 1; /*هيتمدو وياخدو مساحة*/ /*المساحة اللي هياخدوها هيا مساحة ال curated-container max-width:800px; مش هياخدو عرض الشاشة كلها*/
     height: 2px; /*سمك الخط*/
-    background: linear-gradient(to right, transparent, #b89c6f); 
+    background: var(--line); 
     margin-right: 5px;
 }
 
 .curated-container::after { /*من اليمين للشمال*/
-    background: linear-gradient(to left, transparent, #b89c6f);
+    background: var(--line);
 }
 
 
@@ -365,12 +365,12 @@ a{
 .icon-circle{
     width: 35px;
     height: 35px;
-    border: 1px solid #d4af37;
+    border: 1px solid var(--gold-accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #d4af37;
+    color: var(--gold-accent);
     font-size: 14px;
 }
 
@@ -409,7 +409,7 @@ a{
     justify-content: space-between;
     width: 100%;
     max-width: 1400px;
-    border: 1px solid rgba(212, 175, 55, 0.3); 
+    border: 1px solid rgba(176, 141, 50, 0.3); 
     border-radius: 15px;
     overflow: hidden;
     background: var(--parent-color);
@@ -468,7 +468,7 @@ a{
 }
 
 .banner-text p {
-    color: var(--gold-accent);
+    color: var(--white-text);
     font-size: 14px;
     line-height: 1.6;
     margin-bottom: 25px;
@@ -519,11 +519,11 @@ a{
     height: 1px;
     flex: 1;
     max-width: 150px;
-    background: linear-gradient(to right, transparent, var(--gold-accent), transparent);
+    background: var(--line);
 }
 
 .gold-title {
-    color: #c5a059;
+    color: var(--gold-accent);
     font-family: 'Cinzel', serif;
     font-size: 24px;
     letter-spacing: 4px;
@@ -531,7 +531,7 @@ a{
 }
 
 .slider-desc {
-    color: var(--gold-accent);
+    color: var(--white-text);
     text-align: center;
     font-size: 14px;
     margin-bottom: 40px;
@@ -577,7 +577,7 @@ a{
     max-width: 280px; 
     scroll-snap-align: start;/*كل كارد وانا بعمل سكرول هيقف عند بدايته من الشمال*/
     background: var(--sky-blue-muted);
-    border: 1px solid rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(176, 141, 50, 0.2);
     border-radius: 12px;
     padding: 15px;/*لو شلتها الصورة هتبقى واخدة الديف كله ماعدا المارجن بوتوم اللي تحت*/
     transition: 0.4s ease;
@@ -624,7 +624,7 @@ a{
     transition: 0.3s;
 }
 
-.nav-arrow:hover { color: #fff; transform: translateY(-50%) scale(1.2); }
+.nav-arrow:hover { color: var(--h1); transform: translateY(-50%) scale(1.2); }
 .prev { left: 10px; }
 .next { right: 10px; }
 
@@ -651,7 +651,7 @@ a{
 #stats-banner {
     background-color: var(--bg-deep-blue);
     padding: 60px 0;
-    border-top: 1px solid rgba(212, 175, 55, 0.1);
+    border-top: 1px solid rgba(176, 141, 50, 0.1);
 }
 
 .stats-container {
@@ -681,14 +681,14 @@ a{
 }
 
 .stat-text p {
-    color: var(--gold-accent);
+    color: var(--white-text);
     font-size: 14px;
 }
 
 .stat-divider {
     width: 1px;
     height: 50px;
-    background: rgba(212, 175, 55, 0.2);
+    background: rgba(176, 141, 50, 0.2);
 }
 
 
@@ -708,11 +708,11 @@ footer {
     color: var(--h1);
     text-align: center;
     padding: 30px;
-    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    border-top: 1px solid rgba(176, 141, 50, 0.3);
     /* margin-top: 40px; */
 }
 .footer-logo {
-    color: #c9a84c;
+    color: var(--gold-accent);
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -729,68 +729,12 @@ footer {
     margin-bottom: 15px;
 }
 .footer-socials a {
-    color: #c9a84c;
+    color: var(--gold-accent);
     transition: 0.3s;
 }
 .footer-socials a:hover {
-    color: white;
+    color: var(--h1);
 }
 .footer-copy {
     font-size: 12px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
