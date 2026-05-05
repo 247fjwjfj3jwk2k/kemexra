@@ -17,6 +17,10 @@ html.light-mode {
         --textcolor: #1a1a1a; 
 
 }
+.steps .step .booking label h5,
+.steps .step .booking label p {
+    color: #1a1a1a !important;
+}
 
 html.light-mode body {
     background-color: var(--bgcolor);
