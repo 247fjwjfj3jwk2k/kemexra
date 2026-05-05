@@ -32,7 +32,7 @@
 
 body.light-mode {
     --bgcolor: #ffffff;
-    --navbg: rgba(255, 255, 255, 0.9);
+    --navbg: rgba(255, 255, 255, 0.95);
     --textcolor: #1a1a1a;
     --homecolor: #2c3e50;
     --navlinkcolor: #1a1a1a;
@@ -41,25 +41,27 @@ body.light-mode {
     --accenthover: #ffffff;
     --tableheadbg: #b08d32;
     --tableheadcolor: #ffffff;
-    --tablebodybg: #fdfdfd;
-    --tablebodyhover: #f7f3e9;
-    --tabletext: #2c3e50;
+    --tablebodybg: #ffffff;
+    --tablebodyhover: #f9f7f2; /* كريمي فاتح بدلاً من الأزرق */
+    --tabletext: #333333;
     --cardbg: #ffffff;
-    --cardlocationcolor: #7f8c8d;
+    --cardlocationcolor: #666666;
     --cardpricecolor: #1a1a1a;
-    --cardpricespan: #95a5a6;
+    --cardpricespan: #888888;
     --filterbg: #ffffff;
     --filtertext: #1a1a1a;
     --filterlabelcolor: #b08d32;
-    --featuresbarbg: #f9f7f2;
+    --featuresbarbg: #fdfaf2;
     --reviewcardbg: #ffffff;
     --reviewtext: #444444;
     --reviewername: #1a1a1a;
     --formbg: #fdfaf2;
     --formcolor: #1a1a1a;
-    --footerbg: #111827;
+    --footerbg: #f4f4f4; /* رمادي فاتح بدلاً من الأزرق الداكن */
     --offerdesc: #555555;
 }
+
+/* باقي كود التنسيق كما هو دون تغيير في الهيكلية */
 .hotels-table {
     width: 80%;
     margin: 20px auto 40px auto;
@@ -130,12 +132,12 @@ body.light-mode {
     background-color: var(--filterbg);
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: all 0.7s ease;
 }
 .filter:hover{
     transform: translateY(5px);
-    box-shadow: 0 15px 10px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
 }
 
 .filter-item {
@@ -191,13 +193,13 @@ body.light-mode {
     text-align: left;
     border-radius: 10px;
     overflow: hidden;
-    border: 1px solid rgba(156, 166, 181, 0.6);
+    border: 1px solid rgba(156, 166, 181, 0.3);
     transition: all 0.4s ease-in-out;
 }
 .card:hover{
     transform: translateY(-5px);
-    border-color: #ffffff;
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    border-color: var(--accentcolor);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .filter-btn {
@@ -303,7 +305,7 @@ body.light-mode {
 
 .offer:hover{
     transform: scale(0.985);
-    box-shadow: 0 0 50px rgba(212, 151, 20, 0.531);
+    box-shadow: 0 0 50px rgba(212, 151, 20, 0.3);
 }
 
 .offer-label {
@@ -394,7 +396,7 @@ body.light-mode {
 .review-card:hover{
     transform: translateY(-10px);
     border-color: var(--accentcolor);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 .review-text {
     color: var(--reviewtext);
