@@ -4,8 +4,9 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #0A0F1E;
-    font-family: sans-serif;
+    background-color: var(--bgcolor, #0A0F1E);
+    color: var(--textcolor, white);
+    transition: background-color 0.3s ease;
 }
 /* عاكس الالوان */
 html.light-mode {
@@ -13,6 +14,11 @@ html.light-mode {
     --navlinkcolor: #2c2f3a;
     --footerbg: #e8e0d0;
     --bgcolor: #f5f0e8;
+}
+
+html.light-mode body {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
 }
 /* الناف بار*/
 .navbar {
