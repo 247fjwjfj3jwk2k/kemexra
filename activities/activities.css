@@ -1,3 +1,33 @@
+:root {
+    --bgcolor: #0a1128;
+    --textcolor: #c5a059;
+    --cardcolor: #161e36;
+    --homecolor: #a9adc1;
+    --buttoncolor: #d4af37;
+    --navbg: rgba(10, 15, 30, 0.85);
+    --navlinkcolor: #e6dfcd;
+    --footerbg: #0a0f1e;
+    --formbg: #deba73;
+    --formcolor: #123f8e;
+    --accent: #c9a84c;
+    --shadow: rgba(0, 0, 0, 0.5);
+}
+
+html.light-mode {
+    --bgcolor: #f5f0e8;
+    --textcolor: #7a5c1e;
+    --cardcolor: #e8e0d0;
+    --homecolor: #2c2f3a;
+    --buttoncolor: #b8860b;
+    --navbg: rgba(245, 240, 232, 0.95);
+    --navlinkcolor: #2c2f3a;
+    --footerbg: #e8e0d0;
+    --formbg: #7a5c1e;
+    --formcolor: #f5f0e8;
+    --accent: #b08d32;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
 /*------------------------------------------------------------------------------------------------------*/
 /*just classes to show which's gon be active and which's not, legit just 2 lines, the problem is going to be swapping*/
 /*may god help me, i havent studied JS yet as of 28th of april*/
@@ -17,7 +47,7 @@
     margin-top: 50px;
 }
 .yasso-title{
-    color: #FFE08F;
+    color: var(--accent);
     font-family: Liberation Serif, serif;
     font-size: 40px;
     font-style: normal;
@@ -26,7 +56,7 @@
     letter-spacing: 0.5px;
 }
 .yasso-title-description{
-    color: #D0C5B2;
+    color: var(--homecolor);
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
     font-style: normal;
@@ -71,23 +101,23 @@
     margin-bottom: 12px;
 }
 .yasso-tag {
-    color: #C2C6DB;
+    color: var(--homecolor);
     background: rgba(30, 41, 59, 0.5);
     backdrop-filter: blur(8px);
-    border: 1px solid #C2C6DB;
+    border: 1px solid var(--homecolor);
     border-radius: 30px;
     padding: 6px 12px;
     font-size: 12px;
 }
 
 .yasso-card-title {
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 28px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 .yasso-card-description {
-    color: #D0C5B2;
+    color: var(--homecolor);
     font-size: 13px;
     line-height: 1.4;
     margin: 0;
@@ -122,7 +152,7 @@
     justify-content: space-between;
     align-items: center;
     color: white;
-    background-color: #0a0f1e;
+    background-color: var(--footerbg);
     position: fixed; 
     /* relative to the browser window and will overlap things unless a margin is added */
     left: 0;
@@ -136,7 +166,7 @@
 .tab-content li {
     list-style: none;
     cursor: pointer;
-    color: #a7acc2;
+    color: var(--homecolor);
     margin: 0 10px;
     font-size: 20px;
     margin-bottom: 20px;
@@ -145,12 +175,12 @@
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 .tab-content li:hover {
-    background-color: #a7acc2;
-    color: #0a0f1e;
+    background-color: var(--homecolor);
+    color: var(--footerbg);
 }
 .tab-content li.active {
-    background-color: #a7acc2;
-    color: #0a0f1e;
+    background-color: var(--homecolor);
+    color: var(--footerbg);
 }
 .sphinx-top-page{
     margin-left: 50px;
@@ -179,7 +209,7 @@
     padding: 60px;
 }
 .sphinx-title-mini{
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -187,17 +217,17 @@
 }
 .sphinx-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 10px var(--shadow);
 }
 .sphinx-description{
     font-family: serif;
     width: fit-content;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-weight: 400;
     font-size: 16px;
     max-width: 550px;
@@ -252,8 +282,8 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    border: 1px solid #FFE08F;
-    background-color: #0d2139;
+    border: 1px solid var(--accent);
+    background-color: var(--cardcolor);
     padding: 24px;
     border-radius: 16px;
     cursor: pointer;
@@ -269,8 +299,8 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    background-color: #0d2139;
-    border: 1px solid #FFE08F;
+    background-color: var(--cardcolor);
+    border: 1px solid var(--accent);
     padding: 24px;
     border-radius: 16px;
     cursor: pointer;
@@ -279,9 +309,9 @@
 .yasso-sphinx-link{
     font-size: 14px;
     font-weight: 600;
-    color: #0a0f1e;
+    color: var(--footerbg);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #dabe78;
+    background-color: var(--formbg);
     box-shadow: 0 0 18px rgba(230, 195, 100, 0.5);
     border-radius: 5px;
     width: fit-content;
@@ -297,7 +327,7 @@
 .yasso-sphinx-link-low-effort{
     font-size: 14px;
     font-weight: 600;
-    color: #e6c364;
+    color: var(--accent);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -309,14 +339,14 @@
     transform: scale(1.02);
 }
 .yasso-sphinx-lower-tag{
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 10px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-transform: uppercase;
     letter-spacing: 3px;
     margin-bottom: 20px;
     margin-left: 0;
-    border: 1px, solid #FFE08F;
+    border: 1px, solid var(--accent);
     padding: 8px;
     width: fit-content;
     text-align: center;
@@ -325,7 +355,7 @@
 {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 2000px;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-weight: 400;
     font-size: 16px;
     max-width: 550px;
@@ -333,14 +363,14 @@
     margin-left: 0;
 }
 .yasso-sphinx-card-title{
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-family: manorope;
     margin-left: 0;
     font-size: 25px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 10px var(--shadow);
 }
 .yasso-sphinx-card {
     grid-column: 2;
@@ -351,8 +381,8 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    border: 1px solid #FFE08F;
-    background-color: #0d2139;
+    border: 1px solid var(--accent);
+    background-color: var(--cardcolor);
     padding: 24px;
     border-radius: 16px;
     cursor: pointer;
@@ -362,21 +392,21 @@
     transform: scale(1.04);
 }
 .yasso-mini-icon-color{
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 30px;
     margin-bottom: 16px;
 }
 .yasso-mini-card-title{
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-family: manorope;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 10px var(--shadow);
 }
 .yasso-mini-card-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -390,8 +420,8 @@
     align-items: flex-start;
     width: 100%;
     height: auto;
-    background-color: #0d2139;
-    border: 1px solid #FFE08F;
+    background-color: var(--cardcolor);
+    border: 1px solid var(--accent);
     padding: 24px;
     border-radius: 16px;
     cursor: pointer;
@@ -451,8 +481,8 @@
     padding: 60px;
 }
 .btn-primary {
-    background-color: #e6c364;
-    color: #0e1e3a;
+    background-color: var(--buttoncolor);
+    color: var(--formcolor);
     border: none;
     padding: 12px 24px;
     font-size: 14px;
@@ -462,7 +492,7 @@
 }
 
 .btn-primary:hover {
-    background-color: #d4ae4e;
+    background-color: var(--accent);
 }
 
 .btn-secondary {
@@ -478,7 +508,7 @@
 
 .btn-secondary:hover {
     background-color: #ffffff;
-    color: #0e1e3a;
+    color: var(--formcolor);
 }
 .button-placement{
     display: flex;
@@ -488,7 +518,7 @@
     margin-top: 30px;
 }
 .sharm-title-mini{
-    color: #e6c364;
+    color: var(--buttoncolor);
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -497,18 +527,18 @@
 }
 .sharm-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 16px;
     margin-left: 30px;
-    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 2px 4px 10px var(--shadow);
 }
 .sharm-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 2000px;
-    color: #d0c5b2;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 16px;
     max-width: 550px;
@@ -539,15 +569,15 @@
     width: 100%;
     height: 1px;
     margin-left: 0;
-    background-color: #e6c364;
-    border-top: 2px solid #e6c364;
+    background-color: var(--buttoncolor);
+    border-top: 2px solid var(--buttoncolor);
     border: none;
     margin-top: 40px;
     margin-bottom: 40px;
     box-shadow: 0 0 18px rgba(230, 195, 100, .4);
 }
 .yasso-sharm-tag{
-    color: #e6c364;
+    color: var(--buttoncolor);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 20px;    
     margin-left: 30px;
@@ -573,8 +603,8 @@
     gap: 16px;
     padding: 32px 28px;
     width: 100%;
-    background-color: #0e1e3a;
-    border: 1px solid #e6c364;
+    background-color: var(--cardcolor);
+    border: 1px solid var(--buttoncolor);
     border-radius: 14px;
     max-width: 280px;
     cursor: pointer;
@@ -584,19 +614,19 @@
 
 .sharm-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 12px 32px var(--shadow);
 }
 
 .sharm-card-icon{
     font-size: 28px;
-    color: #e6c364;
+    color: var(--buttoncolor);
     margin-bottom: 4px;
 }
 
 .sharm-card-title{
     font-size: 20px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--navlinkcolor);
     margin: 0;
     font-family: 'Georgia', serif;
 }
@@ -604,14 +634,14 @@
 .sharm-card-description{
     font-size: 14px;
     line-height: 1.7;
-    color: #a8bcd4;
+    color: var(--homecolor);
     margin: 0;
 }
 
 .sharm-card-link{
     font-size: 14px;
     font-weight: 600;
-    color: #e6c364;
+    color: var(--buttoncolor);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -650,7 +680,7 @@
     margin-top: 6%;
 }
 .khan-title-mini{
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -658,7 +688,7 @@
 }
 .khan-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
@@ -669,16 +699,16 @@
     font-family: serif;
     font-size: 20px;
     width: 600px;
-    color: #d0c5b2;
+    color: var(--homecolor);
     margin-bottom: 30px;
     font-weight: 400;
 }
 .yasso-khan-link{
     font-size: 14px;
     font-weight: 600;
-    color: #0a0f1e;
+    color: var(--footerbg);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #dabe78;
+    background-color: var(--formbg);
     box-shadow: 0 0 18px rgba(230, 195, 100, 0.5);
     border-radius: 5px;
     text-align: center;
@@ -697,7 +727,7 @@
 }
 .khan-lower-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 25px;
     font-weight: 700;
     line-height: 1.2;
@@ -708,7 +738,7 @@
 .khan-lower-title-line{
     width: 100px;
     height: 2px;
-    background-color: #d5e3ff;
+    background-color: var(--navlinkcolor);
     box-shadow: rgb(213, 227, 255, 0.4) 2px 4px 10px;
     margin: 0 auto 16px auto;
     margin-top: 15px;
@@ -741,7 +771,7 @@
     filter: brightness(1.1);
 }
 .khan-lower-left-mini-title{
-    color: #FFE08F;
+    color: var(--accent);
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -771,7 +801,7 @@
 }
 .khan-lower-left-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
@@ -782,13 +812,13 @@
     font-family: serif;
     font-size: 20px;
     width: 600px;
-    color: #d0c5b2;
+    color: var(--homecolor);
     margin-bottom: 30px;
     font-weight: 400;
 }
 .khan-mini-card-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #FFE08F;
+    color: var(--accent);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -804,11 +834,11 @@
     flex-direction: column;
     flex: 1;
     padding: 40px;
-    background-color: #0e2136;
+    background-color: var(--cardcolor);
 }
 .khan-lower-lower-title{
     font-family: manorope;
-    color: #d5e3ff;
+    color: var(--navlinkcolor);
     font-size: 25px;
     font-weight: 700;
     margin: 0px;
@@ -824,8 +854,8 @@
 }
 .khan-lower-lower-page .yasso-khan-link{
     background: transparent;
-    color:#C2C6DB;
-    border: 1px solid #C2C6DB;
+    color: var(--homecolor);
+    border: 1px solid var(--homecolor);
     box-shadow: none;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -878,22 +908,22 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .luxor-filler1{
-    color: #e0be62;
+    color: var(--buttoncolor);
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
 }
 .luxor-filler1:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #f8d36d;
-    text-shadow: 0 0 5px #f8d36d;
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
 }
 .luxor-filler1::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #e0be62;
+    background-color: var(--buttoncolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -902,22 +932,22 @@
     width: 100%;
 }
 .luxor-filler2{
-    color: #ccc2b0;
+    color: var(--homecolor);
     cursor: pointer;
     transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
 }
 .luxor-filler2:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #f8d36d;
-    text-shadow: 0 0 5px #f8d36d;
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
 }
 .luxor-filler2::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #e0be62;
+    background-color: var(--buttoncolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -934,7 +964,7 @@
 .luxor-lower-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 2000px;
-    color: #e0be62;
+    color: var(--buttoncolor);
     font-weight: 400;
     font-size: 16px;
     max-width: 550px;
@@ -984,7 +1014,7 @@
 }
 .luxor-lower-lower-left-description{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #e6c364;
+    color: var(--buttoncolor);
     margin-top: 240px;
     margin-left: 20px;
     background-color: rgba(18, 28, 58, 0.35);
@@ -1011,9 +1041,9 @@
     flex: 2;
     display: flex;
     flex-direction: column;
-    background-color: #182a44;
+    background-color: var(--cardcolor);
     width: 400px;
-    color: #e6c364;
+    color: var(--buttoncolor);
     font-size: 25px;
     border-radius: 10px;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -1033,7 +1063,7 @@
 }
 .luxor-lower-lower-right .khan-lower-lower-left-description{
     font-size: 17px;
-    color: #95938e;
+    color: var(--homecolor);
     margin-left: 20px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -1042,9 +1072,9 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    background-color: #182a44;
+    background-color: var(--cardcolor);
     width: 400px;
-    color: #e6c364;
+    color: var(--buttoncolor);
     font-size: 25px;
     border-radius: 10px;
     transition: transform 0.2s ease, filter 0.2s ease;
@@ -1058,7 +1088,7 @@
     margin-top: 5px;
     margin-bottom: 20px;
     text-decoration: none;
-    color: #e6c364;
+    color: var(--buttoncolor);
     font-size: 17px;
     transition: transform 0.2s ease, filter 0.2s ease;
 }
@@ -1078,7 +1108,7 @@ in small sittings, its currently the 1st of may*/
 }
 .yasso-title-main-light{
     font-family: manorope;
-    color: #00436a;
+    color: var(--formcolor);
     font-size: 40px;
     font-weight: 700;
     line-height: 1.2;
@@ -1088,7 +1118,7 @@ in small sittings, its currently the 1st of may*/
 .yasso-title-description-light{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 2000px;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 16px;
     max-width: 550px;
@@ -1111,7 +1141,7 @@ in small sittings, its currently the 1st of may*/
     gap: 16px;
     padding: 32px 28px;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: var(--cardcolor);
     border: 1px solid #c2c2c2;
     border-radius: 14px;
     max-width: 700px;
@@ -1134,7 +1164,7 @@ in small sittings, its currently the 1st of may*/
     gap: 16px;
 }
 .card-upper-tag{
-    color: #bc902b;
+    color: var(--textcolor);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 10px;
     font-size: 15px;  
@@ -1143,7 +1173,7 @@ in small sittings, its currently the 1st of may*/
 }
 .card-title-light{
     font-family: manorope;
-    color: #00436a;
+    color: var(--formcolor);
     font-size: 40px;
     font-weight: 400;
     line-height: 1.2;
@@ -1151,7 +1181,7 @@ in small sittings, its currently the 1st of may*/
 }
 .card-description-light{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 16px;
     width: 400px;
@@ -1160,7 +1190,7 @@ in small sittings, its currently the 1st of may*/
 .yasso-card-link-light{
     font-size: 14px;
     font-weight: 600;
-    color: #00436a;
+    color: var(--formcolor);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     width: 170px;
@@ -1181,7 +1211,7 @@ in small sittings, its currently the 1st of may*/
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #00436a;
+    background-color: var(--formcolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease, transform 0.2s ease;
@@ -1196,7 +1226,7 @@ in small sittings, its currently the 1st of may*/
     gap: 16px;
     padding: 32px 28px;
     width: 100%;
-    background-color: #f0f0f0;
+    background-color: var(--cardcolor);
     border: 1px solid #c2c2c2;
     border-radius: 14px;
     max-width: 700px;
@@ -1303,7 +1333,7 @@ in small sittings, its currently the 1st of may*/
     justify-content: space-between;
     align-items: center;
     color: white;
-    background-color: #0a0f1e;
+    background-color: var(--footerbg);
     position: fixed; 
     /* relative to the browser window and will overlap things unless a margin is added */
     left: 0;
@@ -1317,7 +1347,7 @@ in small sittings, its currently the 1st of may*/
 .tab-light-content li {
     list-style: none;
     cursor: pointer;
-    color: #ffffff;
+    color: var(--navlinkcolor);
     margin: 0 10px;
     font-size: 20px;
     margin-bottom: 20px;
@@ -1326,12 +1356,12 @@ in small sittings, its currently the 1st of may*/
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 .tab-light-content li:hover {
-    background-color: #000000;
-    color: #335eff;
+    background-color: var(--bgcolor);
+    color: var(--formcolor);
 }
 .tab-light-content li.active {
-    background-color: #0a0f1e;
-    color: #c2c8e2;
+    background-color: var(--footerbg);
+    color: var(--homecolor);
 }
 /* I genuinely dont care enough to tamper with the fucking colors, having the light mode be simply an inverse is NOT my fault and time is running out for me to find an alternative to this mess*/
 .yasso-giza-light-upper{
@@ -1371,7 +1401,7 @@ in small sittings, its currently the 1st of may*/
     line-height: 1.6;
 }
 .giza-upper-tag{
-    color: #bc902b;
+    color: var(--textcolor);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 10px;
     font-size: 20px;  
@@ -1393,7 +1423,7 @@ in small sittings, its currently the 1st of may*/
 }
 .giza-light-middle-title{
     font-family: manorope;
-    color: #bb9825;
+    color: var(--textcolor);
     font-size: 40px;
     font-weight: 400;
     line-height: 1.2;
@@ -1415,7 +1445,7 @@ in small sittings, its currently the 1st of may*/
 }
 .yasso-giza-card-title{
     font-family: manorope;
-    color: #00436a;
+    color: var(--formcolor);
     font-size: 25px;
     font-weight: 400;
     line-height: 1.2;
@@ -1424,7 +1454,7 @@ in small sittings, its currently the 1st of may*/
 }
 .yasso-giza-card-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 16px;
     width: 400px;
@@ -1440,12 +1470,12 @@ in small sittings, its currently the 1st of may*/
     max-width: 1000px;
 }
 .logo-color-time{
-    color: #bb9825;
+    color: var(--textcolor);
     font-size: 40px;
 }
 .best{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 16px;
     margin-bottom: 5px;
@@ -1453,14 +1483,14 @@ in small sittings, its currently the 1st of may*/
 }
 .october{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgb(37, 115, 179);
+    color: var(--formcolor);
     font-weight: 500;
     font-size: 16px;
 }
 #giza-light .giza-light-middle-title{
     margin-left: 0;
     font-size: 25px;
-    color: #0f5b8b;
+    color: var(--formcolor);
     text-align: center;
 }
 .giza-lower-cards{
@@ -1493,8 +1523,8 @@ in small sittings, its currently the 1st of may*/
     transition: transform 0.3s ease;
 }
 .card-tag-giza{
-    color: #0f5b8b;
-    background-color: #ffffff;
+    color: var(--formcolor);
+    background-color: var(--cardcolor);
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -1543,7 +1573,7 @@ in small sittings, its currently the 1st of may*/
 }
 .card-title{
     font-family: manorope;
-    color: #00436a;
+    color: var(--formcolor);
     font-size: 18px;
     font-weight: 400;
     line-height: 1.2;
@@ -1552,7 +1582,7 @@ in small sittings, its currently the 1st of may*/
 }
 .card-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 14px;
     width: 300px;
@@ -1577,11 +1607,11 @@ in small sittings, its currently the 1st of may*/
     padding: 60px;
 }
 .sharm-upper-light-tag{
-    color: #fddda8;
-    background-color: #1a5e89;
+    color: var(--formbg);
+    background-color: var(--formcolor);
     border-radius: 10px;
     padding: 5px 10px;
-    border: 1px solid #fddda8;
+    border: 1px solid var(--formbg);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-bottom: 10px;
     font-size: 20px;  
@@ -1618,7 +1648,7 @@ in small sittings, its currently the 1st of may*/
 }
 .sharm-lower-upper-light-item{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #41474f;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 20px;
     transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
@@ -1627,14 +1657,14 @@ in small sittings, its currently the 1st of may*/
 .sharm-lower-upper-light-item:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #1a5e89;
+    color: var(--formcolor);
 }
 .sharm-lower-upper-light-item::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #1a5e89;
+    background-color: var(--formcolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -1643,12 +1673,12 @@ in small sittings, its currently the 1st of may*/
     width: 100%;
 }
 #sharm-light .yasso-line{
-    background-color: #000000;
-    box-shadow: rgb(0, 0, 0) 0px 0px 10px;
+    background-color: var(--homecolor);
+    box-shadow: var(--homecolor) 0px 0px 10px;
 }
 .Mid-sharm-light-title{
     font-family: maorope;
-    color: #1a5e89;
+    color: var(--formcolor);
     font-size: 30px;
     font-weight: 400;
     text-align: center;
@@ -1685,7 +1715,7 @@ in small sittings, its currently the 1st of may*/
 }
 .sharm-lower-tag{
     color: #ffffff;
-    background-color: #7b580b;
+    background-color: var(--textcolor);
     width: fit-content;
     margin-left: 0;
     margin-top: 0;
@@ -1726,12 +1756,12 @@ in small sittings, its currently the 1st of may*/
     gap: 16px;
 }
 .sharm-icon{
-    color: #2e90cd;
+    color: var(--formcolor);
     font-size: 30px;
 }
 .mid-sharm-right-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #1a5e89;
+    color: var(--formcolor);
     font-size: 35px;
     font-weight: 400;
     line-height: 1.2;
@@ -1741,7 +1771,7 @@ in small sittings, its currently the 1st of may*/
 }
 .mid-sharm-right-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 20px;
     width: 400px;
@@ -1750,8 +1780,8 @@ in small sittings, its currently the 1st of may*/
 .mid-sharm-right-link{
     font-size: 14px;
     font-weight: 600;
-    color: #a2d1ff;
-    background-color: #0f5b8b;
+    color: var(--navlinkcolor);
+    background-color: var(--formcolor);
     border-radius: 6px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -1763,7 +1793,7 @@ in small sittings, its currently the 1st of may*/
     gap: 6px;
     margin-top: 20px;
     transition: gap 0.2s ease, transform 0.2s ease;
-    box-shadow: 0 0 10px rgb(15, 91, 139, 0.5);
+    box-shadow: 0 0 10px var(--shadow);
 }
 .mid-sharm-right-link:hover {
     gap: 10px;
@@ -1802,7 +1832,7 @@ in small sittings, its currently the 1st of may*/
 }
 .conditions-title{
     font-family: manorope;
-    color: #000000;
+    color: var(--homecolor);
     font-size: 35px;
     font-weight: 600;
     width: 400px;
@@ -1817,7 +1847,7 @@ in small sittings, its currently the 1st of may*/
     gap: 20px;
 }
 .conditions-line{
-    background-color: #000000;
+    background-color: var(--homecolor);
     height: 2px;
     width: 100%;
     margin-left: 10px;
@@ -1837,12 +1867,12 @@ in small sittings, its currently the 1st of may*/
     gap: 20px;
 }
 .right-conditions .condition{
-    color: #0f5b9a;
+    color: var(--formcolor);
     text-align: right;
 }
 .description-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #191c1f;
+    color: var(--homecolor);
     font-size: 30px;
     font-weight: 400;
     line-height: 1.2;
@@ -1852,7 +1882,7 @@ in small sittings, its currently the 1st of may*/
 }
 .actual-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 20px;
     width: 400px;
@@ -1861,7 +1891,7 @@ in small sittings, its currently the 1st of may*/
 .description-link{
     font-size: 20px;
     font-weight: 600;
-    color: #0f5b8b;
+    color: var(--formcolor);
     border-radius: 6px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -1877,7 +1907,7 @@ in small sittings, its currently the 1st of may*/
 .description-link:hover {
     gap: 10px;
     transform: scale(1.04);
-    color: #7b580b;
+    color: var(--textcolor);
 }
 /*luxor light*/
 .luxor-upper-light{
@@ -1902,7 +1932,7 @@ in small sittings, its currently the 1st of may*/
     margin-left: 0;
 }
 .yasso-luxor-upper-light-tag{
-    color: #fddda8;
+    color: var(--formbg);
     text-transform: uppercase;
     font-size: 20px;
 }
@@ -1936,7 +1966,7 @@ in small sittings, its currently the 1st of may*/
 }
 .active-stuff-luxor-light-thingie{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #41474f;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 20px;
     transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
@@ -1945,14 +1975,14 @@ in small sittings, its currently the 1st of may*/
 .active-stuff-luxor-light-thingie:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #1a5e89;
+    color: var(--formcolor);
 }
 .active-stuff-luxor-light-thingie::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #c7a127;
+    background-color: var(--textcolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -1969,7 +1999,7 @@ in small sittings, its currently the 1st of may*/
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid #e0e0e0;
+    border: 1px solid var(--cardcolor);
 
 }
 .luxor-middle-light-right{
@@ -1991,7 +2021,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-middle-light-right-title{
     font-family: manorope;
-    color: #0f5b9a;
+    color: var(--formcolor);
     font-size: 21px;
     font-weight: 600;
     line-height: 1.2;
@@ -2001,7 +2031,7 @@ in small sittings, its currently the 1st of may*/
 .luxor-middle-light-right-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     max-width: 550px;
-    color: #4c5259;
+    color: var(--homecolor);
     align-self: center;
     font-weight: 500;
     font-size: 16px;
@@ -2010,7 +2040,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-middle-light-right-explore{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #c7a127;
+    color: var(--textcolor);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.6;
@@ -2020,11 +2050,11 @@ in small sittings, its currently the 1st of may*/
 .luxor-middle-light-right-explore:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #1a5e89;
+    color: var(--formcolor);
 }
 .lower-middle-luxor-light-title-but-not-that-big{
     font-family: manorope;
-    color: #1a5e89;
+    color: var(--formcolor);
     margin-left: 45%;
     font-size: 20px;
     font-weight: 400;
@@ -2067,12 +2097,12 @@ in small sittings, its currently the 1st of may*/
 .luxor-lower-upper-tag{
     margin-top: 62%;
     margin-left: 10px;
-    color: #fddda8;
+    color: var(--formbg);
     font-size: 20px;
 }
 .luxor-lower-upper-right{
     display: flex;
-    background-color: #d4defa;
+    background-color: var(--cardcolor);
     flex-direction: column;
     border-radius: 12px;
     gap: 16px;
@@ -2096,7 +2126,7 @@ in small sittings, its currently the 1st of may*/
     text-shadow: 0 0 18px rgb(255, 255, 255, 0.5);
 }
 .luxor-lower-upper-right-icon{
-    color: #7b580b;
+    color: var(--textcolor);
     margin-top: 30px;
     margin-left: 10px;
     font-size: 30px;
@@ -2104,7 +2134,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-upper-right-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #1a5e89;
+    color: var(--formcolor);
     font-size: 30px;
     margin-left: 10px;
     font-weight: 400;
@@ -2115,7 +2145,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-upper-right-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 19px;
     margin-left: 10px;
@@ -2153,7 +2183,7 @@ in small sittings, its currently the 1st of may*/
     transform: scale(1.05);
 }
 .luxor-lower-lower-right-light-tag{
-    color: #fddda8;
+    color: var(--formbg);
     text-transform: uppercase;
     font-size: 20px;
     margin-top: 52%;
@@ -2172,7 +2202,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-lower-light-left{
     display: flex;
-    background-color: #d4defa;
+    background-color: var(--cardcolor);
     flex-direction: column;
     border-radius: 12px;
     gap: 16px;
@@ -2185,7 +2215,7 @@ in small sittings, its currently the 1st of may*/
     filter: brightness(1.1);
 }
 .luxor-lower-lower-light-left-icon{
-    color: #7b580b;
+    color: var(--textcolor);
     margin-top: 30px;
     margin-left: 10px;
     font-size: 30px;
@@ -2193,7 +2223,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-lower-light-left-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #1a5e89;
+    color: var(--formcolor);
     font-size: 30px;
     margin-left: 10px;
     font-weight: 400;
@@ -2204,7 +2234,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-lower-light-left-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 19px;
     margin-left: 10px;
@@ -2226,7 +2256,7 @@ in small sittings, its currently the 1st of may*/
 }
 .khan-light-upper-tag{
     margin-top: 20%;
-    color: #2a85fc;
+    color: var(--formcolor);
     text-transform: uppercase;
     font-size: 25px;
     margin-left: 10px;
@@ -2265,7 +2295,7 @@ in small sittings, its currently the 1st of may*/
     margin-right: auto;
 }
 .filler-content{
-    color: #41474f;
+    color: var(--homecolor);
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 400;
     font-size: 24px;
@@ -2275,14 +2305,14 @@ in small sittings, its currently the 1st of may*/
 .filler-content:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: #a64b00;
+    color: var(--textcolor);
 }
 .filler-content::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: #a64b00;
+    background-color: var(--textcolor);
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -2291,7 +2321,7 @@ in small sittings, its currently the 1st of may*/
     width: 100%;
 }
 #khan-light .yasso-line{
-    background-color: #b7b8bd;
+    background-color: var(--homecolor);
     margin-top: -20px;
 }
 .khan-light-middle{
@@ -2303,7 +2333,7 @@ in small sittings, its currently the 1st of may*/
     max-width: 1000px;
     margin-left: 10%;
     margin-right: auto;
-    background-color: #d6dff8;
+    background-color: var(--cardcolor);
     border-radius: 12px;
 }
 .khan-light-middle-left{
@@ -2319,24 +2349,24 @@ in small sittings, its currently the 1st of may*/
 }
 .khan-light-middle-title{
     font-family: manorope;
-    color: #3e2723;
+    color: var(--homecolor);
     font-size: 40px;
     font-weight: 400;
     max-width: 500px;
     line-height: 1.2;
     margin-bottom: 16px;
-    text-shadow: 0 0 18px rgb(62, 39, 35, 0.2);
+    text-shadow: 0 0 18px var(--shadow);
 }
 .khan-light-middle-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #4c5259;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 20px;
     width: 500px;
     line-height: 1.6;
 }
 .khan-light-middle-tag{
-    color: #a64b00;
+    color: var(--textcolor);
     font-size: 20px;
     font-weight: 500;
 }
@@ -2370,13 +2400,13 @@ in small sittings, its currently the 1st of may*/
 }
 .khan-lower-title-left{
     font-family: manorope;
-    color: #3e2723;
+    color: var(--homecolor);
     font-size: 30px;
     font-weight: 400;
     line-height: 1.2;
     margin-left: 10%;
     margin-bottom: 16px;
-    text-shadow: 0 0 18px rgb(62, 39, 35, 0.2);
+    text-shadow: 0 0 18px var(--shadow);
     margin-bottom: 30px;
 }
 .khan-lower-lower-light{
@@ -2444,14 +2474,14 @@ in small sittings, its currently the 1st of may*/
     justify-content: flex-end;
     margin-bottom: 30px;
     gap: 30px;
-    color: #d6dff8;
+    color: var(--cardcolor);
 }
 .khan-lower-lower-light-card{
-    background-color: #d6dff8;
+    background-color: var(--cardcolor);
     display: flex;
     flex-direction: column;
     width: 400px;
-    box-shadow: rgba(214, 223, 248, 1) 0px 2px 4px, rgba(214, 223, 248, 0.3) 0px 7px 13px -3px, rgba(214, 223, 248, 0.2) 0px -3px 0px inset;
+    box-shadow: var(--shadow) 0px 2px 4px, var(--shadow) 0px 7px 13px -3px, var(--shadow) 0px -3px 0px inset;
     border-radius: 12px;
     transition: transform 0.3s ease, filter 0.3s ease;
 }
@@ -2464,11 +2494,11 @@ in small sittings, its currently the 1st of may*/
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: #ad5a15;
+    color: var(--textcolor);
 }
 .khan-lower-lower-light-card-title{
     font-family:manorope;
-    color: #6f5e5b;
+    color: var(--homecolor);
     font-size: 20px;
     margin-left: 10px;
     font-weight: 400;
@@ -2478,14 +2508,14 @@ in small sittings, its currently the 1st of may*/
 }
 .khan-lower-lower-light-card-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #84888d;
+    color: var(--homecolor);
     margin-bottom: 4%;
     margin-left: 3%;
     max-width: 500px;
 }
 .khan-lower-lower-light-card-link{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #c58b5b;
+    color: var(--textcolor);
     margin-bottom: 4%;
     margin-left: 3%;
     max-width: 500px;
@@ -2495,4 +2525,3 @@ in small sittings, its currently the 1st of may*/
 .khan-lower-lower-light-card-link:hover{
     transform: scale(1.05);
 }
-
