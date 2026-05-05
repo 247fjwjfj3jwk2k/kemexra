@@ -30,7 +30,7 @@
     --accenthover: black;
 }
 
-body.light-mode {
+html.light-mode {
     --bgcolor: #ffffff;
     --navbg: rgba(255, 255, 255, 0.95);
     --textcolor: #1a1a1a;
@@ -42,7 +42,7 @@ body.light-mode {
     --tableheadbg: #b08d32;
     --tableheadcolor: #ffffff;
     --tablebodybg: #ffffff;
-    --tablebodyhover: #f9f7f2; /* كريمي فاتح بدلاً من الأزرق */
+    --tablebodyhover: #f9f7f2;
     --tabletext: #333333;
     --cardbg: #ffffff;
     --cardlocationcolor: #666666;
@@ -57,34 +57,42 @@ body.light-mode {
     --reviewername: #1a1a1a;
     --formbg: #fdfaf2;
     --formcolor: #1a1a1a;
-    --footerbg: #f4f4f4; /* رمادي فاتح بدلاً من الأزرق الداكن */
+    --footerbg: #f4f4f4;
     --offerdesc: #555555;
 }
 
-/* باقي كود التنسيق كما هو دون تغيير في الهيكلية */
+body {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 .hotels-table {
     width: 80%;
     margin: 20px auto 40px auto;
     border-collapse: collapse;
     color: var(--tabletext);
 }
+
 .hotels-table th {
     background-color: var(--tableheadbg);
     color: var(--tableheadcolor);
     padding: 12px 20px;
     text-align: center;
 }
+
 .hotels-table td {
     padding: 12px 20px;
     text-align: center;
     border-bottom: 1px solid rgba(201, 168, 76, 0.2);
     background-color: var(--tablebodybg);
 }
+
 .hotels-table tr:hover td {
     background-color: var(--tablebodyhover);
 }
 
-.book-btn{
+.book-btn {
     background-color: var(--accentcolor);
     padding: 10px 20px;
     border-radius: 5px;
@@ -95,7 +103,7 @@ body.light-mode {
     text-decoration: none;
 }
 
-.hero{
+.hero {
     height: 500px;
     background-image: url("hero-photo.jpg");
     background-size: cover;
@@ -135,7 +143,8 @@ body.light-mode {
     box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: all 0.7s ease;
 }
-.filter:hover{
+
+.filter:hover {
     transform: translateY(5px);
     box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1);
 }
@@ -160,6 +169,7 @@ body.light-mode {
     font-size: 14px;
     cursor: pointer;
 }
+
 .filter-item select:focus {
     outline: none;
 }
@@ -180,14 +190,14 @@ body.light-mode {
     font-size: 36px;
 }
 
-.hotels-container{
+.hotels-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 50px;
 }
 
-.card{
+.card {
     background-color: var(--cardbg);
     color: var(--navlinkcolor);
     text-align: left;
@@ -196,7 +206,8 @@ body.light-mode {
     border: 1px solid rgba(156, 166, 181, 0.3);
     transition: all 0.4s ease-in-out;
 }
-.card:hover{
+
+.card:hover {
     transform: translateY(-5px);
     border-color: var(--accentcolor);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
@@ -212,55 +223,63 @@ body.light-mode {
     cursor: pointer;
     transition: 0.3s;
 }
+
 .filter-btn:hover {
     background-color: var(--accentcolor);
     color: var(--accenthover);
 }
 
-.card-img{
+.card-img {
     height: 250px;
     background-image: url("card-1.png");
     background-size: cover;
     background-position: center;
 }
-.card-img-2{
+
+.card-img-2 {
     height: 250px;
     background-image: url("card-2.png");
     background-size: cover;
     background-position: center;
 }
-.card-img-3{
+
+.card-img-3 {
     height: 250px;
     background-image: url("card-3.png");
     background-size: cover;
     background-position: center;
 }
-.card-img-4{
+
+.card-img-4 {
     height: 250px;
     background-image: url("card-4.png");
     background-size: cover;
     background-position: center;
 }
 
-.card-content{
+.card-content {
     padding: 15px;
 }
-.card-content h3{
+
+.card-content h3 {
     color: var(--accentcolor);
     font-size: 18px;
     margin-bottom: 5px;
 }
-.card-content .location{
+
+.card-content .location {
     font-size: 13px;
     color: var(--cardlocationcolor);
     margin-bottom: 10px;
 }
+
 .card-content .price {
     font-weight: bold;
     font-size: 20px;
     margin: 10px 0;
     color: var(--cardpricecolor);
 }
+
 .card-content .price span {
     font-size: 12px;
     font-weight: normal;
@@ -280,12 +299,13 @@ body.light-mode {
     font-size: 14px;
     transition: 0.3s;
 }
+
 .view-btn:hover {
     background-color: var(--accentcolor);
     color: var(--accenthover);
 }
 
-.offer{
+.offer {
     margin-right: 60px;
     margin-left: 60px;
     margin-bottom: 50px;
@@ -303,7 +323,7 @@ body.light-mode {
     transition: all 0.9s ease;
 }
 
-.offer:hover{
+.offer:hover {
     transform: scale(0.985);
     box-shadow: 0 0 50px rgba(212, 151, 20, 0.3);
 }
@@ -336,7 +356,7 @@ body.light-mode {
     color: var(--offerdesc);
 }
 
-.features-bar{
+.features-bar {
     display: flex;
     border: 1px solid var(--accentcolor);
     border-radius: 8px;
@@ -347,7 +367,8 @@ body.light-mode {
     justify-content: space-around;
     align-items: center;
 }
-.feature-item{
+
+.feature-item {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -357,15 +378,18 @@ body.light-mode {
     gap: 8px;
     padding: 20px;
 }
+
 .feature-item:hover {
     background-color: rgba(201, 168, 76, 0.05);
     transform: translateY(-5px);
 }
-.feature-icon{
+
+.feature-icon {
     font-size: 25px;
     color: var(--accentcolor) !important;
 }
-.feature-title{
+
+.feature-title {
     color: var(--accentcolor);
     font-size: 13px;
     font-weight: bold;
@@ -373,12 +397,13 @@ body.light-mode {
     text-transform: uppercase;
     margin-bottom: 4px;
 }
-.feature-desc{
+
+.feature-desc {
     font-size: 12px;
     color: var(--offerdesc);
 }
 
-.reviews-container{
+.reviews-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
@@ -393,11 +418,13 @@ body.light-mode {
     text-align: center;
     transition: all 0.3s ease;
 }
-.review-card:hover{
+
+.review-card:hover {
     transform: translateY(-10px);
     border-color: var(--accentcolor);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
 .review-text {
     color: var(--reviewtext);
     font-style: italic;
