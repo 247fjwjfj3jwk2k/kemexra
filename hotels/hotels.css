@@ -1,14 +1,76 @@
+:root{
+    --cardcolor:#161e36;
+    --textcolor:#c5a059;
+    --homecolor:#a9adc1;
+    --buttoncolor:#d4af37;
+    --bgcolor:#0a1128;
+    --navbg:rgba(10, 15, 30, 0.85);
+    --footerbg:#0a0f1e;
+    --formbg:#deba73;
+    --formcolor:#123f8e;
+    --navlinkcolor:#e6dfcd;
+    --tableheadbg:#c9a84c;
+    --tableheadcolor:black;
+    --tablebodybg:#162040;
+    --tablebodyhover:#1a2a50;
+    --tabletext:#737ab1;
+    --filterbg:#111827;
+    --filtertext:white;
+    --filterlabelcolor:#c9a84c;
+    --cardbg:#162040;
+    --cardlocationcolor:#9aaccc;
+    --cardpricecolor:#ffffff;
+    --cardpricespan:#9aaccc;
+    --featuresbarbg:#121a32;
+    --reviewcardbg:#1a243d;
+    --reviewtext:#cccccc;
+    --reviewername:#ffffff;
+    --offerdesc:#cccccc;
+    --accentcolor:#c9a84c;
+    --accenthover:black;
+}
 
+html.light-mode {
+    --cardcolor:#e8e0d0;
+    --textcolor:#7a5c1e;
+    --homecolor:#2c2f3a;
+    --buttoncolor:#b8860b;
+    --bgcolor:#f5f0e8;
+    --navbg:rgba(245, 240, 232, 0.95);
+    --footerbg:#e8e0d0;
+    --formbg:#7a5c1e;
+    --formcolor:#f5f0e8;
+    --navlinkcolor:#2c2f3a;
+    --tableheadbg:#b8860b;
+    --tableheadcolor:#f5f0e8;
+    --tablebodybg:#e8e0d0;
+    --tablebodyhover:#d6c9b0;
+    --tabletext:#5a5f8a;
+    --filterbg:#e0d8c8;
+    --filtertext:#2c2f3a;
+    --filterlabelcolor:#7a5c1e;
+    --cardbg:#e8e0d0;
+    --cardlocationcolor:#5a6a7a;
+    --cardpricecolor:#2c2f3a;
+    --cardpricespan:#5a6a7a;
+    --featuresbarbg:#ddd5c0;
+    --reviewcardbg:#ddd5c0;
+    --reviewtext:#4a4a4a;
+    --reviewername:#2c2f3a;
+    --offerdesc:#4a4a4a;
+    --accentcolor:#b8860b;
+    --accenthover:#f5f0e8;
+}
 
 .hotels-table {
     width: 80%;
     margin: 20px auto 40px auto;
     border-collapse: collapse;
-    color: #737ab1;
+    color: var(--tabletext);
 }
 .hotels-table th {
-    background-color: #c9a84c;
-    color: black;
+    background-color: var(--tableheadbg);
+    color: var(--tableheadcolor);
     padding: 12px 20px;
     text-align: center;
 }
@@ -16,103 +78,100 @@
     padding: 12px 20px;
     text-align: center;
     border-bottom: 1px solid rgba(201, 168, 76, 0.2);
-    background-color: #162040;
+    background-color: var(--tablebodybg);
 }
 .hotels-table tr:hover td {
-    background-color: #1a2a50;
+    background-color: var(--tablebodyhover);
 }
 
+.book-btn{
+    background-color: var(--accentcolor);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: var(--accenthover) !important;
+    font-weight: bold;
+    display: inline-block;
+    width: fit-content;
+    text-decoration: none;
+}
 
-      
-      .book-btn{
-        background-color: #c9a84c;
-        padding: 10px 20px;
-        border-radius: 5px;
-        color: black !important;
-        font-weight: bold;
-        display: inline-block; 
-        width: fit-content;
-        text-decoration: none;}
-        
-      .hero{
-        height: 500px;
-        background-image: url("hero-photo.jpg");
-        background-size: cover;
-        background-position: center;
-        position: relative;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        padding: 60px;
-      }
+.hero{
+    height: 500px;
+    background-image: url("hero-photo.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
 
-      .hero h2 {
-       font-size: 48px;
-       color: #c9a84c;
-       margin: 0;
-      }
+.hero h2 {
+    font-size: 48px;
+    color: var(--accentcolor);
+    margin: 0;
+}
 
-      .hero p {
-       font-size: 20px;
-       margin: 5px 0;
-         }  
-     .filter {
-       margin: -40px 60px 0 60px;
-       position: relative;
-       z-index: 5;
-       border: 1px solid rgba(201, 168, 76, 0.3);
-       border-radius: 12px;
-       padding: 20px;
-       display: flex;
-       gap: 20px;
-       color: white;
-       background-color: #111827;
-       justify-content: space-around;
-       align-items: center;
-       box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
-       transition: all 0.7s ease;
+.hero p {
+    font-size: 20px;
+    margin: 5px 0;
+}
+
+.filter {
+    margin: -40px 60px 0 60px;
+    position: relative;
+    z-index: 5;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    color: var(--filtertext);
+    background-color: var(--filterbg);
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    transition: all 0.7s ease;
 }
 .filter:hover{
-       transform: translateY(5px);
-       box-shadow: 0 15px 10px rgba(255, 255, 255, 0.3); 
-        
-
-
+    transform: translateY(5px);
+    box-shadow: 0 15px 10px rgba(255, 255, 255, 0.3);
 }
-     
-     .filter-item {
-     display: flex;
-     flex-direction: column;
-     background-color: #111827;
-     gap: 5px;
-   }
 
-    .filter-item label {
+.filter-item {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--filterbg);
+    gap: 5px;
+}
+
+.filter-item label {
     font-size: 12px;
-    color: #c9a84c;
-    background-color: #111827;
+    color: var(--filterlabelcolor);
+    background-color: var(--filterbg);
+}
 
-    }
-
-    .filter-item select {
-    background-color: #111827;
-    color: white;
+.filter-item select {
+    background-color: var(--filterbg);
+    color: var(--filtertext);
     border: none;
     font-size: 14px;
     cursor: pointer;
-  }
-   .filter-item select:focus {
-    outline: none; /* عشان لما تدوس عليه ميعملش برواز أبيض وحش */
 }
+.filter-item select:focus {
+    outline: none;
+}
+
 .section-title {
     text-align: center;
     padding: 40px 0 20px 0;
-    color: white;
+    color: var(--navlinkcolor);
 }
 
 .section-title p {
-    color: #c9a84c;
+    color: var(--accentcolor);
     font-size: 13px;
     letter-spacing: 2px;
 }
@@ -120,16 +179,17 @@
 .section-title h2 {
     font-size: 36px;
 }
+
 .hotels-container{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr ;
-    gap:20px ;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
     padding: 50px;
-
 }
+
 .card{
-    background-color: #162040; 
-    color: white;
+    background-color: var(--cardbg);
+    color: var(--navlinkcolor);
     text-align: left;
     border-radius: 10px;
     overflow: hidden;
@@ -138,7 +198,7 @@
 }
 .card:hover{
     transform: translateY(-5px);
-    border-color: #ffffff;   
+    border-color: #ffffff;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -146,22 +206,24 @@
     background-color: transparent;
     padding: 10px 20px;
     border-radius: 5px;
-    color: #c9a84c;
-    border: 1px solid #c9a84c;
+    color: var(--accentcolor);
+    border: 1px solid var(--accentcolor);
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
 }
 .filter-btn:hover {
-    background-color: #c9a84c;
-    color: black;
+    background-color: var(--accentcolor);
+    color: var(--accenthover);
 }
+
 .card-img{
     height: 250px;
     background-image: url("card-1.png");
     background-size: cover;
     background-position: center;
-}.card-img-2{
+}
+.card-img-2{
     height: 250px;
     background-image: url("card-2.png");
     background-size: cover;
@@ -184,33 +246,33 @@
     padding: 15px;
 }
 .card-content h3{
-    color :#c9a84c;
+    color: var(--accentcolor);
     font-size: 18px;
     margin-bottom: 5px;
 }
 .card-content .location{
     font-size: 13px;
-    color: #9aaccc;
+    color: var(--cardlocationcolor);
     margin-bottom: 10px;
 }
 .card-content .price {
     font-weight: bold;
     font-size: 20px;
     margin: 10px 0;
-    color: #ffffff;
-
+    color: var(--cardpricecolor);
 }
 .card-content .price span {
     font-size: 12px;
     font-weight: normal;
-    color: #9aaccc; }
+    color: var(--cardpricespan);
+}
 
 .view-btn {
     display: block;
     text-align: center;
     background-color: transparent;
-    color: #c9a84c;
-    border: 1px solid #c9a84c;
+    color: var(--accentcolor);
+    border: 1px solid var(--accentcolor);
     padding: 8px;
     text-decoration: none;
     border-radius: 5px;
@@ -219,15 +281,16 @@
     transition: 0.3s;
 }
 .view-btn:hover {
-    background-color: #c9a84c;
-    color: black;
+    background-color: var(--accentcolor);
+    color: var(--accenthover);
 }
+
 .offer{
     margin-right: 60px;
     margin-left: 60px;
     margin-bottom: 50px;
     display: flex;
-    border:1px solid #c9a84c;
+    border: 1px solid var(--accentcolor);
     background-image: url("offer-1.png");
     border-radius: 15px;
     background-size: cover;
@@ -241,12 +304,12 @@
 }
 
 .offer:hover{
-    transform: scale(0.985);    
+    transform: scale(0.985);
     box-shadow: 0 0 50px rgba(212, 151, 20, 0.531);
 }
 
 .offer-label {
-    color: #c9a84c;
+    color: var(--accentcolor);
     font-size: 13px;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -259,7 +322,7 @@
     align-items: center;
     gap: 15px;
     flex-wrap: wrap;
-    border-left: 3px solid #c9a84c; 
+    border-left: 3px solid var(--accentcolor);
 }
 
 .offer-percent {
@@ -270,17 +333,17 @@
 
 .offer-desc {
     font-size: 14px;
-    color: #cccccc;
+    color: var(--offerdesc);
 }
 
 .features-bar{
     display: flex;
-    border: 1px solid #c9a84c;
+    border: 1px solid var(--accentcolor);
     border-radius: 8px;
     margin: 40px 60px;
     padding: 10px;
-    color:white ;
-    background-color: #121a32;
+    color: var(--navlinkcolor);
+    background-color: var(--featuresbarbg);
     justify-content: space-around;
     align-items: center;
 }
@@ -289,73 +352,74 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    transition: all 0.3s ease; 
+    transition: all 0.3s ease;
     flex: 1;
     gap: 8px;
     padding: 20px;
 }
 .feature-item:hover {
-    background-color: rgba(201, 168, 76, 0.05); 
-    transform: translateY(-5px); 
+    background-color: rgba(201, 168, 76, 0.05);
+    transform: translateY(-5px);
 }
 .feature-icon{
     font-size: 25px;
-    color: #c9a84c !important;
+    color: var(--accentcolor) !important;
 }
 .feature-title{
-    color: #c9a84c;
+    color: var(--accentcolor);
     font-size: 13px;
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 4px;
-  }
+}
 .feature-desc{
     font-size: 12px;
-    color: #cccccc;
+    color: var(--offerdesc);
 }
+
 .reviews-container{
     display: grid;
-    grid-template-columns: 1fr  1fr 1fr ;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
     padding: 20px 60px;
 }
 
 .review-card {
-    background-color: #1a243d;
+    background-color: var(--reviewcardbg);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid rgba(201, 168, 76, 0.2); 
+    border: 1px solid rgba(201, 168, 76, 0.2);
     text-align: center;
     transition: all 0.3s ease;
 }
 .review-card:hover{
-    transform: translateY(-10px);     
-    border-color: #c9a84c;
+    transform: translateY(-10px);
+    border-color: var(--accentcolor);
     box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-       
 }
 .review-text {
-    color: #cccccc; 
-    font-style: italic; 
+    color: var(--reviewtext);
+    font-style: italic;
     font-size: 15px;
-    line-height: 1.6; 
+    line-height: 1.6;
     margin-bottom: 15px;
 }
 
 .reviewer-name {
-    color: #ffffff;
+    color: var(--reviewername);
     margin-bottom: 5px;
     font-weight: bold;
 }
 
 .review-stars {
-    color: #c9a84c; 
+    color: var(--accentcolor);
     font-size: 14px;
 }
+
 footer {
-    background-color: #0a0f1e;
-    color: #9aaccc;
+    background-color: var(--footerbg);
+    color: var(--cardlocationcolor);
     text-align: center;
     padding: 30px;
     border-top: 1px solid rgba(201, 168, 76, 0.3);
@@ -363,7 +427,7 @@ footer {
 }
 
 .footer-logo {
-    color: #c9a84c;
+    color: var(--accentcolor);
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -383,20 +447,21 @@ footer {
 }
 
 .footer-socials a {
-    color: #c9a84c;
+    color: var(--accentcolor);
     transition: 0.3s;
 }
 
 .footer-socials a:hover {
-    color: white;
+    color: var(--reviewername);
 }
 
 .footer-copy {
     font-size: 12px;
 }
+
 @media (max-width: 992px) {
     .hotels-container {
-        grid-template-columns: 1fr 1fr; /* كارتين جنب بعض في التابلت */
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -405,7 +470,7 @@ footer {
         grid-template-columns: 1fr;
         padding: 20px;
     }
-    
+
     .filter {
         flex-direction: column;
         margin: -20px 20px 0 20px;
