@@ -5,69 +5,105 @@
 }
 
 body {
-    background-color: #121c3a;
-    font-family: sans-serif;
+    background-color: var(--bgcolor, #0A0F1E);
+    color: var(--textcolor, white);
+    transition: background-color 0.3s ease;
 }
-/* عاكس الالوان*/
+/* عاكس الالوان */
 html.light-mode {
-    filter: invert(1) hue-rotate(180deg);
+    --navbg: rgba(245, 240, 232, 0.95);
+    --navlinkcolor: #2c2f3a;
+    --footerbg: #e8e0d0;
+    --bgcolor: #f5f0e8;
 }
 
+html.light-mode body {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+}
 
 /* الناف بار*/
-
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
-    color: white;
-    background-color: #0a0f1e;
+    padding: 18px 50px; 
+    background-color: var(--navbg, rgba(10, 15, 30, 0.85));
+    backdrop-filter: blur(12px); 
     position: sticky;
     top: 0;
     z-index: 1000;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.2); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
-
 .logo {
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 800;
     color: #c9a84c;
+    letter-spacing: 3px;
+    text-transform: uppercase;
 }
-
 .nav-links {
     display: flex;
-    gap: 30px;
+    gap: 25px;
 }
-
-.navbar a {
+.nav-links a {
     text-decoration: none;
-    color: white;
+    color: var(--navlinkcolor, #e6dfcd); 
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease; 
+    position: relative; 
 }
-
-.navbar a:hover {
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1.5px;
+    bottom: -5px;
+    left: 0;
+    background-color: #c9a84c;
+    transition: width 0.3s ease;
+}
+.nav-links a:hover {
     color: #c9a84c;
+}
+.nav-links a:hover::after {
+    width: 100%;
 }
 .theme-btn {
     background-color: transparent;
-    border: 1px solid #c9a84c;
+    border: 1px solid rgba(201, 168, 76, 0.5);
     color: #c9a84c;
-    padding: 8px 15px;
-    border-radius: 5px;
+    padding: 8px 18px;
+    border-radius: 2px; 
     cursor: pointer;
-    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
     transition: 0.3s;
-    font-size: 13px;
+}
+.theme-btn:hover {
+    background-color: rgba(201, 168, 76, 0.1);
+    border-color: #c9a84c;
 }
 .action-btn {
     background-color: #c9a84c;
-    padding: 10px 20px;
-    border-radius: 5px;
-    color: black !important;
-    font-weight: bold;
-    display: inline-block;
-    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 2px;
+    color: #0a0f1e !important;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
 }
-
+.action-btn:hover {
+    background-color: #e8ce87;
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
+}
 /* زرار العربة */
 .cart-icon-btn {
     position: relative;
