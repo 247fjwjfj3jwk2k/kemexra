@@ -1,103 +1,150 @@
+غلطت، اتفضل:
+
+```css
+:root{
+    --cardcolor:#161e36;
+    --textcolor:#c5a059;
+    --homecolor:#a9adc1;
+    --buttoncolor:#d4af37;
+    --bgcolor:#0a1128;
+    --navbg:rgba(10, 15, 30, 0.85);
+    --footerbg:#0a0f1e;
+    --formbg:#deba73;
+    --formcolor:#123f8e;
+    --navlinkcolor:#e6dfcd;
+    --accentcolor:#c9a84c;
+    --accenthover:#000000;
+    --tabletext:#737ab1;
+    --cardlocationcolor:#9aaccc;
+    --reviewtext:#cccccc;
+}
+
+html.light-mode {
+    --cardcolor:#e8e0d0;
+    --textcolor:#7a5c1e;
+    --homecolor:#2c2f3a;
+    --buttoncolor:#b8860b;
+    --bgcolor:#f5f0e8;
+    --navbg:rgba(245, 240, 232, 0.95);
+    --footerbg:#e8e0d0;
+    --formbg:#7a5c1e;
+    --formcolor:#f5f0e8;
+    --navlinkcolor:#2c2f3a;
+    --accentcolor:#b8860b;
+    --accenthover:#f5f0e8;
+    --tabletext:#5a5f8a;
+    --cardlocationcolor:#5a6a7a;
+    --reviewtext:#4a4a4a;
+}
+
 body {
-    background-image: url("background-register.png")!important; 
+    background-image: url("background-register.png")!important;
     background-position: center !important;
     background-size: cover !important;
     background-repeat: no-repeat !important;
-    background-attachment: fixed !important; /* بتخلي الخلفية ثابتة وشيك جداً وأنت بتعمل Scroll */
+    background-attachment: fixed !important;
     min-height: 100vh !important;
     display: flex !important;
     flex-direction: column !important;
 }
+
 .display {
     display: flex;
-    flex-direction: column; /* عشان يرتّب اللي جواه فوق بعض مش جنب بعض */
-    align-items: center;    /* بيجيب المحتوى في نص الصندوق بالعرض */
-    
-    max-width: 450px;       /* حددنا عرض ثابت ومعقول للصندوق */
-    margin: 100px auto;     /* السحر هنا: 100 فوق وتحت، و auto يمين وشمال بتوسطنه بالمللي */
-    
-    padding: 40px;          /* مسافة جوه الصندوق عشان الكلام م يلزقش في الحواف */
-    border: 1px solid #635d4d; /* خليه ذهبي عشان يليق على التصميم */
+    flex-direction: column;
+    align-items: center;
+    max-width: 450px;
+    margin: 100px auto;
+    padding: 40px;
+    border: 1px solid var(--textcolor);
     border-radius: 10px;
-    background-color: #131823; /* لون الكارت الغامق */
+    background-color: var(--cardcolor);
     box-shadow: 0px 0px 40px snow;
     transition: all 0.4s ease-in;
 }
-
 .display:hover{
     transform: translateY(4px);
-    border: 1px solid #181818; /* خليه ذهبي عشان يليق على التصميم */
+    border: 1px solid #181818;
     border-radius: 10px;
-    box-shadow: 0px 20px 20px #e8ce87;
-
+    box-shadow: 0px 20px 20px var(--buttoncolor);
 }
-
 .login-container{
     text-align: center;
     margin-top: 80px;
 }
 .login-container h2 {
-    color:#c9a84c ;
+    color: var(--accentcolor);
     letter-spacing: 3px;
     font-size: 28px;
     margin-top: 60px;
 }
 .subtitle{
-    color: rgba(153, 170, 170, 0.8);
+    color: var(--homecolor);
     font-style: italic;
     margin-top: 10px;
-
 }
 .input-group{
     margin-top: 25px;
     text-align: left;
 }
-
 .input-group label{
     display: block;
-    color: #c9a84c;
+    color: var(--accentcolor);
     font-size: 10px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 .input-group input {
-    width: 100%;         /* بياخد عرض الكارت كله */
-    background: transparent; /* بنشيل الصندوق الأبيض تماماً */
-    border: none;        /* بنمسح الحدود الأربعة */
-    border-bottom: 1px solid rgba(230, 223, 205, 0.5); /* بنرسم خط تحتاني بس ذهبي شفاف شوية */
-    color: #e8ce87;        /* لون الكتابة اللي المستخدم هيدخلها */
-    padding: 8px 0;      /* مسافة داخلية عشان الكلام ميبقاش لازق في الخط */
-    outline: none;       /* أهم سطر: بيلغي البرواز اللي بيظهر لما تيجي تكتب */
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(230, 223, 205, 0.5);
+    color: var(--formbg);
+    padding: 8px 0;
+    outline: none;
 }
 .submit-btn{
     margin-top: 20px;
-    background-color: transparent; /* ابدأ بخلفية شفافة لو عايز شكل الـ Outline */
-    border: 1px solid #c9a84c;
+    background-color: transparent;
+    border: 1px solid var(--accentcolor);
     width: 100%;
-    color: #c9a84c;
+    color: var(--accentcolor);
     padding: 15px;
     letter-spacing: 2px;
-    transition: 0.6s ;
+    transition: 0.6s;
 }
-
 .submit-btn:hover{
-    background-color: #e2c26d;
+    background-color: var(--buttoncolor);
     letter-spacing: 5px;
-    color: #546488;
-
+    color: var(--formcolor);
 }
 .text {
     margin-top: 30px;
     font-size: 13px;
-    color: #80a2ebb2;
+    color: var(--cardlocationcolor);
 }
-
 .text a {
-    color: #c9a84c;
-    text-decoration: none; /* شيل الخط اللي تحت اللينك */
+    color: var(--accentcolor);
+    text-decoration: none;
     font-weight: bold;
 }
-
 .text a:hover {
-    text-decoration: underline; /* يظهر الخط لما تقف عليه بس */
+    text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .display {
+        margin: 40px 20px;
+        padding: 25px;
+        max-width: 100%;
+    }
+
+    .login-container h2 {
+        font-size: 22px;
+        margin-top: 30px;
+    }
+
+    .submit-btn {
+        padding: 12px;
+    }
+}
+```
