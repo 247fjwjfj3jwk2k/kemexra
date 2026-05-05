@@ -4,22 +4,35 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: var(--bgcolor, #0A0F1E);
-    color: var(--textcolor, white);
-    transition: background-color 0.3s ease;
+:root {
+    --bgcolor: #0A0F1E;
+    --textcolor: white;
+    --navbg: rgba(10, 15, 30, 0.85);
+    --navlinkcolor: #e6dfcd;
+    --footerbg: #0a0f1e;
+    --cardbg: #111b38;
+    --panelbg: #0a0f1e;
+    --textsecondary: #9aaccc;
+    --accent: #c9a84c;
 }
-/* عاكس الالوان */
+
 html.light-mode {
+    --bgcolor: #f5f0e8;
+    --textcolor: #1a1a1a;
     --navbg: rgba(245, 240, 232, 0.95);
     --navlinkcolor: #2c2f3a;
     --footerbg: #e8e0d0;
-    --bgcolor: #f5f0e8;
+    --cardbg: #ffffff;
+    --panelbg: #f5f0e8;
+    --textsecondary: #5a6a7a;
+    --accent: #b08d32;
 }
 
-html.light-mode body {
+body {
     background-color: var(--bgcolor);
     color: var(--textcolor);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: sans-serif;
 }
 
 /* الناف بار*/
@@ -28,28 +41,31 @@ html.light-mode body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 50px; 
-    background-color: var(--navbg, rgba(10, 15, 30, 0.85));
+    background-color: var(--navbg);
     backdrop-filter: blur(12px); 
     position: sticky;
     top: 0;
     z-index: 1000;
     border-bottom: 1px solid rgba(201, 168, 76, 0.2); 
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3); 
 }
+
 .logo {
     font-size: 24px;
     font-weight: 800;
-    color: #c9a84c;
+    color: var(--accent);
     letter-spacing: 3px;
     text-transform: uppercase;
 }
+
 .nav-links {
     display: flex;
     gap: 25px;
 }
+
 .nav-links a {
     text-decoration: none;
-    color: var(--navlinkcolor, #e6dfcd); 
+    color: var(--navlinkcolor); 
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -57,6 +73,7 @@ html.light-mode body {
     transition: all 0.4s ease; 
     position: relative; 
 }
+
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -64,19 +81,22 @@ html.light-mode body {
     height: 1.5px;
     bottom: -5px;
     left: 0;
-    background-color: #c9a84c;
+    background-color: var(--accent);
     transition: width 0.3s ease;
 }
+
 .nav-links a:hover {
-    color: #c9a84c;
+    color: var(--accent);
 }
+
 .nav-links a:hover::after {
     width: 100%;
 }
+
 .theme-btn {
     background-color: transparent;
     border: 1px solid rgba(201, 168, 76, 0.5);
-    color: #c9a84c;
+    color: var(--accent);
     padding: 8px 18px;
     border-radius: 2px; 
     cursor: pointer;
@@ -84,32 +104,36 @@ html.light-mode body {
     text-transform: uppercase;
     transition: 0.3s;
 }
+
 .theme-btn:hover {
     background-color: rgba(201, 168, 76, 0.1);
-    border-color: #c9a84c;
+    border-color: var(--accent);
 }
+
 .action-btn {
-    background-color: #c9a84c;
+    background-color: var(--accent);
     padding: 10px 22px;
     border-radius: 2px;
-    color: #0a0f1e !important;
+    color: var(--bgcolor) !important;
     font-weight: 700;
     font-size: 12px;
     letter-spacing: 1px;
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
 }
+
 .action-btn:hover {
     background-color: #e8ce87;
     transform: translateY(-2px); 
     box-shadow: 0 6px 20px rgba(201, 168, 76, 0.4);
 }
+
 /* زرار العربة */
 .cart-icon-btn {
     position: relative;
     background: transparent;
     border: none;
-    color: white;
+    color: var(--textcolor);
     font-size: 22px;
     cursor: pointer;
 }
@@ -118,7 +142,7 @@ html.light-mode body {
     position: absolute;
     top: -5px;
     right: -5px;
-    background: #c9a84c;
+    background: var(--accent);
     color: black;
     font-size: 10px;
     font-weight: bold;
@@ -130,9 +154,7 @@ html.light-mode body {
     justify-content: center;
 }
 
-
 /* cart backdrop */
-
 .cart-backdrop {
     display: none;
     position: fixed;
@@ -145,17 +167,15 @@ html.light-mode body {
     display: block;
 }
 
-
 /* cart panel */
-
 .cart-panel {
     position: fixed;
     top: 0;
     right: -350px;
     width: 350px;
     height: 100vh;
-    background: #0a0f1e;
-    border-left: 1px solid #c9a84c;
+    background: var(--panelbg);
+    border-left: 1px solid var(--accent);
     z-index: 1200;
     display: flex;
     flex-direction: column;
@@ -171,18 +191,18 @@ html.light-mode body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    border-bottom: 1px solid #c9a84c;
+    border-bottom: 1px solid var(--accent);
 }
 
 .cart-title {
-    color: #c9a84c;
+    color: var(--accent);
     font-size: 16px;
 }
 
 .cart-close {
     background: transparent;
     border: 1px solid gray;
-    color: white;
+    color: var(--textcolor);
     width: 30px;
     height: 30px;
     border-radius: 5px;
@@ -194,7 +214,7 @@ html.light-mode body {
     flex: 1;
     overflow-y: auto;
     padding: 16px;
-    color: white;
+    color: var(--textcolor);
 }
 
 .cart-row {
@@ -202,7 +222,7 @@ html.light-mode body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 }
 
 .cart-row-name {
@@ -211,15 +231,15 @@ html.light-mode body {
 }
 
 .cart-row-price {
-    color: #c9a84c;
+    color: var(--accent);
     font-size: 13px;
     margin-right: 10px;
 }
 
 .qty-btn {
-    background: #111b38;
+    background: var(--cardbg);
     border: 1px solid gray;
-    color: white;
+    color: var(--textcolor);
     width: 24px;
     height: 24px;
     border-radius: 4px;
@@ -234,8 +254,8 @@ html.light-mode body {
 
 .cart-panel-footer {
     padding: 16px;
-    border-top: 1px solid #c9a84c;
-    color: white;
+    border-top: 1px solid var(--accent);
+    color: var(--textcolor);
 }
 
 .cart-total-row {
@@ -246,14 +266,14 @@ html.light-mode body {
 }
 
 .cart-total {
-    color: #c9a84c;
+    color: var(--accent);
     font-size: 20px;
     font-weight: bold;
 }
 
 .Checkout {
     width: 100%;
-    background: #c9a84c;
+    background: var(--accent);
     color: black;
     border: none;
     padding: 12px;
@@ -275,9 +295,7 @@ html.light-mode body {
     font-size: 12px;
 }
 
-
 /* herooooo */
-
 .hero {
     text-align: center;
     padding: 60px 20px 40px;
@@ -285,18 +303,16 @@ html.light-mode body {
 
 .hero h1 {
     font-size: 36px;
-    color: #c9a84c;
+    color: var(--accent);
     margin-bottom: 12px;
 }
 
 .hero p {
-    color: #9aaccc;
+    color: var(--textsecondary);
     font-size: 14px;
 }
 
-
 /* items grid */
-
 .items-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -307,10 +323,15 @@ html.light-mode body {
 }
 
 .item-card {
-    background: #111b38;
+    background: var(--cardbg);
     border: 1px solid rgba(201, 168, 76, 0.3);
     border-radius: 10px;
     overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
 }
 
 .item-img {
@@ -327,12 +348,12 @@ html.light-mode body {
     font-size: 14px;
     font-weight: bold;
     margin-bottom: 6px;
-     color: white;
+    color: var(--textcolor);
 }
 
 .item-desc {
     font-size: 12px;
-    color: #9aaccc;
+    color: var(--textsecondary);
     line-height: 1.5;
 }
 
@@ -347,26 +368,30 @@ html.light-mode body {
 .item-price {
     font-size: 16px;
     font-weight: bold;
-    color: #c9a84c;
+    color: var(--accent);
 }
 
 .add-to-cart-btn {
     background: rgba(201, 168, 76, 0.15);
-    border: 1px solid #c9a84c;
-    color: #c9a84c;
+    border: 1px solid var(--accent);
+    color: var(--accent);
     width: 32px;
     height: 32px;
     border-radius: 6px;
     cursor: pointer;
     font-size: 16px;
+    transition: 0.3s;
 }
 
+.add-to-cart-btn:hover {
+    background: var(--accent);
+    color: black;
+}
 
 /* الفوتر*/
-
 footer {
-    background-color: #0a0f1e;
-    color: #9aaccc;
+    background-color: var(--footerbg);
+    color: var(--textsecondary);
     text-align: center;
     padding: 30px;
     border-top: 1px solid rgba(201, 168, 76, 0.3);
@@ -374,7 +399,7 @@ footer {
 }
 
 .footer-logo {
-    color: #c9a84c;
+    color: var(--accent);
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -392,13 +417,67 @@ footer {
     font-size: 22px;
     margin-bottom: 15px;
 }
+
 .footer-socials a {
-    color: #c9a84c;
+    color: var(--accent);
     transition: 0.3s;
 }
+
 .footer-socials a:hover {
-    color: white;
+    color: var(--textcolor);
 }
+
 .footer-copy {
     font-size: 12px;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 15px 30px;
+    }
+    .items-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        padding: 0 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+        order: 3;
+        width: 100%;
+    }
+    .nav-links a {
+        font-size: 11px;
+    }
+    .hero h1 {
+        font-size: 28px;
+    }
+    .cart-panel {
+        width: 100%;
+        right: -100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .items-grid {
+        grid-template-columns: 1fr;
+    }
+    .action-btn, .theme-btn {
+        padding: 6px 12px;
+        font-size: 10px;
+    }
 }
