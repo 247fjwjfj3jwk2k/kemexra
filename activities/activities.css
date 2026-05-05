@@ -1173,7 +1173,7 @@ in small sittings, its currently the 1st of may*/
 }
 .card-title-light{
     font-family: manorope;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-size: 40px;
     font-weight: 400;
     line-height: 1.2;
@@ -1190,7 +1190,7 @@ in small sittings, its currently the 1st of may*/
 .yasso-card-link-light{
     font-size: 14px;
     font-weight: 600;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
     width: 170px;
@@ -1200,6 +1200,7 @@ in small sittings, its currently the 1st of may*/
     align-items: center;
     gap: 6px;
     margin-top: 20px;
+    cursor: pointer;
     transition: gap 0.2s ease, transform 0.2s ease;
 }
 .yasso-card-link-light:hover {
@@ -1211,7 +1212,7 @@ in small sittings, its currently the 1st of may*/
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: var(--formcolor);
+    background-color: #2C1F14;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease, transform 0.2s ease;
@@ -1423,7 +1424,7 @@ in small sittings, its currently the 1st of may*/
 }
 .giza-light-middle-title{
     font-family: manorope;
-    color: var(--textcolor);
+    color: #C9A84C;
     font-size: 40px;
     font-weight: 400;
     line-height: 1.2;
@@ -1445,7 +1446,7 @@ in small sittings, its currently the 1st of may*/
 }
 .yasso-giza-card-title{
     font-family: manorope;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-size: 25px;
     font-weight: 400;
     line-height: 1.2;
@@ -1483,14 +1484,14 @@ in small sittings, its currently the 1st of may*/
 }
 .october{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--formcolor);
+    color: rgb(37, 115, 179);
     font-weight: 500;
     font-size: 16px;
 }
 #giza-light .giza-light-middle-title{
     margin-left: 0;
     font-size: 25px;
-    color: var(--formcolor);
+    color: #C9A84C;
     text-align: center;
 }
 .giza-lower-cards{
@@ -1523,8 +1524,8 @@ in small sittings, its currently the 1st of may*/
     transition: transform 0.3s ease;
 }
 .card-tag-giza{
-    color: var(--formcolor);
-    background-color: var(--cardcolor);
+    color: #0f5b8b;
+    background-color: #ffffff;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
@@ -1648,7 +1649,7 @@ in small sittings, its currently the 1st of may*/
 }
 .sharm-lower-upper-light-item{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--homecolor);
+    color: #B8952A;
     font-weight: 400;
     font-size: 20px;
     transition: transform 0.3s ease, filter 0.3s ease, color 0.3s ease;
@@ -1657,14 +1658,14 @@ in small sittings, its currently the 1st of may*/
 .sharm-lower-upper-light-item:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: var(--formcolor);
+    color: #2C1F14;
 }
 .sharm-lower-upper-light-item::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: var(--formcolor);
+    background-color: #2C1F14;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -1678,7 +1679,7 @@ in small sittings, its currently the 1st of may*/
 }
 .Mid-sharm-light-title{
     font-family: maorope;
-    color: var(--formcolor);
+    color: #0f5b8b;
     font-size: 30px;
     font-weight: 400;
     text-align: center;
@@ -1761,7 +1762,7 @@ in small sittings, its currently the 1st of may*/
 }
 .mid-sharm-right-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--formcolor);
+    color: #00B4D8;
     font-size: 35px;
     font-weight: 400;
     line-height: 1.2;
@@ -1780,7 +1781,7 @@ in small sittings, its currently the 1st of may*/
 .mid-sharm-right-link{
     font-size: 14px;
     font-weight: 600;
-    color: var(--navlinkcolor);
+    color: #C9A84C;
     background-color: var(--formcolor);
     border-radius: 6px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -1793,6 +1794,7 @@ in small sittings, its currently the 1st of may*/
     gap: 6px;
     margin-top: 20px;
     transition: gap 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
     box-shadow: 0 0 10px var(--shadow);
 }
 .mid-sharm-right-link:hover {
@@ -1867,7 +1869,7 @@ in small sittings, its currently the 1st of may*/
     gap: 20px;
 }
 .right-conditions .condition{
-    color: var(--formcolor);
+    color: #00B4D8;
     text-align: right;
 }
 .description-title{
@@ -1891,7 +1893,7 @@ in small sittings, its currently the 1st of may*/
 .description-link{
     font-size: 20px;
     font-weight: 600;
-    color: var(--formcolor);
+    color: #00B4D8;
     border-radius: 6px;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     text-align: center;
@@ -1902,6 +1904,7 @@ in small sittings, its currently the 1st of may*/
     align-items: center;
     gap: 6px;
     margin-top: 20px;
+    cursor: pointer;
     transition: gap 0.2s ease, transform 0.2s ease, color 0.3s ease;
 }
 .description-link:hover {
@@ -1999,13 +2002,11 @@ in small sittings, its currently the 1st of may*/
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid var(--cardcolor);
-
 }
 .luxor-middle-light-right{
     flex: 1;
     background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuA8R3STwYiUrdZCfy0bQoyHDG6Ac8gfMRVJbYha3uZ6VN8-FYOoSr3GbUkOnKIpUdF4sc7Hr1SxVaJWEsWYsEzTtValZhH_29P-HmqNhfo4G_NE3WmhTylOhuuZXExvJDYIKXZZazl8Cj2E3VYfOMeGQThtyQmqGiCOl_HxipipH-taIz9hFuqgdOrMu_Qfv11bNWF42CB1uiEUwu-H1QZ0b2ViImArx-Z9XLWZNRIwSNwPhtG6pj9UZuVdl2YitZjD2bSo8Qat_DM);
-    background-size: auto; /* I just realized that background size auto solves a ton of my issues, i gotta go back to change some stuff now, shit)*/
+    background-size: auto; /* I just realized that background size auto solves a ton of my issues, i gotta go back to change some stuff now, shit*/
     /*after playing around with this, size auto is only good if the photo isnt going to be a background photo with content inside of it*/
     background-repeat: no-repeat;
     background-position: center;
@@ -2021,7 +2022,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-middle-light-right-title{
     font-family: manorope;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-size: 21px;
     font-weight: 600;
     line-height: 1.2;
@@ -2050,17 +2051,17 @@ in small sittings, its currently the 1st of may*/
 .luxor-middle-light-right-explore:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: var(--formcolor);
+    color: #2C1F14;
 }
 .lower-middle-luxor-light-title-but-not-that-big{
     font-family: manorope;
-    color: var(--formcolor);
+    color: #C9A84C;
     margin-left: 45%;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 400;
     line-height: 1.2;
     margin-bottom: 16px;
-    text-shadow: 0 0 18px rgb(26, 94, 137, 0.2);
+    text-shadow: 0 0 18px rgb(201, 168, 76, 0.4);
 }
 .luxor-lower-upper-light{
     display: flex;
@@ -2145,7 +2146,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-upper-right-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--homecolor);
+    color: #C9A84C;
     font-weight: 400;
     font-size: 19px;
     margin-left: 10px;
@@ -2223,7 +2224,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-lower-light-left-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-size: 30px;
     margin-left: 10px;
     font-weight: 400;
