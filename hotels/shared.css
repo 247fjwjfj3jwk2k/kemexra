@@ -3,19 +3,31 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
-    background-color: var(--bgcolor, #0A0F1E);
-    color: var(--textcolor, white);
-    transition: background-color 0.3s ease;
-}
-/* عاكس الالوان */
-html.light-mode {
-    --navbg: rgba(245, 240, 232, 0.95);
-    --navlinkcolor: #2c2f3a;
-    --footerbg: #e8e0d0;
-    --bgcolor: #f5f0e8;
+:root {
+    --bgcolor: #0a1128;
+    --navbg: rgba(10, 15, 30, 0.85);
+    --footerbg: #0a0f1e;
+    --textcolor: #c5a059;
+    --navlinkcolor: #e6dfcd;
+    --accentcolor: #c9a84c;
+    --accenthover: black;
 }
 
+html.light-mode {
+    --bgcolor: #ffffff;
+    --navbg: rgba(255, 255, 255, 0.95);
+    --footerbg: #f4f4f4;
+    --textcolor: #1a1a1a;
+    --navlinkcolor: #1a1a1a;
+    --accentcolor: #b08d32;
+    --accenthover: #ffffff;
+}
+
+body {
+    background-color: var(--bgcolor);
+    color: var(--textcolor);
+    transition: background-color 0.3s ease;
+}
 html.light-mode body {
     background-color: var(--bgcolor);
     color: var(--textcolor);
