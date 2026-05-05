@@ -5,22 +5,32 @@
     box-sizing: border-box;
 }
 
-:root{
-    --bgcolor:#020817;
-    --navbg:rgba(10, 15, 30, 0.85);
-    --accentcolor:#c9a84c;
-    --navlinkcolor:#e6dfcd;
-    --cardlocationcolor:#9aaccc;
-    --statsbg:#0a0f1e;
-    --teambg:#1a1a2e;
-    --footerbg:#0a0f1e;
-    --textcolor:white;
-    --contactinputbg:#0a0f1e;
-    --boxbg:rgba(62, 62, 224, 0.1);
+:root {
+    --bgcolor: #020817;
+    --navbg: rgba(10, 15, 30, 0.85);
+    --accentcolor: #c9a84c;
+    --navlinkcolor: #e6dfcd;
+    --cardlocationcolor: #9aaccc;
+    --statsbg: #0a0f1e;
+    --teambg: #1a1a2e;
+    --footerbg: #0a0f1e;
+    --textcolor: white;
+    --contactinputbg: #0a0f1e;
+    --boxbg: rgba(62, 62, 224, 0.1);
 }
 
-html.light-mode {
-    filter: invert(1) hue-rotate(180deg);
+body.light-theme {
+    --bgcolor: #fcfaf5;
+    --navbg: rgba(255, 255, 255, 0.85);
+    --accentcolor: #c9a84c;
+    --navlinkcolor: #333d4f;
+    --cardlocationcolor: #546488;
+    --statsbg: #f3f1ea;
+    --teambg: #ebe8df;
+    --footerbg: #1a1a2e;
+    --textcolor: #1a1a1a;
+    --contactinputbg: #ffffff;
+    --boxbg: rgba(62, 62, 224, 0.05);
 }
 
 body {
