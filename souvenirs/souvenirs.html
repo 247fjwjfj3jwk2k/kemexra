@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>KEMEXRA — Souvenirs</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="souvenirs.css">
+</head>
+<body>
+
+<!--  navbar  -->
+<nav class="navbar">
+    <div class="logo">KEMEXRA</div>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="locations.html">Locations</a>
+        <a href="activities.html">Activities</a>
+        <a href="hotels.html">Hotels</a>
+        <a href="souvenirs.html">Souvenirs</a>
+        <a href="recommendations.html">Recommendations</a>
+        <a href="reservations.html">Reservations</a>
+    </div>
+    <div style="display:flex; gap:10px; align-items:center;">
+        <button class="theme-btn" onclick="toggleTheme()">☀️ Light</button>
+        <button class="cart-icon-btn" id="cartBtn" title="View Cart"><!--cart زرار ال-->
+            <i class="bi bi-bag"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a class="action-btn" href="login.html">LOG IN</a>
+    </div>
+</nav>
+  <!--cart backdrop التعتيم الي بيتعمل في الخلفية لما افتح الcart panel-->
+<div class="cart-backdrop" id="cartbackdrop"></div>
+
+<!--cart panel بتظهر في الجنب لما بدوس على ال cart-->
+ <aside class="cart-panel" id="cartpanel">
+    <div class="cart-panelheader">
+        <h2 class="cart-title">Your cart</h2>
+        <button class="cart-close" id="cartclosebtn">
+            <i class="bi bi-x-lg"></i>
+        </button>
+    </div>
+    <div class="cart-items" id="cartitems"></div>
+    <div class="cart-panel-footer" id="cartpanelfooter">
+        <div class="cart-total-row">
+            <span>total</span>
+            <span class="cart-total" id="carttotal">$0</span>
+        </div>
+        <button class="Checkout">Checkout</button>
+    </div>
+ </aside>
+ <!--heroooo-->
+ <section class="hero">
+    <h1>Egyptian Souvenirs</h1>
+    <p>Discover unique Egyptian souvenirs inspired by our culture and history.</p>
+ </section>
+ <!--items -->
+ <div class="items-grid" id="itemsgrid">
+    <div class="item-card">
+        <img class="item-img" src="Felucca.jpg" alt="Felucca">
+        <div class="item-info">
+            <div class="item-name">Felucca Model Boat</div>
+            <div class="item-desc">Handcrafted wooden replica of the iconic Nile sailing felucca.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$130</span>
+            <button class="add-to-cart-btn" data-name="Felucca Model Boat" data-price="130">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Crocodile design.jpg" alt="Crocodile">
+        <div class="item-info">
+            <div class="item-name">Sobek Crocodile Amulet</div>
+            <div class="item-desc">Cast bronze amulet of the Nile crocodile god, protector of the waters.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$65</span>
+            <button class="add-to-cart-btn" data-name="Sobek Crocodile Amulet" data-price="65">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Alabaster Vase.jpg" alt="Alabaster Vase">
+        <div class="item-info">
+            <div class="item-name">Alabaster Vase</div>
+            <div class="item-desc">Translucent white alabaster, hand-carved in the workshops of Luxor.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$125</span>
+            <button class="add-to-cart-btn" data-name="Alabaster Vase" data-price="125">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="fish.jpg" alt="Nile Fish Mosaic">
+        <div class="item-info">
+            <div class="item-name">Nile Fish Mosaic</div>
+            <div class="item-desc">Hand-laid ceramic mosaic depicting Nile fish, a classic Fayoum motif.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$220</span>
+            <button class="add-to-cart-btn" data-name="Nile Fish Mosaic" data-price="220">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Egyptian pyramid.jpg" alt="Mini Pyramid">
+        <div class="item-info">
+            <div class="item-name">Mini Pyramid Set</div>
+            <div class="item-desc">Polished obsidian Giza set, capturing the alignment of the three pyramids.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$75</span>
+            <button class="add-to-cart-btn" data-name="Mini Pyramid Set" data-price="75">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Sphinx Statue.jpg" alt="Sphinx Statue">
+        <div class="item-info">
+            <div class="item-name">Sphinx Statue</div>
+            <div class="item-desc">Limestone replica of the Great Sphinx of Giza, Giza Plateau guardian.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$340</span>
+            <button class="add-to-cart-btn" data-name="Sphinx Statue" data-price="340">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Desert Sand Hourglass.jpg" alt="Desert Sand Hourglass">
+        <div class="item-info">
+            <div class="item-name">Desert Sand Hourglass</div>
+            <div class="item-desc">Real Sahara sand sealed in hand-blown glass — time made tangible.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$50</span>
+            <button class="add-to-cart-btn" data-name="Desert Sand Hourglass" data-price="50">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+       <div class="item-card">
+        <img class="item-img" src="Pyramid Blueprint Print.jpg" alt="Pyramid Blueprint Print">
+        <div class="item-info">
+            <div class="item-name">Pyramid Blueprint Print</div>
+            <div class="item-desc">Architect-grade blueprint reproduction of the Khufu pyramid's internal chambers.</div>
+        </div>
+        <div class="item-footer">
+            <span class="item-price">$70</span>
+            <button class="add-to-cart-btn" data-name="Pyramid Blueprint Print" data-price="70">
+                <i class="bi bi-bag-plus"></i>
+            </button>
+        </div>
+    </div>
+ </div>
+
+<!--  footer  -->
+<footer>
+    <p class="footer-logo">KEMEXRA</p>
+    <p class="footer-tagline">Experience Egypt in Ultimate Comfort</p>
+    <div class="footer-socials">
+        <a href="#"><i class="bi bi-facebook"></i></a>
+        <a href="#"><i class="bi bi-instagram"></i></a>
+        <a href="#"><i class="bi bi-twitter-x"></i></a>
+    </div>
+    <p class="footer-copy">&copy; 2025 KEMEXRA. All Rights Reserved.</p>
+</footer>
+
+<script src="souvenirs.js"></script>
+</body>
+</html>

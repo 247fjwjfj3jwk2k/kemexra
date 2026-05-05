@@ -1,0 +1,368 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121c3a;
+    font-family: sans-serif;
+}
+/* عاكس الالوان*/
+html.light-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+
+/* الناف بار*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    color: white;
+    background-color: #0a0f1e;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar a:hover {
+    color: #c9a84c;
+}
+.theme-btn {
+    background-color: transparent;
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    font-size: 13px;
+}
+.action-btn {
+    background-color: #c9a84c;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: black !important;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* زرار العربة */
+.cart-icon-btn {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #c9a84c;
+    color: black;
+    font-size: 10px;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* cart backdrop */
+
+.cart-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1100;
+}
+
+.cart-backdrop.open {
+    display: block;
+}
+
+
+/* cart panel */
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 350px;
+    height: 100vh;
+    background: #0a0f1e;
+    border-left: 1px solid #c9a84c;
+    z-index: 1200;
+    display: flex;
+    flex-direction: column;
+    transition: right 0.3s;
+}
+
+.cart-panel.open {
+    right: 0;
+}
+
+.cart-panelheader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #c9a84c;
+}
+
+.cart-title {
+    color: #c9a84c;
+    font-size: 16px;
+}
+
+.cart-close {
+    background: transparent;
+    border: 1px solid gray;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.cart-items {
+    flex: 1;
+    overflow-y: auto;
+    padding: 16px;
+    color: white;
+}
+
+.cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cart-row-name {
+    font-size: 13px;
+    flex: 1;
+}
+
+.cart-row-price {
+    color: #c9a84c;
+    font-size: 13px;
+    margin-right: 10px;
+}
+
+.qty-btn {
+    background: #111b38;
+    border: 1px solid gray;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.qty-number {
+    font-size: 13px;
+    margin: 0 6px;
+}
+
+.cart-panel-footer {
+    padding: 16px;
+    border-top: 1px solid #c9a84c;
+    color: white;
+}
+
+.cart-total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.cart-total {
+    color: #c9a84c;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.Checkout {
+    width: 100%;
+    background: #c9a84c;
+    color: black;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.clear-btn {
+    width: 100%;
+    background: transparent;
+    color: gray;
+    border: 1px solid gray;
+    padding: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+
+/* herooooo */
+
+.hero {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    color: #c9a84c;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #9aaccc;
+    font-size: 14px;
+}
+
+
+/* items grid */
+
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px 60px;
+}
+
+.item-card {
+    background: #111b38;
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+.item-info {
+    padding: 14px;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 6px;
+     color: white;
+}
+
+.item-desc {
+    font-size: 12px;
+    color: #9aaccc;
+    line-height: 1.5;
+}
+
+.item-footer {
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
+}
+
+.item-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #c9a84c;
+}
+
+.add-to-cart-btn {
+    background: rgba(201, 168, 76, 0.15);
+    border: 1px solid #c9a84c;
+    color: #c9a84c;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+/* الفوتر*/
+
+footer {
+    background-color: #0a0f1e;
+    color: #9aaccc;
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(201, 168, 76, 0.3);
+    margin-top: 40px;
+}
+
+.footer-logo {
+    color: #c9a84c;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.footer-socials a {
+    color: #c9a84c;
+    transition: 0.3s;
+}
+.footer-socials a:hover {
+    color: white;
+}
+.footer-copy {
+    font-size: 12px;
+}
