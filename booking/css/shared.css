@@ -14,6 +14,8 @@ html.light-mode {
     --navlinkcolor: #2c2f3a;
     --footerbg: #e8e0d0;
     --bgcolor: #f5f0e8;
+        --textcolor: #1a1a1a; 
+
 }
 
 html.light-mode body {
