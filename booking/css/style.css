@@ -477,7 +477,7 @@ header p{
 }
 .steps .step .booking label h5,
 .steps .step .booking label p {
-    color: #1a1a1a;
+    color: #1a1a1a !important;
 }
 .steps .step .booking label img{
     width: 100%;
