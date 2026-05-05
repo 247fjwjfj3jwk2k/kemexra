@@ -30,6 +30,7 @@ html.light-mode {
     --cardbg2: #d9d0be;
     --textcolor: #2c2f3a;
     --scrolltrack: #e8e0d0;
+    --cardtextcolor: #1a1a1a;
 }
 header{
     background-size: cover;
@@ -473,6 +474,10 @@ header p{
     cursor: pointer;
     border-radius: 10px;
     transition: 0.3s;
+}
+.steps .step .booking label h5,
+.steps .step .booking label p {
+    color: #1a1a1a;
 }
 .steps .step .booking label img{
     width: 100%;
