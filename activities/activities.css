@@ -1978,14 +1978,14 @@ in small sittings, its currently the 1st of may*/
 .active-stuff-luxor-light-thingie:hover{
     transform: scale(1.02);
     filter: brightness(1.1);
-    color: var(--formcolor);
+    color: #C9A84C;
 }
 .active-stuff-luxor-light-thingie::after{
     content: "";
     position: absolute;
     width: 0; 
     height: 2px;
-    background-color: var(--textcolor);
+    background-color: #C9A84C;
     left: 0;
     bottom: -5px;
     transition: width 0.3s ease;
@@ -2135,7 +2135,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-upper-right-title{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: var(--formcolor);
+    color: #C9A84C;
     font-size: 30px;
     margin-left: 10px;
     font-weight: 400;
@@ -2146,7 +2146,7 @@ in small sittings, its currently the 1st of may*/
 }
 .luxor-lower-upper-right-description{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #C9A84C;
+    color: var(--homecolor);
     font-weight: 400;
     font-size: 19px;
     margin-left: 10px;
