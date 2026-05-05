@@ -1,18 +1,29 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}:root {
+    --bg-body: #121c3a;
+    --nav-bg: rgba(10, 15, 30, 0.85);
+    --gold-main: #c9a84c;
+    --text-nav: #e6dfcd;
+    --card-bg: #122844;
+}
+
+html.light-mode {
+    --bg-body: #f5eee6;
+    --nav-bg: #ebe4db;
+    --gold-main: #b08d32;
+    --text-nav: #1a1a1a;
+    --card-bg: #ffffff;
 }
 
 body {
-    background-color: #121c3a;
-    font-family: sans-serif;
+    background-color: var(--bg-body);
+    transition: background-color 0.3s;
 }
 
-/* عاكس الالوان */
-html.light-mode {
-    filter: invert(1) hue-rotate(180deg);
-}
+
 
 /* الناف بار*/
 .navbar {
@@ -20,7 +31,7 @@ html.light-mode {
     justify-content: space-between;
     align-items: center;
     padding: 18px 50px; 
-    background-color: rgba(10, 15, 30, 0.85);
+    background-color: var(--navbg, rgba(10, 15, 30, 0.85));
     backdrop-filter: blur(12px); 
     position: sticky;
     top: 0;
@@ -28,23 +39,20 @@ html.light-mode {
     border-bottom: 1px solid rgba(201, 168, 76, 0.2); 
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5); 
 }
-
 .logo {
     font-size: 24px;
     font-weight: 800;
-    color: #c9a84c;
+    color: var(--text-nav);
     letter-spacing: 3px;
     text-transform: uppercase;
 }
-
 .nav-links {
     display: flex;
     gap: 25px;
 }
-
 .nav-links a {
     text-decoration: none;
-    color: #e6dfcd; 
+    color: var(--navlinkcolor, #e6dfcd); 
     font-size: 13px;
     font-weight: 500;
     text-transform: uppercase;
@@ -52,7 +60,6 @@ html.light-mode {
     transition: all 0.4s ease; 
     position: relative; 
 }
-
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -63,32 +70,27 @@ html.light-mode {
     background-color: #c9a84c;
     transition: width 0.3s ease;
 }
-
 .nav-links a:hover {
     color: #c9a84c;
 }
-
 .nav-links a:hover::after {
     width: 100%;
 }
-
 .theme-btn {
     background-color: transparent;
-    border: 1px solid rgba(201, 168, 76, 0.5);
-    color: #c9a84c;
     padding: 8px 18px;
     border-radius: 2px; 
     cursor: pointer;
     font-size: 12px;
     text-transform: uppercase;
     transition: 0.3s;
+    color: var(--gold-main);
+    border: 1px solid var(--gold-main);
 }
-
 .theme-btn:hover {
     background-color: rgba(201, 168, 76, 0.1);
     border-color: #c9a84c;
 }
-
 .action-btn {
     background-color: #c9a84c;
     padding: 10px 22px;
@@ -100,7 +102,6 @@ html.light-mode {
     transition: 0.3s;
     box-shadow: 0 4px 15px rgba(201, 168, 76, 0.3);
 }
-
 .action-btn:hover {
     background-color: #e8ce87;
     transform: translateY(-2px); 
@@ -108,7 +109,7 @@ html.light-mode {
 }
 /* الفوتر*/
 footer {
-    background-color: #0a0f1e;
+    background-color: var(--footerbg, #0a0f1e);
     color: #9aaccc;
     text-align: center;
     padding: 30px;
@@ -142,12 +143,19 @@ footer {
 .footer-copy {
     font-size: 12px;
 }
-html.light-mode .light-mode-layout {
-    filter: invert(1) hue-rotate(180deg);
-}
-.tab-bar-light {
-    display: none;
-}
-html.light-mode .tab-bar-light {
-    display: flex;
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 12px 20px;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .nav-links {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links a {
+        font-size: 11px;
+    }
 }
