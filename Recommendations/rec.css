@@ -35,6 +35,12 @@ html.light-mode {
     --accent: #b08d32;
     --shadow: rgba(0, 0, 0, 0.1);
 }
+html.light-mode .start-rec:before{
+    background-image: url(images/try.jpeg);
+    filter:invert(1) hue-rotate(180deg);}
+
+
+
 
 body {
     background-color: var(--bgcolor);
@@ -155,10 +161,12 @@ a {
     position: relative;
     text-align: center;
     padding: 20px;
-    overflow: hidden;
+   
 }
 
-.start-rec:before {
+.start-rec:before {background-image: url(images/home-1.png);
+    background-size: 100% 76vh;
+    background-repeat: no-repeat;
     content: "";
     position: absolute;
     top: 0;
@@ -222,7 +230,7 @@ a {
 .content_rec { grid-template-columns: 65% 35%; }
 
 .content_rec:hover, .content_rec1:hover {
-    transform: translateY(-10px);
+   
 }
 
 .image-rec {
