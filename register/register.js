@@ -50,7 +50,7 @@ registrationForm.addEventListener('submit', function(event) {
     localStorage.setItem('useremail', emailValue);
     localStorage.setItem('password', paswdValue);
     alert("تم حفظ البيانات بنجاح");
-    window.location.href = "google.com"
+    window.location.href = "../log-in/login.html"
 
     });
  
