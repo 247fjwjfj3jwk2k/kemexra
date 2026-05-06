@@ -17,7 +17,7 @@ loginForm.addEventListener('submit',function(event) {
     }
 
      alert("Login Successful! Welcome to KEMEXRA."); 
-     window.location.href = "index.html";
+     window.location.href = "../index.html";
 
 });
 
