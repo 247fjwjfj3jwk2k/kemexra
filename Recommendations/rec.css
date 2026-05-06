@@ -189,7 +189,8 @@ a {
 .start-rec h3 { font-size: 1.2vw; text-transform: uppercase; letter-spacing: 2px; }
 
 /* Audio Player */
-.audio-player {z-index:1;
+.audio-player {
+    z-index: 1;
     display: flex;
     align-items: center;
     gap: 15px;
