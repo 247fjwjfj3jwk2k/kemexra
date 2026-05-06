@@ -37,8 +37,7 @@ html.light-mode {
 }
 html.light-mode .start-rec:before{
     background-image: url(images/try.jpeg);
-    filter:invert(1) hue-rotate(180deg);}
-
+   
 
 
 
@@ -281,64 +280,68 @@ a {
 }
 
 /* Form */
-.form {
-    width: 70%;
-    max-width: 800px;
-    background-color: var(--formbg);
-    margin: 15vh auto;
-    border-radius: 20px;
-    padding: 50px;
-    color: var(--formcolor);
-    box-shadow: 0 15px 40px var(--shadow);
+.form{
+    width: 70vw;
+    height: fit-content;
+    background-color: #9aaccc;
+    margin: auto;
+    margin-top: 20vh;
+    border: 3px solid #95aaad7a;
+    box-shadow: -2px 0px 11px 2px aliceblue;
+    background-color: #deba73;
+    border-radius: 40px 40px;
+    padding: 4vw;
+    width: 70vw;
+    height: fit-content;
+    color: #123f8e;
+    margin: auto;
+    margin-top: 20vh;
 }
-
-.form-start {
-    font-size: 28px;
-    margin-bottom: 30px;
-    text-align: center;
+.form-start{
+    margin: 1vw;
+    width: fit-content;
+    font-size: 3vw;
 }
-
-.rate-rec {
+.rate-rec{
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 20px 0;
+    justify-content: space-between;
 }
-
-.r {
-    font-size: 24px;
-    cursor: pointer;
-    transition: 0.3s;
+.r{display: inline-block;
+    transition: all ease 0.3s;
 }
-
-.r:hover { transform: scale(1.3); }
-
-.form input, .form textarea {
-    width: 100%;
-    background: var(--bgcolor);
-    border: 1px solid var(--buttoncolor);
-    color: var(--textcolor);
-    padding: 15px;
-    border-radius: 10px;
-    margin: 10px 0 20px;
+.r:hover{ transform:scale(1.4) ; -webkit-transform:scale(1.4) ; -moz-transform:scale(1.4) ; -ms-transform:scale(1.4) ; -o-transform:scale(1.4) ;
 }
-
-.form button {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    background-color: var(--formcolor);
-    color: var(--formbg);
-    border: none;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
+.form button{
+    width: 10vw;
+    height: 5vh;
+    border-radius:40px 40px ;
+    border: 3px solid #95aaad7a;
+    box-shadow: -2px 0px 11px 2px aliceblue;
+    background-color: #deba73;
+    transition: all ease 0.3s;
+   
 }
+.form button:hover{
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+}
+.name,.comment{
 
-.form button:hover {
-    opacity: 0.9;
-    transform: translateY(-2px);
+    font-size: 2vw;
+}
+#name,#comment{border: 3px solid var(--buttoncolor);
+    height: 4vh;
+    cursor: cell;
+     border-radius:40px 40px ;
+    box-shadow: -2px 0px 11px 2px aliceblue;
+    padding: 1vw;
+   
+}
+#comment{
+    padding: 5vwz;
 }
 
 /* الفوتر*/
