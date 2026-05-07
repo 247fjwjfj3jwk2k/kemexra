@@ -20,7 +20,7 @@
     --accent: #c9a84c;
     --shadow: rgba(0, 0, 0, 0.5);
 }
-
+//how!!
 html.light-mode {
     --bgcolor: #f5f0e8;
     --textcolor: #7a5c1e;
@@ -38,6 +38,7 @@ html.light-mode {
 html.light-mode .start-rec:before{filter:none;
     background-image: url(images/try.jpeg);
 }
+html.light-mode .start-rec h1,html.light-mode .start-rec h3, html.light-mode .start-rec p{color:antiquewhite;}
 
 
 
@@ -84,7 +85,7 @@ a {
     display: flex;
     gap: 25px;
 }
-
+//how!!
 .nav-links a {
     color: var(--navlinkcolor); 
     font-size: 13px;
@@ -182,6 +183,7 @@ a {
     z-index: 2;
     position: relative;
     margin-bottom: 15px;
+    
 }
 
 .start-rec h1 { font-size: 5vw; }
@@ -190,7 +192,7 @@ a {
 
 /* Audio Player */
 .audio-player {
-    z-index: 1;
+    z-index: 2;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -229,7 +231,7 @@ a {
 .content_rec1 { grid-template-columns: 35% 65%; }
 .content_rec { grid-template-columns: 65% 35%; }
 
-.content_rec:hover, .content_rec1:hover {
+.content_rec:hover, .content_rec1:hover {transform: scale(1.05);
    
 }
 
@@ -249,22 +251,24 @@ a {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    padding: 12px 25px;
+    padding: 1vw;
     background: linear-gradient(135deg, var(--accent) 0%, #a68058 100%);
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: 0.3s;
     border-radius: 8px;
     cursor: pointer;
     border: none;
-    margin: 20px 0;
+    margin: 2vh 0;
+  
 }
 
 .button-rec { float: right; }
 .button-rec-2 { float: left; }
 
 .button-rec a, .button-rec-2 a, #btn_3 a {
+     text-shadow: 3px 1px 4px var(--textcolor);
     color: #0a0f1e;
-    font-size: 14px;
+    font-size: 1vw;
     text-transform: uppercase;
 }
 
@@ -275,9 +279,19 @@ a {
 
 #btn_3 {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+     bottom: 2vw;
+    right: 5vw;
+   
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    width: 15vh;
+    height: 7vh;
+    padding: 1vw;
     z-index: 999;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 /* Form */
@@ -403,7 +417,7 @@ footer {
 @media (max-width: 480px) {
     .start-rec h1 { font-size: 10vw; }
     .button-rec, .button-rec-2 {
-        float: none;
+       /* float: none;*/
         width: 100%;
         text-align: center;
     }
