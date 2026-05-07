@@ -359,8 +359,7 @@ a {
 
 textarea{width: 74vw;
           cursor: cell;
-         border: 3px solid var(--buttoncolo
-     border-radius:40px 40px ;
+         border: 3px solid var(--buttoncoloborder-radius:40px 40px) ;
     box-shadow: -2px 0px 11px 2px aliceblue;
    padding:2vw;
     height: 25vh;
