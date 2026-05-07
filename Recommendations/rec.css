@@ -357,7 +357,7 @@ a {
    
 }
 
-textarea{width: 74vw;
+textarea{width: 54vw;
           cursor: cell;
          border: 3px solid var(--buttoncoloborder-radius:40px 40px) ;
     box-shadow: -2px 0px 11px 2px aliceblue;
