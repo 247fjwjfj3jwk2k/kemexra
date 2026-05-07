@@ -12,7 +12,7 @@ window.onload = function() {
         document.querySelector(`input[value="${savedRate}"]`).checked = true;
     }
 };
-
+//where!!
 // 2. عند الضغط على
 //       Submit
 // احفظ الايميل والنجوم في ذاكرة المتصفح
