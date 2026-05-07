@@ -240,10 +240,7 @@ a {
     height: 100%;
    
 }
-textarea{width: 74vw;
-   
-    height: 25vh;
-}
+
 
 .text_rec {
     padding: 40px;
@@ -351,16 +348,22 @@ textarea{width: 74vw;
 
     font-size: 2vw;
 }
-#name,#comment{border: 3px solid var(--buttoncolor);
-    height: 4vh;
+#name{border: 3px solid var(--buttoncolor);
+   height:4vh;
     cursor: cell;
      border-radius:40px 40px ;
     box-shadow: -2px 0px 11px 2px aliceblue;
     padding: 1vw;
    
 }
-#comment{
-    padding: 5vwz;
+
+textarea{width: 74vw;
+          cursor: cell;
+         border: 3px solid var(--buttoncolo
+     border-radius:40px 40px ;
+    box-shadow: -2px 0px 11px 2px aliceblue;
+   padding:2vw;
+    height: 25vh;
 }
 
 /* الفوتر*/
