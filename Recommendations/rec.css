@@ -240,6 +240,10 @@ a {
     height: 100%;
    
 }
+textarea{width: 40vw;
+   
+    height: 32vh;
+}
 
 .text_rec {
     padding: 40px;
