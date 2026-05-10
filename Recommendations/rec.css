@@ -1,11 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
-
+/* in firsr we make import to google .fonts */
+/* this to reset the page */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+ul {
+    list-style: none;
+}
 
+a {
+    text-decoration: none;
+}
+/* /////////////////////////////////////////////////////////////////////////// */
 :root {
     --bgcolor: #0a1128;
     --textcolor: #c5a059;
@@ -20,7 +28,8 @@
     --accent: #c9a84c;
     --shadow: rgba(0, 0, 0, 0.5);
 }
-/*why*/
+/*why///////////////////////////////////////////////////////////////////////*/
+
 html.light-mode {
     --bgcolor: #f5f0e8;
     --textcolor: #7a5c1e;
@@ -35,13 +44,24 @@ html.light-mode {
     --accent: #b08d32;
     --shadow: rgba(0, 0, 0, 0.1);
 }
+/* /////////////////////////////////////////////////////////////////////////////////////////// */
+/* الlight mode جزء ده لتعديل اي حاجه تخص  */
+/* ////////////////////////////////////////////////////////////////////////////////////////// */
+/* html.light-mode that    light-modeانا كده قلت لما نحط الكلاس الي هو 
+تتحط الصوره دي وشلت من عليها اي فلتر لان خالد كان ضايف فلاترfilter: blur(3px) brightness(0.6); تحت علي الكلاس ده */
 html.light-mode .start-rec:before{filter:none;
     background-image: url(images/try.jpeg);
 }
 html.light-mode .start-rec h1,html.light-mode .start-rec h3, html.light-mode .start-rec p{color:antiquewhite;}
-
-
-
+/* عدلنا الالوانات بتاعت p h3 h1 */
+/* /////////////////////////////////////////////////////////////// */
+/* lets start in body first
+colors 
+line height
+font
+transition when we move from dark to light and vice versa  we  make time and 
+ease that make slow then fast then slow
+ */
 body {
     background-color: var(--bgcolor);
     color: var(--textcolor);
@@ -49,14 +69,8 @@ body {
     transition: background-color 0.3s ease, color 0.3s ease;
     line-height: 1.6;
 }
+/* 2/nav bar */
 
-ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
 
 /* الناف بار*/
 .navbar {
@@ -85,7 +99,8 @@ a {
     display: flex;
     gap: 25px;
 }
-
+/* this part to make links when hover aline appear under it
+ */
 .nav-links a {
     color: var(--navlinkcolor); 
     font-size: 13px;
@@ -96,22 +111,17 @@ a {
     position: relative; 
 }
 
-.nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 1.5px;
-    bottom: -5px;
-    left: 0;
-    background-color: var(--accent);
-    transition: width 0.3s ease;
-}
 
 .nav-links a:hover {
     color: var(--accent);
 }
-
-.nav-links a:hover::after {
+/* when we make hover put after it this */
+.nav-links a:hover::after { content: '';
+    position: absolute;
+    height: 1.5px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--accent);
     width: 100%;
 }
 
@@ -126,7 +136,7 @@ a {
     text-transform: uppercase;
     transition: 0.3s;
 }
-
+/* when hover change color روشنه */
 .theme-btn:hover {
     background-color: rgba(201, 168, 76, 0.1);
     border-color: var(--accent);
@@ -161,7 +171,7 @@ a {
     position: relative;
     text-align: center;
     padding: 20px;
-   
+
 }
 
 .start-rec:before {background-image: url(images/home-1.png);
@@ -173,7 +183,6 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    
     filter: blur(3px) brightness(0.6);
     z-index: 1;
 }
@@ -181,7 +190,6 @@ a {
 .start-rec h1, .start-rec h3, .start-rec p {
     color: var(--homecolor);
     z-index: 2;
-    position: relative;
     margin-bottom: 15px;
     
 }
@@ -209,6 +217,7 @@ a {
 }
 
 /* Cards Content */
+/* middle in section */
 .cointainer_rec {
     width: 90vw;
     margin: auto;
@@ -243,12 +252,18 @@ a {
 
 
 .text_rec {
-    padding: 40px;
+    padding: 4vw;
 }
 
 /* Buttons */
+/* we have three clases
+1- button-rec 
+2-button-rec2 
+this two  to make different direction  one left and other right
+3- btn-rec for arrow*/
 .button-rec, .button-rec-2, #btn_3 {
     display: inline-flex;
+    /* to middle it and in same time make arrow */
     justify-content: center;
     align-items: center;
     font-weight: bold;
@@ -259,13 +274,14 @@ a {
     border-radius: 8px;
     cursor: pointer;
     border: none;
+    /* to sutisfy in phone */
     margin: 2vh 0;
   
 }
 
 .button-rec { float: right; }
 .button-rec-2 { float: left; }
-
+/* see */
 .button-rec a, .button-rec-2 a, #btn_3 a {
      text-shadow: 3px 1px 4px var(--textcolor);
     color: #0a0f1e;
@@ -277,7 +293,7 @@ a {
     transform: scale(1.05);
     filter: brightness(1.1);
 }
-
+/* move to top */
 #btn_3 {
     position: fixed;
      bottom: 2vw;
@@ -312,6 +328,7 @@ a {
     color: #123f8e;
     margin: auto;
     margin-top: 20vh;
+    margin-bottom: 3vh;
 }
 .form-start{
     margin: 1vw;
@@ -322,7 +339,9 @@ a {
     display: flex;
     justify-content: space-between;
 }
+/* stars */
 .r{display: inline-block;
+    font-size: 1.5vw;
     transition: all ease 0.3s;
 }
 .r:hover{ transform:scale(1.4) ; -webkit-transform:scale(1.4) ; -moz-transform:scale(1.4) ; -ms-transform:scale(1.4) ; -o-transform:scale(1.4) ;
@@ -344,10 +363,12 @@ a {
     -ms-transform: scale(1.3);
     -o-transform: scale(1.3);
 }
+/*  div of mail and div of text area*/
 .name,.comment{
 
     font-size: 2vw;
 }
+/* input of mail */
 #name{border: 3px solid var(--buttoncolor);
    height:4vh;
     cursor: cell;
@@ -365,8 +386,9 @@ textarea{width: 44vw;
    padding:2vw;
     height: 25vh;
 }
-
+/* form end */
 /* الفوتر*/
+/* footer */
 footer {
     background-color: var(--footerbg);
     color: var(--homecolor);
@@ -413,9 +435,7 @@ footer {
     .navbar {
         padding: 15px 20px;
     }
-    .nav-links {
-        display: none; /* ينصح بإضافة قائمة موبايل لاحقاً */
-    }
+    
     .logo { font-size: 18px; }
     .text_rec { padding: 20px; }
     .audio-player { width: 90%; font-size: 14px; }
@@ -423,10 +443,6 @@ footer {
 
 @media (max-width: 480px) {
     .start-rec h1 { font-size: 10vw; }
-    .button-rec, .button-rec-2 {
-       /* float: none;*/
-        width: 100%;
-        text-align: center;
-    }
+    
 }
-}
+
