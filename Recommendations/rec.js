@@ -60,7 +60,8 @@ behavior:"smooth"
 //to make focus in mail
 window.onload=function(){
   //built in fun
-    mail.focus();
+    //to make page begain right
+    // mail.focus();
 }
 
 
