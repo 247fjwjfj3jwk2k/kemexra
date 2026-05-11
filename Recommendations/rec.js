@@ -57,12 +57,6 @@ behavior:"smooth"
 
     let mail=document.querySelector("#name");
     
-//to make focus in mail
-window.onload=function(){
-  //built in fun
-    //to make page begain right
-    // mail.focus();
-}
 
 
      //retake value from local storage:
