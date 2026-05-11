@@ -15,15 +15,14 @@ function toggleTheme() {
 // /          /عرفت فانكشن بدور علي ال ؤمشسس معين لو موجود هنعمل نتغير يحمل  الزر ثم نغر محتواخ لاسود ونخزن ان منظر اسود ثم عكس كل ده لو ملقناش خلاص نخلي ابيض ونخزن ابيض
 
 // حفظ اللون بتاع الموقع سواء دارك او لايت خلال التصفح
-// حفظ اللون بتاع الموقع سواء دارك او لايت خلال التصفح
-window.addEventListener(window.onload, function () {
+window.addEventListener('DOMContentLoaded', function () {
     const saved = localStorage.getItem('theme');
     if (saved === 'light') {
         document.documentElement.classList.add('light-mode');
         const btn = document.querySelector('.theme-btn');
         if (btn) btn.textContent = '🌙 Dark';
     }
-    else if(saved=="dark"){
+    else if(saved=='dark'){
         document.documentElement.classList.remove('light-mode');
  const btn = document.querySelector('.theme-btn');
         if (btn) btn.textContent = '☀️ Light';
