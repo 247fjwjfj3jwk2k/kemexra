@@ -309,7 +309,7 @@ header p{
     border-bottom: 0.5px solid  #C9A84C;
     background: transparent;
     transition-duration: 0.5s;
-    color: white;
+    color: black;
 }
 .steps .row input:hover{
     border-bottom: 1px solid var(--cardbg2, #121C3A);
