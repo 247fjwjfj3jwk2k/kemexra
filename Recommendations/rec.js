@@ -15,14 +15,20 @@ function toggleTheme() {
 // /          /عرفت فانكشن بدور علي ال ؤمشسس معين لو موجود هنعمل نتغير يحمل  الزر ثم نغر محتواخ لاسود ونخزن ان منظر اسود ثم عكس كل ده لو ملقناش خلاص نخلي ابيض ونخزن ابيض
 
 // حفظ اللون بتاع الموقع سواء دارك او لايت خلال التصفح
-window.addEventListener('DOMContentLoaded', function () {
+// حفظ اللون بتاع الموقع سواء دارك او لايت خلال التصفح
+window.addEventListener(window.onload, function () {
     const saved = localStorage.getItem('theme');
     if (saved === 'light') {
         document.documentElement.classList.add('light-mode');
         const btn = document.querySelector('.theme-btn');
         if (btn) btn.textContent = '🌙 Dark';
     }
-    // 
+    else if(saved=="dark"){
+        document.documentElement.classList.remove('light-mode');
+ const btn = document.querySelector('.theme-btn');
+        if (btn) btn.textContent = '☀️ Light';
+    }
+    
 });
 /////home
 let btn3 =document.getElementById("btn_3");
