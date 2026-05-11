@@ -1,3 +1,30 @@
+//ده خاص بعكس الالوان
+function toggleTheme() {
+    document.documentElement.classList.toggle('light-mode');
+     const btn = document.querySelector('.theme-btn');
+    if (document.documentElement.classList.contains('light-mode')) {
+       
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+    } else {
+        btn.textContent = '☀️ Light';
+
+        localStorage.setItem('theme', 'dark');
+    }
+}
+// /          /عرفت فانكشن بدور علي ال ؤمشسس معين لو موجود هنعمل نتغير يحمل  الزر ثم نغر محتواخ لاسود ونخزن ان منظر اسود ثم عكس كل ده لو ملقناش خلاص نخلي ابيض ونخزن ابيض
+
+// حفظ اللون بتاع الموقع سواء دارك او لايت خلال التصفح
+window.addEventListener('DOMContentLoaded', function () {
+    const saved = localStorage.getItem('theme');
+    if (saved === 'light') {
+        document.documentElement.classList.add('light-mode');
+        const btn = document.querySelector('.theme-btn');
+        if (btn) btn.textContent = '🌙 Dark';
+    }
+    // 
+});
+/////home
 let btn3 =document.getElementById("btn_3");
 window.onscroll=function(){if (window.scrollY >= 100) {
 
